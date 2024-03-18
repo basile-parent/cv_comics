@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="panel.css">
@@ -13,45 +13,50 @@
 </head>
 <body>
 
-<!--<aside class="halftone"></aside>-->
+<!--<div class="halftone"></div>-->
 
-<article class="comic">
+<main class="comic">
+
+    <h1 class="sr-only">CV de Basile Parent</h1>
+
     <button id="presentation" class="panel" aria-labelledby="presentation-label">
-        <p id="presentation-label" class="text top-left">Présentation</p>
+        <h2 id="presentation-label" class="text top-left">Présentation</h2>
 
         <div class="panel-container">
-            <aside class="radial-speed"></aside>
+            <div class="radial-speed"></div>
         </div>
 
         <img src="assets/portrait.png" class="portrait" alt="" />
         <p class="bubble outside-top-right arrow-to-left">Cliquez sur une case pour avoir le détail</p>
     </button>
-    <button id="skills" class="panel">
+
+    <button id="skills" class="panel" aria-labelledby="skills-label experience-label">
         <div class="panel-container">
-            <aside class="halftone-watermark revealing"></aside>
+            <div class="halftone-watermark revealing"></div>
         </div>
 
         <img src="assets/bubble-1.svg" class="bubble-icon" alt="" />
         <img src="assets/brain.png" class="brain-icon" alt="" />
 
-        <p class="text top-right">Compétences</p>
-        <p class="text bottom-left">Expériences</p>
+        <h2 id="skills-label" class="text top-right">Compétences</h2>
+        <h2 id="experience-label" class="text bottom-left">Expériences</h2>
     </button>
-    <button id="certificates" class="panel">
-        <p class="text top-left">Diplômes</p>
 
+    <button id="certificates" class="panel" aria-labelledby="diploma-label certif-label">
         <div class="panel-container">
-            <aside class="stars-watermark"></aside>
+            <div class="stars-watermark"></div>
         </div>
 
         <img src="assets/bubble-2.svg" class="bubble-icon" alt="" />
         <img src="assets/certificate.png" class="certificate-icon" alt="" />
 
-        <p class="text bottom-right">Certifications</p>
+        <h2 id="diploma-label" class="text top-left">Diplômes</h2>
+        <h2 id="certif-label" class="text bottom-right">Certifications</h2>
     </button>
-    <button id="talks" class="panel">
+
+    <button id="talks" class="panel" aria-labelledby="formations-label talks-label">
         <div class="panel-container">
-            <aside class="oblic-stripes-watermark"></aside>
+            <div class="oblic-stripes-watermark"></div>
 
             <img src="assets/mic.svg" class="talk-img" alt="" />
         </div>
@@ -71,8 +76,8 @@
 <!--            </div>-->
 <!--        </div>-->
 
-        <p class="text top-right">Formations</p>
-        <p class="text bottom-left">Talks</p>
+        <h2 id="formations-label" class="text top-right">Formations</h2>
+        <h2 id="talks-label" class="text bottom-left">Talks</h2>
 
 <!--        <div class="drop-circle-wrapper">-->
 <!--            <div class="drop-circle-container">-->
@@ -83,9 +88,10 @@
 <!--        </div>-->
 
     </button>
-    <button id="hobbies" class="panel">
+
+    <button id="hobbies" class="panel" aria-labelledby="hobbies-label projects-label">
         <div class="panel-container">
-            <aside class="halftone-watermark br"></aside>
+            <div class="halftone-watermark br"></div>
         </div>
 
         <div id="mixing-bowl">
@@ -100,18 +106,20 @@
             <img src="assets/bowl-front.svg" class="bowl bowl-front" alt="" />
         </div>
 
-        <p class="text top-left">Hobbies</p>
-        <p class="text bottom-right">Projets perso</p>
+        <h2 id="hobbies-label" class="text top-left">Hobbies</h2>
+        <h2 id="projects-label" class="text bottom-right">Projets perso</h2>
     </button>
-    <button id="contact" class="panel">
+
+    <button id="contact" class="panel" aria-labelledby="contact-label">
         <div class="panel-container">
-            <aside class="rays-watermark"></aside>
+            <div class="rays-watermark"></div>
         </div>
 
         <img src="assets/handshake.svg" class="handshake" alt="" />
 
-        <p class="text top-right">Contact</p>
+        <h2 id="contact-label" class="text top-right">Contact</h2>
     </button>
-</article>
+
+</main>
 </body>
 </html>

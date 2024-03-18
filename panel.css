@@ -18,12 +18,12 @@
 }
 
 /* background colours */
-.panel:nth-child(6n+1) {background-image: radial-gradient(circle, lightblue, deepskyblue);}
-.panel:nth-child(6n+2) {background-image: radial-gradient(circle, yellow, orange);}
-.panel:nth-child(6n+3) {background-image: radial-gradient(circle, palegreen, yellowgreen);}
-.panel:nth-child(6n+4) {background-image: radial-gradient(circle, lightcoral, tomato);}
-.panel:nth-child(6n+5) {background-image: radial-gradient(circle, #e180f0, #cb47ff);}
-.panel:nth-child(6n+6) {background-image: radial-gradient(circle, #ffaf46, #fffc36);}
+.panel:nth-of-type(6n+1) {background-image: radial-gradient(circle, lightblue, deepskyblue);}
+.panel:nth-of-type(6n+2) {background-image: radial-gradient(circle, yellow, orange);}
+.panel:nth-of-type(6n+3) {background-image: radial-gradient(circle, palegreen, yellowgreen);}
+.panel:nth-of-type(6n+4) {background-image: radial-gradient(circle, lightcoral, tomato);}
+.panel:nth-of-type(6n+5) {background-image: radial-gradient(circle, #e180f0, #cb47ff);}
+.panel:nth-of-type(6n+6) {background-image: radial-gradient(circle, #ffaf46, #fffc36);}
 
 .panel-container {
     position: absolute;
