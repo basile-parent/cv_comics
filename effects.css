@@ -1,0 +1,327 @@
+
+.halftone-watermark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+
+    /*-webkit-mask-image: url("assets/halftone.svg");*/
+    /*mask-image: url("assets/halftone.svg") ;*/
+    /*-webkit-mask-repeat: no-repeat;*/
+    /*mask-repeat: no-repeat;*/
+    /*-webkit-mask-position: center;*/
+    /*mask-position: center;*/
+    /*-webkit-mask-size: 100%;*/
+    /*mask-size: 100%;*/
+
+    /*background-image: radial-gradient(circle, #a6a6a6, #737373);*/
+    background: url("assets/halftone.svg") no-repeat center center;
+    background-size: 80%;
+}
+
+.revealing {
+    -webkit-mask-image: url("assets/revealing-mask.svg");
+    mask-image: url("assets/revealing-mask.svg");
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: 140% center;
+    mask-position: 140% center;
+    -webkit-mask-size: auto 100%;
+    mask-size: auto 100%;
+    -webkit-animation: reveal-reverse 1.5s ease-out forwards;
+    -moz-animation: reveal-reverse 1.5s ease-out forwards;
+    animation: reveal-reverse 1.5s ease-out forwards;
+}
+
+.revealing:hover {
+    -webkit-animation: reveal 1.5s ease-out forwards;
+    -moz-animation: reveal 1.5s ease-out forwards;
+    animation: reveal 1.5s ease-out forwards;
+}
+@-webkit-keyframes reveal-reverse {
+    from { -webkit-mask-position: 0 center; }
+    to { -webkit-mask-position: 140% center; }
+}
+@keyframes reveal-reverse {
+    from {
+        -webkit-mask-position: 0 center;
+        mask-position: 0 center;
+    }
+    to {
+        -webkit-mask-position: 140% center;
+        mask-position: 140% center;
+    }
+}
+@-webkit-keyframes reveal {
+    from { -webkit-mask-position: 140% center; }
+    to { -webkit-mask-position: 0 center; }
+}
+@keyframes reveal {
+    from {
+        -webkit-mask-position: 140% center;
+        mask-position: 140% center;
+    }
+    to {
+        -webkit-mask-position: 0 center;
+        mask-position: 0 center;
+    }
+}
+
+
+.rays-watermark {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    opacity: 0.3;
+
+    -webkit-mask: repeating-conic-gradient(#000 0% 2.5%, transparent 0% 5%);
+    mask: repeating-conic-gradient(#000 0% 2.5%, transparent 0% 5%);
+
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-size: 100%;
+    mask-size: 100%;
+
+    background-image: radial-gradient(circle, #a6a6a6, #737373);
+}
+.rays-watermark:hover {
+    -webkit-animation:spin 1s ease-out forwards;
+    -moz-animation:spin 1s ease-out forwards;
+    animation:spin 1s ease-out forwards;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(90deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(90deg); } }
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(90deg);
+        transform:rotate(90deg);
+    }
+}
+
+/*
+Bottom right for halftone
+ */
+.br {
+    bottom: -100%;
+    position: absolute;
+    right: -100%;
+    left: auto;
+    top: auto;
+    transform: skew(-15deg);
+    height: 200%;
+    width: 200%;
+}
+
+
+
+/* ********* Circle waves *********** */
+.drop-circle-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.drop-circle-container {
+    position: relative;
+    width: 100%;
+    padding-top: 100%; /* 1:1 Aspect Ratio */
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.drop-circle:not(.delay1) {opacity: 0;}
+
+.drop-circle-container:hover .delay1 {
+    -webkit-animation: waves 2.5s linear;
+    animation: waves 2.5s linear;
+    -webkit-animation-delay: 0.1s;
+    animation-delay: 0.1s;
+}
+.drop-circle-container:hover .delay2 {
+    -webkit-animation: waves 2.5s linear 0.7s forwards;
+    animation: waves 2.5s linear 0.7s forwards;
+}
+.drop-circle-container:hover .delay3 {
+    -webkit-animation: waves 2.5s linear 1.3s forwards;
+    animation: waves 2.5s linear 1.3s forwards;
+}
+.drop-circle-container:hover .delay4 {
+    -webkit-animation: waves 2.5s linear 1.9s forwards;
+    animation: waves 2.5s linear 1.9s forwards;
+}
+
+.drop-circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 60%;
+    width: 60%;
+
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.2);
+
+    margin: auto;
+    transition: 5s ease;
+}
+
+@-webkit-keyframes waves {
+    0% {
+        -moz-transform: scale(1);
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 0;
+    }
+    10% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        -moz-transform: scale(4);
+        -webkit-transform: scale(4);
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+
+/* ************ RADIAL SPEED ************ */
+.radial-speed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+
+    background: url("assets/radial-speed.svg") no-repeat center center;
+    background-size: 350%;
+    transition: background-size .3s linear;
+}
+.panel:hover .radial-speed {
+    background-size: 150%;
+}
+
+
+
+/* ************ STARS WATERMARK ************ */
+.stars-watermark {
+    position: absolute;
+    top: -25%;
+    left: -25%;
+    width: 150%;
+    height: 150%;
+    opacity: 0.3;
+
+    background: url("assets/star.svg") repeat center center;
+    background-size: 8%;
+    transform: rotateZ(-15deg);
+    transition: translate .3s linear;
+}
+.panel:hover .stars-watermark {
+    translate: 20px;
+}
+
+/* ************ HALF CIRCLE STARS ************ */
+.half-circle {
+    border-radius: 50% 50% 0 0;
+    border: 30px solid #ffd93d;
+    background-color: white;
+
+    height: 120%;
+    width: 120%;
+    border-bottom: 0;
+    position: absolute;
+    left: 50%;
+    margin-left: -60%;
+    top: 35%;
+}
+.half-circle:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    border-radius: 50%;
+    background: url("assets/radial-speed.svg") no-repeat 50% 0 white;
+    background-size: cover;
+}
+
+.stars-in-half-circle {
+    position: absolute;
+    left: 43%;
+    transform: rotate(-2deg);
+    height: 30%;
+    width: 100%;
+    top: -5px;
+}
+.stars-in-half-circle div {
+    height: 220%;
+    position: absolute;
+    width: 25px;
+    left: 0;
+    top: -28px;
+    transform-origin: bottom center;
+}
+.stars-in-half-circle img {
+    fill: white;
+}
+.stars-in-half-circle :nth-child(1) {transform: rotate(-10deg);}
+.stars-in-half-circle :nth-child(2) {transform: rotate(-30deg);}
+.stars-in-half-circle :nth-child(2) img {transform: rotate(3deg);}
+.stars-in-half-circle :nth-child(3) {transform: rotate(-50deg);}
+.stars-in-half-circle :nth-child(3) img {transform: rotate(4deg);}
+.stars-in-half-circle :nth-child(4) {transform: rotate(-70deg);}
+.stars-in-half-circle :nth-child(4) img {transform: rotate(15deg);}
+.stars-in-half-circle :nth-child(5) {transform: rotate(-90deg);}
+.stars-in-half-circle :nth-child(6) {transform: rotate(10deg);}
+.stars-in-half-circle :nth-child(7) {transform: rotate(30deg);}
+.stars-in-half-circle :nth-child(7) img {transform: rotate(-2deg);}
+.stars-in-half-circle :nth-child(8) {transform: rotate(50deg);}
+.stars-in-half-circle :nth-child(9) {transform: rotate(70deg);}
+.stars-in-half-circle :nth-child(9) img {transform: rotate(-13deg);}
+.stars-in-half-circle :nth-child(10) {transform: rotate(90deg);}
+.stars-in-half-circle :nth-child(10) img {transform: rotate(-12deg);}
+
+
+/* ************ OBLIC STRIPES  ************ */
+.oblic-stripes-watermark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    background-color: #444;
+
+    -webkit-mask-image: url("assets/oblic-stripes.webp");
+    mask-image: url("assets/oblic-stripes.webp");
+    -webkit-mask-repeat: repeat;
+    mask-repeat: repeat;
+    -webkit-mask-position: center center;
+    mask-position: center center;
+    -webkit-mask-size: 100%;
+    mask-size: 100%;
+
+    transition: top .3s linear;
+}
+
+.panel:hover .oblic-stripes-watermark {
+    top: -10%;
+}
