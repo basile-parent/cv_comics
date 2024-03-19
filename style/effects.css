@@ -7,8 +7,8 @@
     height: 100%;
     opacity: 0.3;
 
-    /*-webkit-mask-image: url("assets/halftone.svg");*/
-    /*mask-image: url("assets/halftone.svg") ;*/
+    /*-webkit-mask-image: url("../assets/halftone.svg");*/
+    /*mask-image: url("../assets/halftone.svg") ;*/
     /*-webkit-mask-repeat: no-repeat;*/
     /*mask-repeat: no-repeat;*/
     /*-webkit-mask-position: center;*/
@@ -17,13 +17,13 @@
     /*mask-size: 100%;*/
 
     /*background-image: radial-gradient(circle, #a6a6a6, #737373);*/
-    background: url("assets/halftone.svg") no-repeat center center;
+    background: url("../assets/halftone.svg") no-repeat center center;
     background-size: 80%;
 }
 
 .revealing {
-    -webkit-mask-image: url("assets/revealing-mask.svg");
-    mask-image: url("assets/revealing-mask.svg");
+    -webkit-mask-image: url("../assets/revealing-mask.svg");
+    mask-image: url("../assets/revealing-mask.svg");
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
     -webkit-mask-position: 140% center;
@@ -207,7 +207,7 @@ Bottom right for halftone
     height: 100%;
     opacity: 0.3;
 
-    background: url("assets/radial-speed.svg") no-repeat center center;
+    background: url("../assets/radial-speed.svg") no-repeat center center;
     background-size: 350%;
     transition: background-size .3s linear;
 }
@@ -226,7 +226,7 @@ Bottom right for halftone
     height: 150%;
     opacity: 0.3;
 
-    background: url("assets/star.svg") repeat center center;
+    background: url("../assets/star.svg") repeat center center;
     background-size: 8%;
     transform: rotateZ(-15deg);
     transition: translate .3s linear;
@@ -259,7 +259,7 @@ Bottom right for halftone
     height: 100%;
     opacity: 0.6;
     border-radius: 50%;
-    background: url("assets/radial-speed.svg") no-repeat 50% 0 white;
+    background: url("../assets/radial-speed.svg") no-repeat 50% 0 white;
     background-size: cover;
 }
 
@@ -310,8 +310,8 @@ Bottom right for halftone
     opacity: 0.3;
     background-color: #444;
 
-    -webkit-mask-image: url("assets/oblic-stripes.png");
-    mask-image: url("assets/oblic-stripes.png");
+    -webkit-mask-image: url("../assets/oblic-stripes.png");
+    mask-image: url("../assets/oblic-stripes.png");
     -webkit-mask-repeat: repeat;
     mask-repeat: repeat;
     -webkit-mask-position: center center;

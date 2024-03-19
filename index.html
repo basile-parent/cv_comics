@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="panel.css">
-    <link rel="stylesheet" href="bubble.css">
-    <link rel="stylesheet" href="halftone.css">
-    <link rel="stylesheet" href="effects.css">
+    <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="style/card.css">
+    <link rel="stylesheet" href="style/cover.css">
+    <link rel="stylesheet" href="style/page.css">
+    <link rel="stylesheet" href="style/panel.css">
+    <link rel="stylesheet" href="style/bubble.css">
+    <link rel="stylesheet" href="style/halftone.css">
+    <link rel="stylesheet" href="style/effects.css">
     <title>CV</title>
 </head>
 <body>
@@ -19,106 +22,123 @@
 
     <h1 class="sr-only">CV de Basile Parent</h1>
 
-    <button id="presentation" class="panel" aria-labelledby="presentation-label">
-        <h2 id="presentation-label" class="text top-left">Présentation</h2>
+    <button id="cover" class="page">
+        <span class="flip-card">
+            <span class="flip-card-inner">
+                <span class="flip-card-front">
+                    <img src="assets/cover-example.jpg" alt="Page de couverture" />
+                </span>
+                <span class="flip-card-back">
 
-        <div class="panel-container">
-            <div class="radial-speed"></div>
-        </div>
-
-        <img src="assets/portrait.png" class="portrait" alt="" />
-        <p class="bubble outside-top-right arrow-to-left">Cliquez sur une case pour avoir le détail</p>
+                </span>
+            </span>
+        </span>
     </button>
 
-    <button id="skills" class="panel" aria-labelledby="skills-label experience-label">
-        <div class="panel-container">
-            <div class="halftone-watermark revealing"></div>
-        </div>
+    <section id="categories" class="page">
+        <button id="presentation" class="panel" aria-labelledby="presentation-label">
+            <h2 id="presentation-label" class="text top-left">Présentation</h2>
 
-        <img src="assets/bubble-1.svg" class="bubble-icon" alt="" />
-        <img src="assets/brain.png" class="brain-icon" alt="" />
-
-        <h2 id="skills-label" class="text top-right">Compétences</h2>
-        <h2 id="experience-label" class="text bottom-left">Expériences</h2>
-    </button>
-
-    <button id="certificates" class="panel" aria-labelledby="diploma-label certif-label">
-        <div class="panel-container">
-            <div class="stars-watermark"></div>
-        </div>
-
-        <img src="assets/bubble-2.svg" class="bubble-icon" alt="" />
-        <img src="assets/certificate.png" class="certificate-icon" alt="" />
-
-        <h2 id="diploma-label" class="text top-left">Diplômes</h2>
-        <h2 id="certif-label" class="text bottom-right">Certifications</h2>
-    </button>
-
-    <button id="talks" class="panel" aria-labelledby="formations-label talks-label">
-        <div class="panel-container">
-            <div class="oblic-stripes-watermark"></div>
-
-            <img src="assets/mic.svg" class="talk-img" alt="" />
-        </div>
-
-<!--        <div class="half-circle">-->
-<!--            <div class="stars-in-half-circle">-->
-<!--                <div><img src="assets/star.svg" class="star" alt="" /></div>-->
-<!--                <div><img src="assets/star.svg" class="star" alt="" /></div>-->
-<!--                <div><img src="assets/star.svg" class="star" alt="" /></div>-->
-<!--                <div><img src="assets/star.svg" class="star" alt="" /></div>-->
-<!--                <div><img src="assets/star.svg" class="star" alt="" /></div>-->
-<!--                <div><img src="assets/star.svg" class="star" alt="" /></div>-->
-<!--                <div><img src="assets/star.svg" class="star" alt="" /></div>-->
-<!--                <div><img src="assets/star.svg" class="star" alt="" /></div>-->
-<!--                <div><img src="assets/star.svg" class="star" alt="" /></div>-->
-<!--                <div><img src="assets/star.svg" class="star" alt="" /></div>-->
-<!--            </div>-->
-<!--        </div>-->
-
-        <h2 id="formations-label" class="text top-right">Formations</h2>
-        <h2 id="talks-label" class="text bottom-left">Talks</h2>
-
-<!--        <div class="drop-circle-wrapper">-->
-<!--            <div class="drop-circle-container">-->
-<!--                <div class="drop-circle delay1"></div>-->
-<!--                <div class="drop-circle delay2"></div>-->
-<!--                <div class="drop-circle delay3"></div>-->
-<!--            </div>-->
-<!--        </div>-->
-
-    </button>
-
-    <button id="hobbies" class="panel" aria-labelledby="hobbies-label projects-label">
-        <div class="panel-container">
-            <div class="halftone-watermark br"></div>
-        </div>
-
-        <div id="mixing-bowl">
-            <img src="assets/bowl-back.svg" class="bowl bowl-back" alt="" />
-            <div class="notebook" aria-hidden="true">
-                <img src="assets/notebook.svg" alt="" />
-                <span>LSF</span>
+            <div class="panel-container">
+                <div class="radial-speed"></div>
             </div>
-            <img src="assets/whisk.svg" class="whisk" alt="" />
-            <img src="assets/shoe.png" class="shoe" alt="" />
-            <img src="assets/black_belt.svg" class="belt" alt="" />
-            <img src="assets/bowl-front.svg" class="bowl bowl-front" alt="" />
-        </div>
 
-        <h2 id="hobbies-label" class="text top-left">Hobbies</h2>
-        <h2 id="projects-label" class="text bottom-right">Projets perso</h2>
-    </button>
+            <img src="assets/portrait.png" class="portrait" alt="" />
+            <p class="bubble outside-top-right arrow-to-left">Cliquez sur une case pour avoir le détail</p>
+        </button>
 
-    <button id="contact" class="panel" aria-labelledby="contact-label">
-        <div class="panel-container">
-            <div class="rays-watermark"></div>
-        </div>
+        <button id="skills" class="panel" aria-labelledby="skills-label experience-label">
+            <div class="panel-container">
+                <div class="halftone-watermark revealing"></div>
+            </div>
 
-        <img src="assets/handshake.svg" class="handshake" alt="" />
+            <img src="assets/bubble-1.svg" class="bubble-icon" alt="" />
+            <img src="assets/brain.png" class="brain-icon" alt="" />
 
-        <h2 id="contact-label" class="text top-right">Contact</h2>
-    </button>
+            <h2 id="skills-label" class="text top-right">Compétences</h2>
+            <h2 id="experience-label" class="text bottom-left">Expériences</h2>
+        </button>
+
+        <button id="certificates" class="panel" aria-labelledby="diploma-label certif-label">
+            <div class="panel-container">
+                <div class="stars-watermark"></div>
+            </div>
+
+            <img src="assets/bubble-2.svg" class="bubble-icon" alt="" />
+            <img src="assets/certificate.png" class="certificate-icon" alt="" />
+
+            <h2 id="diploma-label" class="text top-left">Diplômes</h2>
+            <h2 id="certif-label" class="text bottom-right">Certifications</h2>
+        </button>
+
+        <button id="talks" class="panel" aria-labelledby="formations-label talks-label">
+            <div class="panel-container">
+                <div class="oblic-stripes-watermark"></div>
+
+                <img src="assets/mic.svg" class="talk-img" alt="" />
+            </div>
+
+            <!--        <div class="half-circle">-->
+            <!--            <div class="stars-in-half-circle">-->
+            <!--                <div><img src="assets/star.svg" class="star" alt="" /></div>-->
+            <!--                <div><img src="assets/star.svg" class="star" alt="" /></div>-->
+            <!--                <div><img src="assets/star.svg" class="star" alt="" /></div>-->
+            <!--                <div><img src="assets/star.svg" class="star" alt="" /></div>-->
+            <!--                <div><img src="assets/star.svg" class="star" alt="" /></div>-->
+            <!--                <div><img src="assets/star.svg" class="star" alt="" /></div>-->
+            <!--                <div><img src="assets/star.svg" class="star" alt="" /></div>-->
+            <!--                <div><img src="assets/star.svg" class="star" alt="" /></div>-->
+            <!--                <div><img src="assets/star.svg" class="star" alt="" /></div>-->
+            <!--                <div><img src="assets/star.svg" class="star" alt="" /></div>-->
+            <!--            </div>-->
+            <!--        </div>-->
+
+            <h2 id="formations-label" class="text top-right">Formations</h2>
+            <h2 id="talks-label" class="text bottom-left">Talks</h2>
+
+            <!--        <div class="drop-circle-wrapper">-->
+            <!--            <div class="drop-circle-container">-->
+            <!--                <div class="drop-circle delay1"></div>-->
+            <!--                <div class="drop-circle delay2"></div>-->
+            <!--                <div class="drop-circle delay3"></div>-->
+            <!--            </div>-->
+            <!--        </div>-->
+
+        </button>
+
+        <button id="hobbies" class="panel" aria-labelledby="hobbies-label projects-label">
+            <div class="panel-container">
+                <div class="halftone-watermark br"></div>
+            </div>
+
+            <div id="mixing-bowl">
+                <img src="assets/bowl-back.svg" class="bowl bowl-back" alt="" />
+                <div class="notebook" aria-hidden="true">
+                    <img src="assets/notebook.svg" alt="" />
+                    <span>LSF</span>
+                </div>
+                <img src="assets/whisk.svg" class="whisk" alt="" />
+                <img src="assets/shoe.png" class="shoe" alt="" />
+                <img src="assets/black_belt.svg" class="belt" alt="" />
+                <img src="assets/bowl-front.svg" class="bowl bowl-front" alt="" />
+            </div>
+
+            <h2 id="hobbies-label" class="text top-left">Hobbies</h2>
+            <h2 id="projects-label" class="text bottom-right">Projets perso</h2>
+        </button>
+
+        <button id="contact" class="panel" aria-labelledby="contact-label">
+            <div class="panel-container">
+                <div class="rays-watermark"></div>
+            </div>
+
+            <img src="assets/handshake.svg" class="handshake" alt="" />
+
+            <h2 id="contact-label" class="text top-right">Contact</h2>
+        </button>
+    </section>
+
+    <script src="js/cover.js"></script>
 
 </main>
 </body>
