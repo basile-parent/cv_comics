@@ -44,7 +44,6 @@ body:before {
 button {
     font-family: "Comic Sans", cursive;
     border-radius: 5px;
-    transition: outline 1s linear;
     background: none;
     border: none;
     padding: 0;
@@ -66,6 +65,8 @@ button:hover, button:focus {
     height: 675px;
     border: 1px solid grey;
     box-shadow: 5px 5px 15px #444;
-
-    /*backface-visibility: hidden;*/
+}
+.page.flipped, .page:has(.flipped) {
+    box-shadow: none;
+    border: none;
 }
