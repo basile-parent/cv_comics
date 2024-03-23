@@ -1,0 +1,13 @@
+#talks-page h2:before {
+    content: " ";
+    position: absolute;
+    top: -20px;
+    left: -10px;
+    height: 62px;
+    width: 62px;
+    background: url("../assets/talks.png") no-repeat lightcoral bottom center;
+    background-size: contain;
+    border: 3px solid black;
+
+    transform: skew(15deg);
+}
