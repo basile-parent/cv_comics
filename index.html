@@ -39,7 +39,7 @@
         <!--        </span>-->
         <!--    </button>-->
 
-        <section id="cover" class="page active">
+        <section id="cover" class="page flipped">
             <div class="front">
                 <button>
                     <img src="assets/cover-example.jpg" alt="Page de couverture"/>
@@ -51,108 +51,140 @@
         </section>
 
 
-        <section id="summary" class="page">
+        <section id="summary" class="page active">
             <div class="front">
-                <button id="presentation" class="panel" aria-labelledby="presentation-label">
-                    <h2 id="presentation-label" class="text top-left">Présentation</h2>
+                <h2 class="text">Sommaire</h2>
 
-                    <div class="panel-container">
-                        <div class="radial-speed"></div>
-                    </div>
+                <ul class="categories">
+                    <li id="presentation" class="panel">
+                        <button aria-labelledby="presentation-label">
+                            <span id="presentation-label" class="text top-left">Présentation</span>
 
-                    <img src="assets/portrait.png" class="portrait" alt=""/>
-                    <p class="bubble outside-top-right arrow-to-left">Cliquez sur une case pour avoir le détail</p>
-                </button>
+                            <div class="panel-container">
+                                <div class="radial-speed"></div>
+                            </div>
 
-                <button id="skills" class="panel" aria-labelledby="skills-label experience-label">
-                    <div class="panel-container">
-                        <div class="halftone-watermark revealing"></div>
-                    </div>
+                            <img src="assets/portrait.png" class="portrait" alt=""/>
+                            <p class="bubble outside-top-right arrow-to-left">Cliquez sur une case pour avoir le
+                                détail</p>
+                        </button>
+                    </li>
 
-                    <img src="assets/bubble-1.svg" class="bubble-icon" alt=""/>
-                    <img src="assets/brain.png" class="brain-icon" alt=""/>
+                    <li id="skills" class="panel">
+                        <button aria-labelledby="skills-label experience-label">
+                            <div class="panel-container">
+                                <img src="assets/puff-1.png" class="puff-icon puff1-icon" alt=""/>
+                                <img src="assets/puff-2.png" class="puff-icon puff2-icon" alt=""/>
+                                <img src="assets/puff-3.png" class="puff-icon puff3-icon" alt=""/>
+                                <img src="assets/puff-4.png" class="puff-icon puff4-icon" alt=""/>
+                                <img src="assets/puff-4.png" class="puff-icon puff5-icon" alt=""/>
+                            </div>
 
-                    <h2 id="skills-label" class="text top-right">Compétences</h2>
-                    <h2 id="experience-label" class="text bottom-left">Expériences</h2>
-                </button>
+                            <img src="assets/brain.png" class="brain-icon" alt=""/>
 
-                <button id="certificates" class="panel" aria-labelledby="diploma-label certif-label">
-                    <div class="panel-container">
-                        <div class="stars-watermark"></div>
-                    </div>
+                            <span id="skills-label" class="text top-right">Compétences</span>
+                            <span id="experience-label" class="text bottom-left">Expériences</span>
+                        </button>
+                    </li>
 
-                    <img src="assets/bubble-2.svg" class="bubble-icon" alt=""/>
-                    <img src="assets/certificate.png" class="certificate-icon" alt=""/>
+                    <li id="certificates" class="panel">
+                        <button aria-labelledby="diploma-label certif-label">
+                            <div class="panel-container">
+                                <div class="stars-watermark"></div>
+                            </div>
 
-                    <h2 id="diploma-label" class="text top-left">Diplômes</h2>
-                    <h2 id="certif-label" class="text bottom-right">Certifications</h2>
-                </button>
+                            <div class="bubble-certification">
+                                <img src="assets/bubble-2.svg" class="bubble-icon" alt=""/>
+                                <img src="assets/certificate.png" class="certificate-icon" alt=""/>
+                            </div>
 
-                <button id="talks" class="panel" aria-labelledby="formations-label talks-label">
-                    <div class="panel-container">
-                        <div class="oblic-stripes-watermark"></div>
+                            <span id="diploma-label" class="text top-left">Diplômes</span>
+                            <span id="certif-label" class="text bottom-right">Certifications</span>
+                        </button>
+                    </li>
 
-                        <img src="assets/mic.svg" class="talk-img" alt=""/>
-                    </div>
+                    <li id="talks" class="panel wm-revealing">
+                        <button aria-labelledby="formations-label talks-label">
 
-                    <!--        <div class="half-circle">-->
-                    <!--            <div class="stars-in-half-circle">-->
-                    <!--                <div><img src="assets/star.svg" class="star" alt="" /></div>-->
-                    <!--                <div><img src="assets/star.svg" class="star" alt="" /></div>-->
-                    <!--                <div><img src="assets/star.svg" class="star" alt="" /></div>-->
-                    <!--                <div><img src="assets/star.svg" class="star" alt="" /></div>-->
-                    <!--                <div><img src="assets/star.svg" class="star" alt="" /></div>-->
-                    <!--                <div><img src="assets/star.svg" class="star" alt="" /></div>-->
-                    <!--                <div><img src="assets/star.svg" class="star" alt="" /></div>-->
-                    <!--                <div><img src="assets/star.svg" class="star" alt="" /></div>-->
-                    <!--                <div><img src="assets/star.svg" class="star" alt="" /></div>-->
-                    <!--                <div><img src="assets/star.svg" class="star" alt="" /></div>-->
-                    <!--            </div>-->
-                    <!--        </div>-->
+                            <!--        <div class="half-circle">-->
+                            <!--            <div class="stars-in-half-circle">-->
+                            <!--                <div><img src="assets/star.svg" class="star" alt="" /></div>-->
+                            <!--                <div><img src="assets/star.svg" class="star" alt="" /></div>-->
+                            <!--                <div><img src="assets/star.svg" class="star" alt="" /></div>-->
+                            <!--                <div><img src="assets/star.svg" class="star" alt="" /></div>-->
+                            <!--                <div><img src="assets/star.svg" class="star" alt="" /></div>-->
+                            <!--                <div><img src="assets/star.svg" class="star" alt="" /></div>-->
+                            <!--                <div><img src="assets/star.svg" class="star" alt="" /></div>-->
+                            <!--                <div><img src="assets/star.svg" class="star" alt="" /></div>-->
+                            <!--                <div><img src="assets/star.svg" class="star" alt="" /></div>-->
+                            <!--                <div><img src="assets/star.svg" class="star" alt="" /></div>-->
+                            <!--            </div>-->
+                            <!--        </div>-->
 
-                    <h2 id="formations-label" class="text top-right">Formations</h2>
-                    <h2 id="talks-label" class="text bottom-left">Talks</h2>
+                            <div class="panel-container">
+                                <!--                        <div class="oblic-stripes-watermark"></div>-->
+                                <div class="halftone-watermark"></div>
+                            </div>
 
-                    <!--        <div class="drop-circle-wrapper">-->
-                    <!--            <div class="drop-circle-container">-->
-                    <!--                <div class="drop-circle delay1"></div>-->
-                    <!--                <div class="drop-circle delay2"></div>-->
-                    <!--                <div class="drop-circle delay3"></div>-->
-                    <!--            </div>-->
-                    <!--        </div>-->
+                            <div class="talk-mic">
+                                <img src="assets/bubble-1.svg" class="bubble-icon" alt=""/>
+                                <div class="talk-img-wrapper">
+                                    <img src="assets/mic.svg" class="talk-img" alt=""/>
+                                </div>
+                            </div>
 
-                </button>
+                            <span id="formations-label" class="text top-right">Formations</span>
+                            <span id="talks-label" class="text bottom-left">Talks</span>
 
-                <button id="hobbies" class="panel" aria-labelledby="hobbies-label projects-label">
-                    <div class="panel-container">
-                        <div class="halftone-watermark br"></div>
-                    </div>
+                            <!--        <div class="drop-circle-wrapper">-->
+                            <!--            <div class="drop-circle-container">-->
+                            <!--                <div class="drop-circle delay1"></div>-->
+                            <!--                <div class="drop-circle delay2"></div>-->
+                            <!--                <div class="drop-circle delay3"></div>-->
+                            <!--            </div>-->
+                            <!--        </div>-->
 
-                    <div id="mixing-bowl">
-                        <img src="assets/bowl-back.svg" class="bowl bowl-back" alt=""/>
-                        <div class="notebook" aria-hidden="true">
-                            <img src="assets/notebook.svg" alt=""/>
-                            <span>LSF</span>
-                        </div>
-                        <img src="assets/whisk.svg" class="whisk" alt=""/>
-                        <img src="assets/shoe.png" class="shoe" alt=""/>
-                        <img src="assets/black_belt.svg" class="belt" alt=""/>
-                        <img src="assets/bowl-front.svg" class="bowl bowl-front" alt=""/>
-                    </div>
+                        </button>
+                    </li>
 
-                    <h2 id="hobbies-label" class="text top-left">Hobbies</h2>
-                    <h2 id="projects-label" class="text bottom-right">Projets perso</h2>
-                </button>
+                    <li id="hobbies" class="panel">
+                        <button aria-labelledby="hobbies-label projects-label">
+                            <div class="panel-container">
+                                <div class="halftone-watermark br"></div>
+                            </div>
 
-                <button id="contact" class="panel" aria-labelledby="contact-label">
-                    <div class="panel-container">
-                        <div class="rays-watermark"></div>
-                    </div>
+                            <div id="mixing-bowl">
+                                <img src="assets/bowl-back.svg" class="bowl bowl-back" alt=""/>
+                                <div class="notebook" aria-hidden="true">
+                                    <img src="assets/notebook.svg" alt=""/>
+                                    <span>LSF</span>
+                                </div>
+                                <img src="assets/whisk.svg" class="whisk" alt=""/>
+                                <img src="assets/shoe.png" class="shoe" alt=""/>
+                                <img src="assets/black_belt.svg" class="belt" alt=""/>
+                                <img src="assets/bowl-front.svg" class="bowl bowl-front" alt=""/>
+                            </div>
 
-                    <img src="assets/handshake.svg" class="handshake" alt=""/>
+                            <span id="hobbies-label" class="text top-left">Hobbies</span>
+                            <span id="projects-label" class="text bottom-right">Projets perso</span>
+                        </button>
+                    </li>
 
-                    <h2 id="contact-label" class="text top-right">Contact</h2>
-                </button>
+                    <li id="contact" class="panel">
+                        <button aria-labelledby="contact-label">
+                            <div class="panel-container">
+                                <div class="rays-watermark"></div>
+                            </div>
+
+                            <div class="panel-container">
+                                <img src="assets/handshake.png" class="handshake" alt=""/>
+                            </div>
+
+                            <span id="contact-label" class="text top-right">Contact</span>
+                        </button>
+                    </li>
+                </ul>
+
             </div>
             <div class="back">
                 BAAAAAAACK
