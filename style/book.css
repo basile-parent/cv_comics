@@ -64,3 +64,80 @@
 .page.flipped:last-of-type {
     z-index: 1;
 }
+
+/* ************************************************
+**************   PAGE ORGANIZATION   **************
+*************************************************** */
+.page .front.page-with-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.page .front.page-with-content header {
+    height: 75px;
+}
+.page .front.page-with-content .page-content {
+    flex: 1;
+}
+.page .front.page-with-content footer {
+    height: 75px;
+}
+
+.page .front.page-with-content header h2 {
+    position: relative;
+    text-align: center;
+    background: white;
+    border: 3px solid black;
+    margin: 30px 15px;
+    transform: skew(-15deg);
+}
+
+.page .front.page-with-content nav.page-navigation {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.page .front.page-with-content nav.page-navigation button {
+    position: relative;
+    flex: 0 1 33%;
+    height: 70%;
+    margin: 10px;
+    color: #000000;
+}
+
+.page .front.page-with-content nav.page-navigation button.prev-page-button {
+    background: url("../assets/arrow-to-left.png") no-repeat center left;
+    background-size: contain;
+}
+
+.page .front.page-with-content nav.page-navigation button.next-page-button {
+    background: url("../assets/arrow-to-right.png") no-repeat center right;
+    background-size: contain;
+}
+
+.page .front.page-with-content nav.page-navigation button {
+    font-size: 1rem;
+}
+
+.page .front.page-with-content nav.page-navigation .bubble {
+    pointer-events: none;
+    opacity: 0;
+    transition: .3s opacity ease;
+}
+
+.page .front.page-with-content nav.page-navigation button:hover .bubble,
+.page .front.page-with-content nav.page-navigation button:focus .bubble {
+    opacity: 1;
+}
+
+.page .front.page-with-content nav.page-navigation button.prev-page-button .bubble {
+    top: -65px;
+    left: 15%;
+}
+
+.page .front.page-with-content nav.page-navigation button.next-page-button .bubble {
+    top: -65px;
+    right: 15%;
+}

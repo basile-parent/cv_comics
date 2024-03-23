@@ -56,6 +56,6 @@ button {
     cursor: pointer;
 }
 
-button:hover, button:focus {
+button:focus {
     outline: 3px solid black;
 }

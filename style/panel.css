@@ -42,30 +42,36 @@
     z-index: 20;
 }
 
+.skew {
+    transform: skew(-15deg);
+    display: block;
+}
+
+.unskew {
+    transform: skew(15deg);
+    display: block;
+}
+
 .text.top-left {
     left: -6px;
     position: absolute;
     top: -5px;
-    transform: skew(-15deg);
 }
 
 .text.top-right {
     top: -5px;
     position: absolute;
     right: -6px;
-    transform: skew(-15deg);
 }
 
 .text.bottom-left {
     left: -6px;
     position: absolute;
     bottom: -5px;
-    transform: skew(-15deg);
 }
 
 .text.bottom-right {
     bottom: -5px;
     position: absolute;
     right: -6px;
-    transform: skew(-15deg);
 }

@@ -13,6 +13,7 @@
 
 .bubble.top-left {top: 0; left: 0;}
 .bubble.outside-top-left {top: -25px; right: 75%;}
+.bubble.outside-top-center {top: -25px; left: 50%;}
 .bubble.top-right {top: 0; right: 0;}
 .bubble.outside-top-right {top: -25px; left: 75%;}
 

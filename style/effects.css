@@ -91,7 +91,7 @@
     background-image: radial-gradient(circle, #a6a6a6, #737373);
 }
 
-.panel:hover                     .rays-watermark, button:focus .rays-watermark {
+.panel:hover .rays-watermark, button:focus .rays-watermark {
     -webkit-animation:spin 1s ease-out forwards;
     -moz-animation:spin 1s ease-out forwards;
     animation:spin 1s ease-out forwards;
