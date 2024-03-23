@@ -5,7 +5,7 @@
     transform: translate(-50%, -50%);
 
     width: 500px;
-    height: 700px;
+    height: 710px;
 
     perspective: 1000px;
 }
@@ -30,10 +30,11 @@
     transform: translateZ(-1px);
     transform-style: preserve-3d;
     transform-origin: left center;
+    border: 1px solid #AAAAAA;
 }
 
-.front,
-.back {
+.page .front,
+.page .back {
     position: absolute;
     top: 0;
     left: 0;
@@ -44,12 +45,14 @@
 
     backface-visibility: hidden;
 }
-.front {
+.page .front {
     background: #F6F6F6;
 }
-.back {
+.page .back {
     transform: rotateY(180deg);
+    background: #d6d6d6;
     background: linear-gradient(to bottom right, #FFFFFF, #d6d6d6);
+    z-index: 15;
 }
 
 .page.active {
