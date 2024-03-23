@@ -83,31 +83,3 @@ function initPageIndex() {
 }
 
 initPageIndex()
-
-goToPage("presentation-page")
-
-// function initPages() {
-//     // $(".page").click((e) => {
-//     //     if (e.currentTarget.classList.contains("active")) {
-//     //         nextPage()
-//     //     } else {
-//     //         prevPage()
-//     //     }
-//     // })
-//
-//     // $("button#cover").click(() => {
-//     //     console.log("click")
-//     //     // $("button#cover .flip-card").toggleClass("flipped")
-//     //     //
-//     //     // const isFlipped = document.querySelector("button#cover .flip-card").classList.contains("flipped")
-//     //     // $("button#cover .flip-card").attr("aria-hidden", isFlipped + "")
-//     //     // $("button#cover").attr("tabindex", isFlipped ? "-1" : "0")
-//     //     //
-//     //     // // Set the focus on the first clickable button
-//     //     // $("#summary-page button:first-of-type").trigger("focus")
-//     //
-//     //     nextPage()
-//     // })
-// }
-//
-// initPages()

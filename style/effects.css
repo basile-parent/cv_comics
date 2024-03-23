@@ -7,16 +7,6 @@
     height: 100%;
     opacity: 0.3;
 
-    /*-webkit-mask-image: url("../assets/halftone.svg");*/
-    /*mask-image: url("../assets/halftone.svg") ;*/
-    /*-webkit-mask-repeat: no-repeat;*/
-    /*mask-repeat: no-repeat;*/
-    /*-webkit-mask-position: center;*/
-    /*mask-position: center;*/
-    /*-webkit-mask-size: 100%;*/
-    /*mask-size: 100%;*/
-
-    /*background-image: radial-gradient(circle, #a6a6a6, #737373);*/
     background: url("../assets/halftone.svg") no-repeat center center;
     background-size: 80%;
 }
@@ -120,85 +110,6 @@ Bottom right for halftone
     width: 200%;
 }
 
-
-
-/* ********* Circle waves *********** */
-.drop-circle-wrapper {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-.drop-circle-container {
-    position: relative;
-    width: 100%;
-    padding-top: 100%; /* 1:1 Aspect Ratio */
-    overflow: hidden;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.drop-circle:not(.delay1) {opacity: 0;}
-
-.panel:hover .drop-circle-container .delay1, button:focus .drop-circle-container .delay1 {
-    -webkit-animation: waves 2.5s linear;
-    animation: waves 2.5s linear;
-    -webkit-animation-delay: 0.1s;
-    animation-delay: 0.1s;
-}
-.panel:hover .drop-circle-container .delay2, button:focus .drop-circle-container:focus .delay2 {
-    -webkit-animation: waves 2.5s linear 0.7s forwards;
-    animation: waves 2.5s linear 0.7s forwards;
-}
-.panel:hover .drop-circle-container .delay3, button:focus .drop-circle-container:focus .delay3 {
-    -webkit-animation: waves 2.5s linear 1.3s forwards;
-    animation: waves 2.5s linear 1.3s forwards;
-}
-.panel:hover .drop-circle-container .delay4, button:focus .drop-circle-container:focus .delay4 {
-    -webkit-animation: waves 2.5s linear 1.9s forwards;
-    animation: waves 2.5s linear 1.9s forwards;
-}
-
-.drop-circle {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    height: 60%;
-    width: 60%;
-
-    border-radius: 50%;
-    background: rgba(0, 0, 0, 0.2);
-
-    margin: auto;
-    transition: 5s ease;
-}
-
-@-webkit-keyframes waves {
-    0% {
-        -moz-transform: scale(1);
-        -webkit-transform: scale(1);
-        transform: scale(1);
-        opacity: 0;
-    }
-    10% {
-        transform: scale(1);
-        opacity: 1;
-    }
-    100% {
-        -moz-transform: scale(4);
-        -webkit-transform: scale(4);
-        transform: scale(4);
-        opacity: 0;
-    }
-}
-
-
 /* ************ RADIAL SPEED ************ */
 .radial-speed {
     position: absolute;
@@ -215,7 +126,6 @@ Bottom right for halftone
 .panel:hover .radial-speed, button:focus .radial-speed {
     background-size: 150%;
 }
-
 
 
 /* ************ STARS WATERMARK ************ */
@@ -236,93 +146,3 @@ Bottom right for halftone
     translate: 20px;
 }
 
-/* ************ HALF CIRCLE STARS ************ */
-.half-circle {
-    border-radius: 50% 50% 0 0;
-    border: 30px solid #ffd93d;
-    background-color: white;
-
-    height: 120%;
-    width: 120%;
-    border-bottom: 0;
-    position: absolute;
-    left: 50%;
-    margin-left: -60%;
-    top: 35%;
-}
-.half-circle:before {
-    content: ' ';
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.6;
-    border-radius: 50%;
-    background: url("../assets/radial-speed.svg") no-repeat 50% 0 white;
-    background-size: cover;
-}
-
-.stars-in-half-circle {
-    position: absolute;
-    left: 43%;
-    transform: rotate(-2deg);
-    height: 30%;
-    width: 100%;
-    top: -5px;
-}
-.stars-in-half-circle div {
-    height: 220%;
-    position: absolute;
-    width: 25px;
-    left: 0;
-    top: -28px;
-    transform-origin: bottom center;
-}
-.stars-in-half-circle img {
-    fill: white;
-}
-.stars-in-half-circle :nth-child(1) {transform: rotate(-10deg);}
-.stars-in-half-circle :nth-child(2) {transform: rotate(-30deg);}
-.stars-in-half-circle :nth-child(2) img {transform: rotate(3deg);}
-.stars-in-half-circle :nth-child(3) {transform: rotate(-50deg);}
-.stars-in-half-circle :nth-child(3) img {transform: rotate(4deg);}
-.stars-in-half-circle :nth-child(4) {transform: rotate(-70deg);}
-.stars-in-half-circle :nth-child(4) img {transform: rotate(15deg);}
-.stars-in-half-circle :nth-child(5) {transform: rotate(-90deg);}
-.stars-in-half-circle :nth-child(6) {transform: rotate(10deg);}
-.stars-in-half-circle :nth-child(7) {transform: rotate(30deg);}
-.stars-in-half-circle :nth-child(7) img {transform: rotate(-2deg);}
-.stars-in-half-circle :nth-child(8) {transform: rotate(50deg);}
-.stars-in-half-circle :nth-child(9) {transform: rotate(70deg);}
-.stars-in-half-circle :nth-child(9) img {transform: rotate(-13deg);}
-.stars-in-half-circle :nth-child(10) {transform: rotate(90deg);}
-.stars-in-half-circle :nth-child(10) img {transform: rotate(-12deg);}
-
-
-/* ************ OBLIC STRIPES  ************ */
-.oblic-stripes-watermark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.3;
-    background-color: #444;
-
-    -webkit-mask-image: url("../assets/oblic-stripes.png");
-    mask-image: url("../assets/oblic-stripes.png");
-    -webkit-mask-repeat: repeat;
-    mask-repeat: repeat;
-    -webkit-mask-position: center center;
-    mask-position: center center;
-    -webkit-mask-size: 100%;
-    mask-size: 100%;
-
-    transition: top .3s linear;
-}
-
-.panel:hover .oblic-stripes-watermark, button:focus .oblic-stripes-watermark {
-    top: -10%;
-}
