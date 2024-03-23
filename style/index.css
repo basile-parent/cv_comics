@@ -54,19 +54,3 @@ button {
 button:hover, button:focus {
     outline: 3px solid black;
 }
-
-.page {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    width: 500px;
-    height: 675px;
-    border: 1px solid grey;
-    box-shadow: 5px 5px 15px #444;
-}
-.page.flipped, .page:has(.flipped) {
-    box-shadow: none;
-    border: none;
-}
