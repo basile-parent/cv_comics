@@ -1,9 +1,193 @@
-#cover-page button span {
-    display: block;
-}
-
-#cover-page button,  #cover-page button img {
+#cover-page button {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
+    z-index: 0;
+    color: transparent;
 }
 
+#cover-page #cover-container {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, darkblue, #00002f);
+}
+
+#cover-page #cover-container * {
+    pointer-events: none;
+}
+
+#cover-page #cover-container h1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 100%;
+    z-index: 15;
+
+    font-family: Badaboom, "Comic_book_bold", "Comic Sans", cursive;
+    font-size: 4rem;
+    font-weight: normal;
+    margin: 0;
+    text-align: center;
+
+    color: #ffb900;
+    /*background: -webkit-linear-gradient(yellow, orange);*/
+    /*-webkit-background-clip: text;*/
+    /*-webkit-text-fill-color: transparent;*/
+
+    filter: drop-shadow(-5px 5px 0px #818181);
+    -webkit-text-stroke: 1px black;
+    letter-spacing: 2px;
+}
+
+
+#cover-page #cover-container article {
+    filter: drop-shadow(-3px 3px 3px #000000);
+}
+
+#cover-page #cover-container article .section-border {
+    display: inline-block;
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+    background-color: #262626;
+}
+
+#cover-page #cover-container article .section-border > .section-content {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+}
+
+#cover-page #cover-container article .section-content .section-background {
+    position: absolute;
+    top: -3%;
+    left: -3%;
+    width: 110%;
+    height: 110%;
+}
+
+#cover-page #cover-container article .section-content .section-punchline {
+    position: absolute;
+    z-index: 15;
+    font-size: 1.3rem;
+}
+
+/* ************* DEVELOPER PANEL ************* */
+#cover-page #cover-container article#cover-dev-section {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    height: 30%;
+    width: 90%;
+    z-index: 10;
+}
+
+#cover-page #cover-container article#cover-dev-section .section-border,
+#cover-page #cover-container article#cover-dev-section .section-border > .section-content {
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% calc(100% - 50px));
+}
+
+#cover-page #cover-container article#cover-dev-section .section-content .section-background {
+    background: url("../assets/room.jpg") no-repeat center center;
+    background-size: cover;
+}
+
+#cover-page #cover-container article#cover-dev-section .section-content .section-character {
+    position: absolute;
+    bottom: -10px;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: url("../assets/dev.png") no-repeat bottom center;
+    background-size: contain;
+}
+
+#cover-page #cover-container article#cover-dev-section .section-content .section-punchline {
+    top: 5%;
+    left: 2%;
+}
+
+/* ************* TEACHER PANEL ************* */
+#cover-page #cover-container article#cover-teacher-section {
+    position: absolute;
+    top: 35%;
+    left: 5%;
+    height: 32%;
+    width: 90%;
+    z-index: 10;
+}
+#cover-page #cover-container article#cover-teacher-section .section-border,
+#cover-page #cover-container article#cover-teacher-section .section-border > .section-content{
+    clip-path: polygon(0 0, 100% calc(0% + 50px), 100% calc(100% - 30px), 0% 100%);
+}
+
+#cover-page #cover-container article#cover-teacher-section .section-border > .section-content {
+    background: linear-gradient(to top, #0a0aff, #0000c0);
+}
+
+#cover-page #cover-container article#cover-teacher-section .section-content .section-background {
+    background: url("../assets/public.jpg") no-repeat top center;
+    background-size: cover;
+    filter: blur(1px);
+}
+
+#cover-page #cover-container article#cover-teacher-section .section-content .section-character {
+    position: absolute;
+    bottom: -10px;
+    left: 10%;
+    width: 50%;
+    height: 90%;
+    background: url("../assets/speaker.png") no-repeat left center;
+    background-size: contain;
+}
+
+#cover-page #cover-container article#cover-teacher-section .section-content .section-punchline {
+    top: 25%;
+    right: 5%;
+}
+
+/* ************* SPECIALIST PANEL ************* */
+#cover-page #cover-container article#cover-specialist-section {
+    position: absolute;
+    top: 65%;
+    left: 5%;
+    height: 30%;
+    width: 90%;
+    z-index: 10;
+}
+#cover-page #cover-container article#cover-specialist-section .section-border,
+#cover-page #cover-container article#cover-specialist-section .section-border > .section-content {
+    clip-path: polygon(0 calc(0% + 30px), 100% 0, 100% 100%, 0% 100%);
+}
+
+#cover-page #cover-container article#cover-specialist-section .section-border > .section-content {
+    background: linear-gradient(to top, #0a0aff, #0000c0);
+}
+
+#cover-page #cover-container article#cover-specialist-section .section-content .section-background {
+    background: url("../assets/city.jpg") no-repeat top center;
+    background-size: cover;
+}
+
+#cover-page #cover-container article#cover-specialist-section .section-content .section-character {
+    position: absolute;
+    bottom: -10px;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: url("../assets/super-deaf.png") no-repeat right center;
+    background-size: contain;
+    transform: rotateZ(-5deg);
+}
+
+#cover-page #cover-container article#cover-specialist-section .section-content .section-punchline {
+    top: 20%;
+    left: 2%;
+}

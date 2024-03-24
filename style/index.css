@@ -8,10 +8,11 @@ html, body {
     color: black;
 
     overflow: hidden;
+    font-family: "Comic_book_regular", "Comic Sans", cursive;
 }
 
 body:before {
-    content: ' ';
+    content: " ";
     position: absolute;
     left: 0;
     top: 0;
@@ -45,7 +46,7 @@ ul, li {
 }
 
 button {
-    font-family: "Comic Sans", cursive;
+    font-family: "Comic_book_regular", "Comic Sans", cursive;
     background: none;
     border: none;
     padding: 0;
@@ -53,6 +54,44 @@ button {
     cursor: pointer;
 }
 
-button:focus {
-    outline: 3px solid black;
+
+@font-face {
+    font-family: "Comic_book_regular";
+    src: url("fonts/comic_book-webfont.woff2") format("woff2"),
+    url("fonts/comic_book-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Comic_book_bold_italic";
+    src: url("fonts/comic_book_bold_italic-webfont.woff2") format("woff2"),
+    url("fonts/comic_book_bold_italic-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Comic_book_bold";
+    src: url("fonts/comic_book_bold-webfont.woff2") format("woff2"),
+    url("fonts/comic_book_bold-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Comic_book_italic";
+    src: url("fonts/comic_book_italic-webfont.woff2") format("woff2"),
+    url("fonts/comic_book_italic-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: "Badaboom";
+    src: url("fonts/badabb__-webfont.woff2") format("woff2"),
+    url("fonts/badabb__-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
 }

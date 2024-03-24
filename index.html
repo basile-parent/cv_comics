@@ -29,11 +29,43 @@
     <div class="book">
         <section id="cover-page" class="page active first">
             <div class="front">
-                <h1 class="sr-only" tabindex="-1">Basile Parent</h1>
-
                 <button onClick="nextPage()">
-                    <img src="assets/cover-example.jpg" alt="Page de couverture" draggable="false"/>
+                    Aller au sommaire
                 </button>
+
+                <div id="cover-container">
+                    <header>
+                        <h1 tabindex="-1" id="text3d"><span data-heading="Basile Parent">Basile Parent</span></h1>
+                    </header>
+
+                    <article id="cover-dev-section">
+                        <span class="section-border">
+                            <span class="section-content">
+                                <span class="section-background"></span>
+                                <span class="section-character"></span>
+                                <span class="text section-punchline">Développeur web</span>
+                            </span>
+                        </span>
+                    </article>
+                    <article id="cover-teacher-section">
+                        <span class="section-border">
+                            <span class="section-content">
+                                <span class="section-background"></span>
+                                <span class="section-character"></span>
+                                <span class="text section-punchline">Formateur</span>
+                            </span>
+                        </span>
+                    </article>
+                    <article id="cover-specialist-section">
+                        <span class="section-border">
+                            <span class="section-content">
+                                <span class="section-background"></span>
+                                <span class="section-character"></span>
+                                <span class="text section-punchline">Spécialiste accessibilité</span>
+                            </span>
+                        </span>
+                    </article>
+                </div>
             </div>
             <div class="back" aria-hidden="true">
                 BAAAAAAACK
@@ -198,7 +230,8 @@
                         <button class="prev-page-button" onClick="prevPage()">
                             <span class="bubble arrow-to-left">Page précédente</span>
                         </button>
-                        <button class="go-to-summary-button" onClick="goToPage('summary-page')">Retour au sommaire</button>
+                        <button class="go-to-summary-button" onClick="goToPage('summary-page')">Retour au sommaire
+                        </button>
                         <button class="next-page-button" onClick="nextPage()">
                             <span class="bubble arrow-to-right">Page suivante</span>
                         </button>
