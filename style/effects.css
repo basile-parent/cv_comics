@@ -7,7 +7,7 @@
     height: 100%;
     opacity: 0.3;
 
-    background: url("../assets/halftone.svg") no-repeat center center;
+    background: url("../assets/halftone.png") no-repeat center center;
     background-size: 80%;
 }
 
@@ -119,7 +119,7 @@ Bottom right for halftone
     height: 100%;
     opacity: 0.3;
 
-    background: url("../assets/radial-speed.svg") no-repeat center center;
+    background: url("../assets/radial-speed.png") no-repeat center center;
     background-size: 350%;
     transition: background-size .3s linear;
 }
