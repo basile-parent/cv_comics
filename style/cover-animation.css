@@ -1,0 +1,220 @@
+
+/* ************* HEADER ************* */
+#cover-page.animated #cover-container header {
+    animation: reveal-header 1s ease-out forwards;
+    top: -50%;
+}
+
+@keyframes reveal-header { 100% { top: 0; } }
+
+/* ************* GLOBAL CONTAINER ************* */
+#cover-page.animated #cover-container article#cover-dev-section,
+#cover-page.animated #cover-container article#cover-specialist-section,
+#cover-page.animated #cover-container article#cover-teacher-section {
+    animation: reveal-container .5s ease-out forwards;
+    animation-delay: 1.5s;
+}
+
+#cover-page.animated #cover-container article#cover-dev-section,
+#cover-page.animated #cover-container article#cover-specialist-section {
+    left: 150%;
+}
+
+#cover-page.animated #cover-container article#cover-teacher-section {
+    left: -150%;
+}
+
+@keyframes reveal-container { 100% { left: 5%; } }
+
+
+/* ************* BACKGROUND ************* */
+#cover-page.animated #cover-container article .background-lightning {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../assets/lightning_1.png") no-repeat top center;
+    background-size: 400px 630px;
+    opacity: 0;
+    animation: lightning-strike-main 2.5s ease-out forwards;
+    animation-delay: 2.5s;
+}
+
+@keyframes lightning-strike-main {
+    10% { opacity: 0; }
+    15% { opacity: 1; }
+    25% { opacity: 1; }
+    40% { opacity: 0; }
+}
+
+
+#cover-page.animated #cover-container article .background-lightning:before,
+#cover-page.animated #cover-container article .background-lightning:after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 400px 630px;
+    opacity: 0;
+}
+#cover-page.animated #cover-container article .background-lightning:before {
+    background: url("../assets/lightning_2.png") no-repeat;
+    background-size: 400px 630px;
+    animation: lightning-strike-sub-1 2.5s ease-out forwards;
+    animation-delay: 2.5s;
+}
+
+#cover-page.animated #cover-container article .background-lightning:after {
+    background: url("../assets/lightning_3.png") no-repeat;
+    background-size: 400px 630px;
+    animation: lightning-strike-sub-2 2.5s ease-out forwards;
+    animation-delay: 2.5s;
+}
+
+@keyframes lightning-strike-sub-1 {
+    15% { opacity: 0; }
+    20% { opacity: 1; }
+    40% { opacity: 0; }
+}
+
+@keyframes lightning-strike-sub-2 {
+    20% { opacity: 0; }
+    25% { opacity: 1; }
+    40% { opacity: 0; }
+}
+
+#cover-page.animated #cover-container article#cover-dev-section .background-lightning,
+#cover-page.animated #cover-container article#cover-dev-section .background-lightning:before,
+#cover-page.animated #cover-container article#cover-dev-section .background-lightning:after {
+    background-position: 0 0;
+}
+
+#cover-page.animated #cover-container article#cover-teacher-section .background-lightning {
+    background-position: 0 -240px;
+}
+#cover-page.animated #cover-container article#cover-teacher-section .background-lightning:before,
+#cover-page.animated #cover-container article#cover-teacher-section .background-lightning:after {
+    background-position: 0 -185px;
+}
+
+#cover-page.animated #cover-container article#cover-specialist-section .background-lightning {
+    background-position: 0 -440px;
+}
+#cover-page.animated #cover-container article#cover-specialist-section .background-lightning:before,
+#cover-page.animated #cover-container article#cover-specialist-section .background-lightning:after {
+    background-position: 0 -400px;
+}
+
+
+#cover-page.animated #cover-container .super-deaf-blur {
+    position: absolute;
+    top: 10%;
+    left: -30%;
+    width: 30px;
+    height: 200px;
+    transform: rotateZ(115deg);
+    background: url("../assets/super-deaf-blur.png") no-repeat center center;
+    background-size: cover;
+}
+#cover-page.animated #cover-container article#cover-teacher-section .super-deaf-blur {
+    animation: super-deaf-fly-panel-1 .5s ease-out forwards;
+    animation-delay: 3.5s;
+}
+#cover-page.animated #cover-container article#cover-specialist-section .super-deaf-blur {
+    animation: super-deaf-fly-panel-2 .5s ease-out forwards;
+    animation-delay: 3.6s;
+}
+
+@keyframes super-deaf-fly-panel-1 {
+    0% { top: -20%; left: -30%; }
+    100% { top: 180%; left: 150%; }
+}
+@keyframes super-deaf-fly-panel-2 {
+    0% { top: -20%; left: 60%; }
+    100% { top: 180%; left: 240%; }
+}
+
+#cover-page.animated #cover-container article .section-background {
+    opacity: 0;
+    animation: reveal-background 3.5s ease-in forwards;
+    animation-delay: 4.5s;
+}
+
+#cover-page #cover-container article .section-border > .section-content {
+    animation: lightning-background 2.5s ease-out forwards;
+    animation-delay: 2.5s;
+}
+@keyframes reveal-background {
+    100% { opacity: 1 }
+}
+@keyframes lightning-background {
+    0% { background-color: #00002f; }
+    10% { background-color: #00002f; }
+    15% { background-color: #ebebff; }
+    20% { background-color: #6767ff; }
+    25% { background-color: #ebebff; }
+    30% { background-color: #000000; }
+    60% { background-color: #00002f; }
+}
+
+/* ************* CHARACTER & PUNCHLINE ************* */
+#cover-page.animated #cover-container article#cover-dev-section .section-character {
+    right: -50%;
+    animation: reveal-dev-character .5s ease-out forwards;
+}
+#cover-page.animated #cover-container article#cover-dev-section .section-character,
+#cover-page.animated #cover-container article#cover-dev-section .section-punchline {
+    animation-delay: 7.5s;
+}
+#cover-page.animated #cover-container article#cover-teacher-section .section-character,
+#cover-page.animated #cover-container article#cover-teacher-section .section-punchline {
+    animation-delay: 9s;
+}
+#cover-page.animated #cover-container article#cover-specialist .section-character,
+#cover-page.animated #cover-container article#cover-specialist .section-punchline {
+    animation-delay: 11s;
+}
+
+#cover-page.animated #cover-container article#cover-teacher-section .section-character {
+    left: -50%;
+    animation: reveal-teacher-character .5s ease-out forwards;
+}
+
+#cover-page.animated #cover-container article#cover-specialist-section .section-character {
+    right: -50%;
+    animation: reveal-dev-character .5s ease-out forwards;
+}
+
+@keyframes reveal-dev-character { 100% { right: 0;} }
+@keyframes reveal-teacher-character { 100% { left: 10%;} }
+
+
+#cover-page.animated #cover-container article#cover-dev-section .section-punchline,
+#cover-page.animated #cover-container article#cover-specialist-section .section-punchline {
+    left: -75%;
+    animation: reveal-left-punchline .5s ease-out forwards;
+}
+
+#cover-page.animated #cover-container article#cover-teacher-section .section-punchline {
+    right: -75%;
+    animation: reveal-right-punchline .5s ease-out forwards;
+}
+
+@keyframes reveal-left-punchline { 100% { left: 2%;} }
+@keyframes reveal-right-punchline { 100% { right: 5%;} }
+
+#cover-page.animated #cover-container article#cover-dev-section .section-character,
+#cover-page.animated #cover-container article#cover-dev-section .section-punchline {
+    animation-delay: 7s;
+}
+#cover-page.animated #cover-container article#cover-teacher-section .section-character,
+#cover-page.animated #cover-container article#cover-teacher-section .section-punchline {
+    animation-delay: 8s;
+}
+#cover-page.animated #cover-container article#cover-specialist-section .section-character,
+#cover-page.animated #cover-container article#cover-specialist-section .section-punchline {
+    animation-delay: 9s;
+}

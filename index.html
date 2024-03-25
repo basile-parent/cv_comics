@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="style/effects.css">
 
     <link rel="stylesheet" href="style/cover.css">
+    <link rel="stylesheet" href="style/cover-animation.css">
     <link rel="stylesheet" href="style/summary.css">
     <link rel="stylesheet" href="style/presentation.css">
     <link rel="stylesheet" href="style/skills.css">
@@ -27,7 +28,7 @@
 
 <main class="scene">
     <div class="book">
-        <section id="cover-page" class="page active first">
+        <section id="cover-page" class="page active first animated">
             <div class="front">
                 <button onClick="nextPage()">
                     Aller au sommaire
@@ -35,13 +36,16 @@
 
                 <div id="cover-container">
                     <header>
-                        <h1 tabindex="-1" id="text3d"><span data-heading="Basile Parent">Basile Parent</span></h1>
+                        <h1 tabindex="-1" id="text3d">Basile Parent</h1>
                     </header>
 
                     <article id="cover-dev-section">
                         <span class="section-border">
                             <span class="section-content">
                                 <span class="section-background"></span>
+                                <span class="section-background-animations">
+                                    <span class="background-lightning"></span>
+                                </span>
                                 <span class="section-character"></span>
                                 <span class="text section-punchline">Développeur web</span>
                             </span>
@@ -51,6 +55,11 @@
                         <span class="section-border">
                             <span class="section-content">
                                 <span class="section-background"></span>
+                                <span class="section-background-animations">
+                                    <span class="background-lightning"></span>
+                                    <span class="super-deaf-blur"></span>
+                                </span>
+
                                 <span class="section-character"></span>
                                 <span class="text section-punchline">Formateur</span>
                             </span>
@@ -60,6 +69,10 @@
                         <span class="section-border">
                             <span class="section-content">
                                 <span class="section-background"></span>
+                                <span class="section-background-animations">
+                                    <span class="background-lightning"></span>
+                                    <span class="super-deaf-blur"></span>
+                                </span>
                                 <span class="section-character"></span>
                                 <span class="text section-punchline">Spécialiste accessibilité</span>
                             </span>

@@ -1,3 +1,7 @@
+#cover-page .front {
+    overflow: hidden;
+}
+
 #cover-page button {
     position: absolute;
     top: 0;
@@ -19,24 +23,27 @@
     pointer-events: none;
 }
 
-#cover-page #cover-container h1 {
+#cover-page #cover-container header {
     position: absolute;
     top: 0;
     left: 0;
-    height: 50px;
+    height: 70px;
     width: 100%;
     z-index: 15;
+}
 
+#cover-page #cover-container header h1 {
     font-family: Badaboom, "Comic_book_bold", "Comic Sans", cursive;
     font-size: 4rem;
     font-weight: normal;
+    line-height: 70px;
     margin: 0;
     text-align: center;
 
-    color: #ffb900;
-    /*background: -webkit-linear-gradient(yellow, orange);*/
-    /*-webkit-background-clip: text;*/
-    /*-webkit-text-fill-color: transparent;*/
+    /*color: #ffb900;*/
+    background: -webkit-linear-gradient(yellow, orange);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 
     filter: drop-shadow(-5px 5px 0px #818181);
     -webkit-text-stroke: 1px black;
@@ -45,7 +52,7 @@
 
 
 #cover-page #cover-container article {
-    filter: drop-shadow(-3px 3px 3px #000000);
+    /*filter: drop-shadow(-3px 3px 3px #000000);*/
 }
 
 #cover-page #cover-container article .section-border {
@@ -54,7 +61,7 @@
     height: 100%;
     width: 100%;
 
-    background-color: #262626;
+    background-color: #4f4f4f;
 }
 
 #cover-page #cover-container article .section-border > .section-content {
@@ -63,9 +70,10 @@
     left: 2px;
     width: calc(100% - 4px);
     height: calc(100% - 4px);
+    background: #00002f;
 }
 
-#cover-page #cover-container article .section-content .section-background {
+#cover-page #cover-container article .section-border > .section-content .section-background {
     position: absolute;
     top: -3%;
     left: -3%;
@@ -128,10 +136,6 @@
     clip-path: polygon(0 0, 100% calc(0% + 50px), 100% calc(100% - 30px), 0% 100%);
 }
 
-#cover-page #cover-container article#cover-teacher-section .section-border > .section-content {
-    background: linear-gradient(to top, #0a0aff, #0000c0);
-}
-
 #cover-page #cover-container article#cover-teacher-section .section-content .section-background {
     background: url("../assets/public.jpg") no-repeat top center;
     background-size: cover;
@@ -165,10 +169,6 @@
 #cover-page #cover-container article#cover-specialist-section .section-border,
 #cover-page #cover-container article#cover-specialist-section .section-border > .section-content {
     clip-path: polygon(0 calc(0% + 30px), 100% 0, 100% 100%, 0% 100%);
-}
-
-#cover-page #cover-container article#cover-specialist-section .section-border > .section-content {
-    background: linear-gradient(to top, #0a0aff, #0000c0);
 }
 
 #cover-page #cover-container article#cover-specialist-section .section-content .section-background {
