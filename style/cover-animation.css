@@ -120,19 +120,19 @@
     background-size: cover;
 }
 #cover-page.animated #cover-container article#cover-teacher-section .super-deaf-blur {
-    animation: super-deaf-fly-panel-1 .5s ease-out forwards;
+    animation: super-deaf-fly-panel-2 .5s ease-out forwards;
     animation-delay: 3.5s;
 }
 #cover-page.animated #cover-container article#cover-specialist-section .super-deaf-blur {
-    animation: super-deaf-fly-panel-2 .5s ease-out forwards;
+    animation: super-deaf-fly-panel-3 .5s ease-out forwards;
     animation-delay: 3.6s;
 }
 
-@keyframes super-deaf-fly-panel-1 {
+@keyframes super-deaf-fly-panel-2 {
     0% { top: -20%; left: -30%; }
     100% { top: 180%; left: 150%; }
 }
-@keyframes super-deaf-fly-panel-2 {
+@keyframes super-deaf-fly-panel-3 {
     0% { top: -20%; left: 60%; }
     100% { top: 180%; left: 240%; }
 }

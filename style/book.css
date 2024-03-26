@@ -10,6 +10,23 @@
     perspective: 1000px;
 }
 
+@media (orientation: portrait) and (max-width: 500px),
+        (orientation: landscape) and (max-height: 700px) {
+    .scene {
+        top: 0;
+        left: 0;
+        transform: none;
+
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .page {
+        overflow: auto;
+        background: #F6F6F6;
+    }
+}
+
 .book {
     position: relative;
     width: 100%;
