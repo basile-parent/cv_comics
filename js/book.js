@@ -2,7 +2,6 @@ var currentPageIndex = 0
 var allPages = {}
 
 function prevPage() {
-    console.log("prev")
     if ($(".active").hasClass("first")) {
         return;
     }
@@ -55,15 +54,15 @@ async function goToPage(pageId) {
     }
     const delta = pageIndex - currentPageIndex
     if (delta > 0) {
+        vocalizePageTitle()
         while (currentPageIndex < pageIndex) {
             await timedPagination(nextPageFlip)
         }
-        vocalizePageTitle()
     } else if (delta < 0) {
+        vocalizePageTitle()
         while (currentPageIndex > pageIndex) {
             await timedPagination(prevPageFlip)
         }
-        vocalizePageTitle()
     }
 }
 

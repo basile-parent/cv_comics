@@ -1,0 +1,34 @@
+@media (orientation: portrait) and (max-width: 500px),
+(orientation: landscape) and (max-height: 700px) {
+    .scene {
+        top: 0;
+        left: 0;
+        transform: none;
+
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .page {
+        overflow: auto;
+        background: #F6F6F6;
+        z-index: 0;
+        border: 1px solid #3d3d3d;
+
+        transition: .7s ease-out transform;
+    }
+
+    .page,
+    .page.flipped:last-of-type,
+    .page.active {
+        z-index: 0;
+    }
+
+    .page.flipped {
+        transform: translateX(-150%);
+    }
+
+    .page.active {
+        transform: none;
+    }
+}
