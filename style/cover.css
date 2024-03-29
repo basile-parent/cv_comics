@@ -46,6 +46,9 @@
     filter: drop-shadow(-5px 5px 0px #818181);
     -webkit-text-stroke: 1px black;
     letter-spacing: 2px;
+
+    /* Should not display outline as it's not an interactive element */
+    outline: 0;
 }
 
 
@@ -192,6 +195,10 @@
 
 
 /* ************* BUBBLE ************* */
+#cover-page:not(.hinted) .bubble {
+    display: none;
+}
+
 #cover-page .bubble {
     top: -85px;
     left: 80%;

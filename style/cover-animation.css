@@ -224,7 +224,7 @@
 }
 
 /* ************* BUBBLE ************* */
-#cover-page.animated .bubble {
+#cover-page.hinted.animated .bubble {
     opacity: 0;
     animation: cover-bubble-reveal .5s ease-out forwards, bubble-pulse 3s linear infinite;
     animation-delay: 12s;

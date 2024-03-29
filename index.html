@@ -31,7 +31,7 @@
 
 <main class="scene">
     <div class="book">
-        <section id="cover-page" class="page active first animated">
+        <section id="cover-page" class="page active first animated hinted">
             <div class="front">
                 <button onClick="nextPage()">
                     Aller au sommaire
@@ -95,113 +95,122 @@
 
         <section id="summary-page" class="page">
             <div class="front">
-                <h2 class="text" tabindex="-1"><span class="unskew">Sommaire</span></h2>
+                <nav aria-label="Navigation vers la page de garde" class="return-to-front-page-navigation">
+                    <button onClick="prevPage()">
+                        <span class="bubble outside-bottom-right arrow-to-top-left">Retour à la page d'accueil</span>
+                    </button>
+                </nav>
 
-                <ul class="categories">
-                    <li id="presentation" class="panel">
-                        <button aria-labelledby="presentation-label" onClick="goToPage('presentation-page')">
-                            <span id="presentation-label" class="text skew top-left">Présentation</span>
+                <h2 id="summary-title" class="text" tabindex="-1"><span class="unskew">Sommaire</span></h2>
 
-                            <div class="panel-container">
-                                <div class="radial-speed"></div>
-                            </div>
+                <nav aria-labelledby="summary-title" class="summary-navigation">
+                    <ul class="categories">
+                        <li id="presentation" class="panel">
+                            <button aria-labelledby="presentation-label" onClick="goToPage('presentation-page')">
+                                <span id="presentation-label" class="text skew top-left">Présentation</span>
 
-                            <img src="assets/portrait.png" class="portrait" alt=""/>
-
-                            <p class="bubble outside-top-right arrow-to-left" aria-hidden="true">Cliquez sur une case pour avoir le
-                                détail</p>
-                        </button>
-                    </li>
-
-                    <li id="skills" class="panel">
-                        <button aria-labelledby="skills-label experience-label" onClick="goToPage('skills-page')">
-                            <div class="panel-container">
-                                <img src="assets/puff-1.png" class="puff-icon puff1-icon" alt=""/>
-                                <img src="assets/puff-2.png" class="puff-icon puff2-icon" alt=""/>
-                                <img src="assets/puff-3.png" class="puff-icon puff3-icon" alt=""/>
-                                <img src="assets/puff-4.png" class="puff-icon puff4-icon" alt=""/>
-                                <img src="assets/puff-4.png" class="puff-icon puff5-icon" alt=""/>
-                            </div>
-
-                            <img src="assets/brain.png" class="brain-icon" alt=""/>
-
-                            <span id="skills-label" class="text skew top-right">Compétences</span>
-                            <span id="experience-label" class="text skew bottom-left">Expériences</span>
-                        </button>
-                    </li>
-
-                    <li id="certificates" class="panel">
-                        <button aria-labelledby="diploma-label certif-label" onClick="goToPage('certificates-page')">
-                            <div class="panel-container">
-                                <div class="stars-watermark"></div>
-                            </div>
-
-                            <div class="bubble-certification">
-                                <img src="assets/bubble-2.png" class="bubble-icon" alt=""/>
-                                <img src="assets/certificate.png" class="certificate-icon" alt=""/>
-                            </div>
-
-                            <span id="diploma-label" class="text skew top-left">Diplômes</span>
-                            <span id="certif-label" class="text skew bottom-right">Certifications</span>
-                        </button>
-                    </li>
-
-                    <li id="talks" class="panel wm-revealing">
-                        <button aria-labelledby="formations-label talks-label" onClick="goToPage('talks-page')">
-                            <div class="panel-container">
-                                <div class="halftone-watermark"></div>
-                            </div>
-
-                            <div class="talk-mic">
-                                <img src="assets/bubble-1.png" class="bubble-icon" alt=""/>
-                                <div class="talk-img-container">
-                                    <img src="assets/mic.png" class="talk-img" alt=""/>
+                                <div class="panel-container">
+                                    <div class="radial-speed"></div>
                                 </div>
-                            </div>
 
-                            <span id="formations-label" class="text skew top-right">Formations</span>
-                            <span id="talks-label" class="text skew bottom-left">Talks</span>
-                        </button>
-                    </li>
+                                <img src="assets/portrait.png" class="portrait" alt=""/>
 
-                    <li id="hobbies" class="panel">
-                        <button aria-labelledby="hobbies-label projects-label" onClick="goToPage('hobbies-page')">
-                            <div class="panel-container">
-                                <div class="halftone-watermark br"></div>
-                            </div>
+                                <p class="bubble outside-top-right arrow-to-left" aria-hidden="true">
+                                    Cliquez sur une case pour avoir le détail
+                                </p>
+                            </button>
+                        </li>
 
-                            <div id="mixing-bowl">
-                                <img src="assets/bowl-back.png" class="bowl bowl-back" alt=""/>
-                                <div class="notebook" aria-hidden="true">
-                                    <img src="assets/notebook.png" alt=""/>
-                                    <span>LSF</span>
+                        <li id="skills" class="panel">
+                            <button aria-labelledby="skills-label experience-label" onClick="goToPage('skills-page')">
+                                <div class="panel-container">
+                                    <img src="assets/puff-1.png" class="puff-icon puff1-icon" alt=""/>
+                                    <img src="assets/puff-2.png" class="puff-icon puff2-icon" alt=""/>
+                                    <img src="assets/puff-3.png" class="puff-icon puff3-icon" alt=""/>
+                                    <img src="assets/puff-4.png" class="puff-icon puff4-icon" alt=""/>
+                                    <img src="assets/puff-4.png" class="puff-icon puff5-icon" alt=""/>
                                 </div>
-                                <img src="assets/whisk.png" class="whisk" alt=""/>
-                                <img src="assets/black_belt.png" class="belt" alt=""/>
-                                <img src="assets/shoe.png" class="shoe" alt=""/>
-                                <img src="assets/bowl-front.png" class="bowl bowl-front" alt=""/>
-                            </div>
 
-                            <span id="hobbies-label" class="text skew top-left">Hobbies</span>
-                            <span id="projects-label" class="text skew bottom-right">Projets perso</span>
-                        </button>
-                    </li>
+                                <img src="assets/brain.png" class="brain-icon" alt=""/>
 
-                    <li id="contact" class="panel">
-                        <button aria-labelledby="contact-label" onClick="goToPage('contact-page')">
-                            <div class="panel-container">
-                                <div class="rays-watermark"></div>
-                            </div>
+                                <span id="skills-label" class="text skew top-right">Compétences</span>
+                                <span id="experience-label" class="text skew bottom-left">Expériences</span>
+                            </button>
+                        </li>
 
-                            <div class="panel-container">
-                                <img src="assets/handshake.png" class="handshake" alt=""/>
-                            </div>
+                        <li id="certificates" class="panel">
+                            <button aria-labelledby="diploma-label certif-label"
+                                    onClick="goToPage('certificates-page')">
+                                <div class="panel-container">
+                                    <div class="stars-watermark"></div>
+                                </div>
 
-                            <span id="contact-label" class="text skew top-right">Contact</span>
-                        </button>
-                    </li>
-                </ul>
+                                <div class="bubble-certification">
+                                    <img src="assets/bubble-2.png" class="bubble-icon" alt=""/>
+                                    <img src="assets/certificate.png" class="certificate-icon" alt=""/>
+                                </div>
 
+                                <span id="diploma-label" class="text skew top-left">Diplômes</span>
+                                <span id="certif-label" class="text skew bottom-right">Certifications</span>
+                            </button>
+                        </li>
+
+                        <li id="talks" class="panel wm-revealing">
+                            <button aria-labelledby="formations-label talks-label" onClick="goToPage('talks-page')">
+                                <div class="panel-container">
+                                    <div class="halftone-watermark"></div>
+                                </div>
+
+                                <div class="talk-mic">
+                                    <img src="assets/bubble-1.png" class="bubble-icon" alt=""/>
+                                    <div class="talk-img-container">
+                                        <img src="assets/mic.png" class="talk-img" alt=""/>
+                                    </div>
+                                </div>
+
+                                <span id="formations-label" class="text skew top-right">Formations</span>
+                                <span id="talks-label" class="text skew bottom-left">Talks</span>
+                            </button>
+                        </li>
+
+                        <li id="hobbies" class="panel">
+                            <button aria-labelledby="hobbies-label projects-label" onClick="goToPage('hobbies-page')">
+                                <div class="panel-container">
+                                    <div class="halftone-watermark br"></div>
+                                </div>
+
+                                <div id="mixing-bowl">
+                                    <img src="assets/bowl-back.png" class="bowl bowl-back" alt=""/>
+                                    <div class="notebook" aria-hidden="true">
+                                        <img src="assets/notebook.png" alt=""/>
+                                        <span>LSF</span>
+                                    </div>
+                                    <img src="assets/whisk.png" class="whisk" alt=""/>
+                                    <img src="assets/black_belt.png" class="belt" alt=""/>
+                                    <img src="assets/shoe.png" class="shoe" alt=""/>
+                                    <img src="assets/bowl-front.png" class="bowl bowl-front" alt=""/>
+                                </div>
+
+                                <span id="hobbies-label" class="text skew top-left">Hobbies</span>
+                                <span id="projects-label" class="text skew bottom-right">Projets perso</span>
+                            </button>
+                        </li>
+
+                        <li id="contact" class="panel">
+                            <button aria-labelledby="contact-label" onClick="goToPage('contact-page')">
+                                <div class="panel-container">
+                                    <div class="rays-watermark"></div>
+                                </div>
+
+                                <div class="panel-container">
+                                    <img src="assets/handshake.png" class="handshake" alt=""/>
+                                </div>
+
+                                <span id="contact-label" class="text skew top-right">Contact</span>
+                            </button>
+                        </li>
+                    </ul>
+                </nav>
             </div>
             <div class="back" aria-hidden="true">
                 BAAAAAAACK

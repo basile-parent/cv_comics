@@ -12,10 +12,15 @@
     align-items: center;
 }
 
-#summary-page .front .categories {
+#summary-page .front .summary-navigation {
     flex: 1;
     padding: 20px 2%;
     width: 100%;
+}
+
+#summary-page .front .summary-navigation ul {
+    width: 100%;
+    height: 100%;
 }
 
 #summary-page .front ul, #summary-page .front li {
@@ -29,7 +34,7 @@
     display: inline-block;
     padding: 3px 30px;
     transform: skew(-15deg);
-    width: 70%;
+    width: 60%;
 }
 
 #summary-page button {
@@ -40,6 +45,37 @@
 #summary-page button > span.text {
     font-size: 1rem;
     font-weight: normal;
+}
+
+/* ********** RETURN BUTTON *********** */
+#summary-page nav.return-to-front-page-navigation {
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    width: 15%;
+    height: 40px;
+}
+
+#summary-page nav.return-to-front-page-navigation button {
+    position: relative;
+    display: block;
+    background: url("../assets/arrow-to-left.png") no-repeat center left;
+    background-size: contain;
+}
+
+#summary-page nav.return-to-front-page-navigation button span {
+    bottom: -80px;
+    left: 15%;
+    right: unset;
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+#summary-page nav.return-to-front-page-navigation button:hover span,
+#summary-page nav.return-to-front-page-navigation button:focus span {
+    animation: reveal-return-button .3s forwards;
+}
+@keyframes reveal-return-button {
+    100% { opacity: 1; }
 }
 
 /* *********************************

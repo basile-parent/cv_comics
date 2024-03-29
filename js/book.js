@@ -1,14 +1,16 @@
-var currentPageIndex = 0
-var allPages = {}
-var pageFlipCallbacks = [ initHints ]
+let currentPageIndex = 0
+let allPages = {}
+let pageFlipCallbacks = [ initHints ]
 
 function prevPage() {
     if ($(".active").hasClass("first")) {
         return;
     }
 
-    prevPageFlip()
-    vocalizePageTitle()
+    prevPageFlip();
+    vocalizePageTitle();
+
+    afterFlipCb();
 }
 
 function nextPage() {
@@ -16,9 +18,10 @@ function nextPage() {
         return;
     }
 
-    nextPageFlip()
-    vocalizePageTitle()
-    pageFlipCallbacks.forEach(cbFn => cbFn(currentPageIndex))
+    nextPageFlip();
+    vocalizePageTitle();
+
+    afterFlipCb();
 }
 
 function prevPageFlip() {
@@ -28,6 +31,9 @@ function prevPageFlip() {
         .addClass("active")
         .siblings(".page")
         .removeClass("active");
+
+    updateHash();
+    afterFlipCb();
 
     currentPageIndex--
 }
@@ -41,30 +47,58 @@ function nextPageFlip() {
         .addClass("active")
         .siblings();
 
-    currentPageIndex++
+    currentPageIndex++;
 }
 
-function vocalizePageTitle() {
-    $(".active h1, .active h2").first().focus()
+function afterFlipCb() {
+    updateHash();
+    pageFlipCallbacks.forEach(cbFn => cbFn(currentPageIndex))
+    $("#cover-page").removeClass("animated").removeClass("hinted")
+}
+
+function updateHash() {
+    window.location.hash = "#" + $(".active").attr("id")
+}
+
+async function goToHrefHashPage() {
+    if (!window.location.hash) {
+        return;
+    }
+
+    await goToPage(window.location.hash.substring(1));
+}
+
+function vocalizePageTitle(pageId = undefined) {
+    let selector
+    if (pageId) {
+        selector = `#${ pageId } h1, #${ pageId } h2`
+    } else {
+        selector = ".active h1, .active h2"
+    }
+    $(selector).first().focus()
 }
 
 async function goToPage(pageId) {
-    const pageIndex = allPages[pageId]?.index
-    if (pageIndex === undefined) {
-        console.warn("Trying to paginate to an unexisting page:", pageId)
+    const askedPageIndex = allPages[pageId]?.index
+    if (askedPageIndex === undefined) {
+        console.warn("Trying to paginate to an unexisting page:", askedPageIndex)
         return;
     }
-    const delta = pageIndex - currentPageIndex
+    const delta = askedPageIndex - currentPageIndex
     if (delta > 0) {
-        vocalizePageTitle()
-        while (currentPageIndex < pageIndex) {
+        vocalizePageTitle(pageId)
+        while (askedPageIndex > currentPageIndex) {
             await timedPagination(nextPageFlip)
         }
+
+        afterFlipCb();
     } else if (delta < 0) {
-        vocalizePageTitle()
-        while (currentPageIndex > pageIndex) {
+        vocalizePageTitle(pageId)
+        while (askedPageIndex < currentPageIndex) {
             await timedPagination(prevPageFlip)
         }
+
+        afterFlipCb();
     }
 }
 
@@ -83,4 +117,5 @@ function initPageIndex() {
     })
 }
 
-initPageIndex()
+initPageIndex();
+goToHrefHashPage();
