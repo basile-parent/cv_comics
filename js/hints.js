@@ -19,7 +19,7 @@ const initHints = (currentPageIndex) => {
     }, HINT_INTERVAL);
 
     $("#summary-page .panel").click(cleanHints).hover(cleanHints)
-    $("#summary-page .panel button").on("focus", cleanHints)
+    $("#summary-page .panel a").on("focus", cleanHints)
 
     setTimeout(() => {
         $("#summary-page #presentation .bubble").addClass("hint")

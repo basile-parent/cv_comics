@@ -27,7 +27,7 @@
 
 .wm-revealing:hover .halftone-watermark,
 .wm-revealing.hover .halftone-watermark,
-.wm-revealing button:focus .halftone-watermark {
+.wm-revealing a:focus .halftone-watermark {
     -webkit-animation: reveal 1.5s ease-out forwards;
     -moz-animation: reveal 1.5s ease-out forwards;
     animation: reveal 1.5s ease-out forwards;
@@ -85,7 +85,7 @@
 
 .panel:hover .rays-watermark,
 .panel.hover .rays-watermark,
-button:focus .rays-watermark {
+a:focus .rays-watermark {
     -webkit-animation:spin 1s ease-out forwards;
     -moz-animation:spin 1s ease-out forwards;
     animation:spin 1s ease-out forwards;
@@ -129,7 +129,7 @@ Bottom right for halftone
 }
 .panel:hover .radial-speed,
 .panel.hover .radial-speed,
-button:focus .radial-speed {
+a:focus .radial-speed {
     background-size: 150%;
 }
 
@@ -150,7 +150,7 @@ button:focus .radial-speed {
 }
 .panel:hover .stars-watermark,
 .panel.hover .stars-watermark,
-button:focus .stars-watermark {
+a:focus .stars-watermark {
     translate: 20px;
 }
 

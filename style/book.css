@@ -95,32 +95,43 @@
 }
 
 .page .front.page-with-content nav.page-navigation {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+}
+.page .front.page-with-content nav.page-navigation ul {
     display: flex;
     height: 100%;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
-.page .front.page-with-content nav.page-navigation button {
+.page .front.page-with-content nav.page-navigation li,
+.page .front.page-with-content nav.page-navigation .spacer {
     position: relative;
     flex: 0 1 33%;
     height: 70%;
     margin: 10px;
-    color: #000000;
 }
 
-.page .front.page-with-content nav.page-navigation button.prev-page-button {
+.page .front.page-with-content nav.page-navigation a.prev-page-button {
     background: url("../assets/arrow-to-left.png") no-repeat center left;
     background-size: contain;
 }
 
-.page .front.page-with-content nav.page-navigation button.next-page-button {
+.page .front.page-with-content nav.page-navigation a.next-page-button {
     background: url("../assets/arrow-to-right.png") no-repeat center right;
     background-size: contain;
 }
 
-.page .front.page-with-content nav.page-navigation button {
+.page .front.page-with-content nav.page-navigation a {
+    display: inline-flex;
+    width: 100%;
+    height: 100%;
     font-size: 1rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
 .page .front.page-with-content nav.page-navigation .bubble {
@@ -129,17 +140,17 @@
     transition: .3s opacity ease;
 }
 
-.page .front.page-with-content nav.page-navigation button:hover .bubble,
-.page .front.page-with-content nav.page-navigation button:focus .bubble {
+.page .front.page-with-content nav.page-navigation a:hover .bubble,
+.page .front.page-with-content nav.page-navigation a:focus .bubble {
     opacity: 1;
 }
 
-.page .front.page-with-content nav.page-navigation button.prev-page-button .bubble {
+.page .front.page-with-content nav.page-navigation a.prev-page-button .bubble {
     top: -65px;
     left: 15%;
 }
 
-.page .front.page-with-content nav.page-navigation button.next-page-button .bubble {
+.page .front.page-with-content nav.page-navigation a.next-page-button .bubble {
     top: -65px;
     right: 15%;
 }

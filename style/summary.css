@@ -1,4 +1,10 @@
-#summary-page button:focus {
+#summary-page a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+#summary-page a:focus {
     outline: 5px solid black;
 }
 
@@ -56,22 +62,24 @@
     height: 40px;
 }
 
-#summary-page nav.return-to-front-page-navigation button {
+#summary-page nav.return-to-front-page-navigation a {
     position: relative;
+    height: 100%;
+    width: 100%;
     display: block;
     background: url("../assets/arrow-to-left.png") no-repeat center left;
     background-size: contain;
 }
 
-#summary-page nav.return-to-front-page-navigation button span {
+#summary-page nav.return-to-front-page-navigation a span {
     bottom: -80px;
     left: 15%;
     right: unset;
     opacity: 0;
     transition: opacity .3s ease;
 }
-#summary-page nav.return-to-front-page-navigation button:hover span,
-#summary-page nav.return-to-front-page-navigation button:focus span {
+#summary-page nav.return-to-front-page-navigation a:hover span,
+#summary-page nav.return-to-front-page-navigation a:focus span {
     animation: reveal-return-button .3s forwards;
 }
 @keyframes reveal-return-button {
@@ -146,8 +154,8 @@
 /* *********************************
 *********      SKILLS      *********
 ************************************ */
-#summary-page #skills {
-    display: flex;
+#summary-page #skills a {
+    display: inline-flex;
     align-items: center;
     justify-content: center;
 }
@@ -196,13 +204,13 @@
     transform: rotateZ(-170deg);
 }
 
-#summary-page #skills:hover .puff1-icon, #summary-page #skills.hover .puff1-icon, #summary-page #skills button:focus .puff1-icon { transform: translate(23%, -20%); }
-#summary-page #skills:hover .puff2-icon, #summary-page #skills.hover .puff2-icon, #summary-page #skills button:focus .puff2-icon { transform: translate(-23%, 20%) rotateZ(-10deg); }
-#summary-page #skills:hover .puff3-icon, #summary-page #skills.hover .puff3-icon, #summary-page #skills button:focus .puff3-icon { transform: translate(23%, 20%); }
-#summary-page #skills:hover .puff4-icon, #summary-page #skills.hover .puff4-icon, #summary-page #skills button:focus .puff4-icon { transform: translate(-15%, -20%) rotateZ(-120deg); }
-#summary-page #skills:hover .puff5-icon, #summary-page #skills.hover .puff5-icon, #summary-page #skills button:focus .puff5-icon { transform: translate(-35%, -10%) rotateZ(-170deg); }
+#summary-page #skills:hover .puff1-icon, #summary-page #skills.hover .puff1-icon, #summary-page #skills a:focus .puff1-icon { transform: translate(23%, -20%); }
+#summary-page #skills:hover .puff2-icon, #summary-page #skills.hover .puff2-icon, #summary-page #skills a:focus .puff2-icon { transform: translate(-23%, 20%) rotateZ(-10deg); }
+#summary-page #skills:hover .puff3-icon, #summary-page #skills.hover .puff3-icon, #summary-page #skills a:focus .puff3-icon { transform: translate(23%, 20%); }
+#summary-page #skills:hover .puff4-icon, #summary-page #skills.hover .puff4-icon, #summary-page #skills a:focus .puff4-icon { transform: translate(-15%, -20%) rotateZ(-120deg); }
+#summary-page #skills:hover .puff5-icon, #summary-page #skills.hover .puff5-icon, #summary-page #skills a:focus .puff5-icon { transform: translate(-35%, -10%) rotateZ(-170deg); }
 
-#summary-page #skills:hover .puff-icon, #summary-page #skills.hover .puff-icon, #summary-page #skills button:focus .puff-icon {
+#summary-page #skills:hover .puff-icon, #summary-page #skills.hover .puff-icon, #summary-page #skills a:focus .puff-icon {
     scale: 1.2;
     opacity: 1;
 }
@@ -256,7 +264,7 @@
 
 #summary-page #certificates:hover .certificate-icon,
 #summary-page #certificates.hover .certificate-icon,
-#summary-page #certificates button:focus .certificate-icon {
+#summary-page #certificates a:focus .certificate-icon {
     transform: translate(-33%, -30%) rotateZ(-25deg);
     scale: 1.5;
 }
@@ -298,7 +306,7 @@
 
 #summary-page #talks:hover .talk-mic .talk-img,
 #summary-page #talks.hover .talk-mic .talk-img,
-#summary-page #talks button:focus .talk-mic .talk-img {
+#summary-page #talks a:focus .talk-mic .talk-img {
     scale: 1.15;
     transform: translate(-43%, -20%);
 }
@@ -341,8 +349,8 @@
 #summary-page #hobbies:hover #mixing-bowl .bowl-back,
 #summary-page #hobbies.hover #mixing-bowl .bowl-front,
 #summary-page #hobbies.hover #mixing-bowl .bowl-back,
-#summary-page #hobbies button:focus #mixing-bowl .bowl-front,
-#summary-page #hobbies button:focus #mixing-bowl .bowl-back {
+#summary-page #hobbies a:focus #mixing-bowl .bowl-front,
+#summary-page #hobbies a:focus #mixing-bowl .bowl-back {
     top: 75%;
     left: 15%;
     scale: 1.1;
@@ -350,7 +358,7 @@
 }
 #summary-page #hobbies:hover #mixing-bowl .bowl-back,
 #summary-page #hobbies.hover #mixing-bowl .bowl-back,
-#summary-page #hobbies button:focus #mixing-bowl .bowl-back {
+#summary-page #hobbies a:focus #mixing-bowl .bowl-back {
     left: 12.5%;
     top: 85%;
 }
@@ -364,7 +372,7 @@
 }
 #summary-page #hobbies:hover #mixing-bowl .belt,
 #summary-page #hobbies.hover #mixing-bowl .belt,
-#summary-page #hobbies button:focus #mixing-bowl .belt {
+#summary-page #hobbies a:focus #mixing-bowl .belt {
     top: 55%;
     left: 15%;
     margin-left: -40%;
@@ -382,7 +390,7 @@
 }
 #summary-page #hobbies:hover #mixing-bowl .shoe,
 #summary-page #hobbies.hover #mixing-bowl .shoe,
-#summary-page #hobbies button:focus #mixing-bowl .shoe {
+#summary-page #hobbies a:focus #mixing-bowl .shoe {
     top: 30%;
     left: 10%;
     scale: 1.1;
@@ -408,7 +416,7 @@
 }
 #summary-page #hobbies:hover #mixing-bowl .notebook,
 #summary-page #hobbies.hover #mixing-bowl .notebook,
-#summary-page #hobbies button:focus #mixing-bowl .notebook {
+#summary-page #hobbies a:focus #mixing-bowl .notebook {
     top: -15%;
     left: 30%;
     transform: rotateZ(5deg);
@@ -432,7 +440,7 @@
 }
 #summary-page #hobbies:hover #mixing-bowl .whisk,
 #summary-page #hobbies.hover #mixing-bowl .whisk,
-#summary-page #hobbies button:focus #mixing-bowl .whisk {
+#summary-page #hobbies a:focus #mixing-bowl .whisk {
     scale: 1.3;
     transform: rotateZ(60deg);
     top: 5%;
@@ -455,6 +463,6 @@
 }
 #summary-page #contact:hover .handshake,
 #summary-page #contact.hover .handshake,
-#summary-page #contact button:focus .handshake {
+#summary-page #contact a:focus .handshake {
     scale: 1.2;
 }

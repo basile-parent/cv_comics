@@ -33,9 +33,11 @@
     <div class="book">
         <section id="cover-page" class="page active first animated hinted">
             <div class="front">
-                <button onClick="nextPage()">
-                    Aller au sommaire
-                </button>
+                <nav id="skip-links" aria-label="Liens d'évitement">
+                    <a href="#summary-page">
+                        Aller au sommaire
+                    </a>
+                </nav>
 
                 <div id="cover-container">
                     <header>
@@ -84,7 +86,7 @@
                     </article>
                 </div>
 
-                <p class="bubble outside-top-right arrow-to-left">Cliquez sur la couverture pour voir la suite</p>
+                <p class="bubble outside-top-right arrow-to-left" aria-hidden="true">Cliquez sur la couverture pour voir la suite</p>
 
             </div>
             <div class="back" aria-hidden="true">
@@ -96,9 +98,9 @@
         <section id="summary-page" class="page">
             <div class="front">
                 <nav aria-label="Navigation vers la page de garde" class="return-to-front-page-navigation">
-                    <button onClick="prevPage()">
+                    <a href="#cover-page">
                         <span class="bubble outside-bottom-right arrow-to-top-left">Retour à la page d'accueil</span>
-                    </button>
+                    </a>
                 </nav>
 
                 <h2 id="summary-title" class="text" tabindex="-1"><span class="unskew">Sommaire</span></h2>
@@ -106,7 +108,7 @@
                 <nav aria-labelledby="summary-title" class="summary-navigation">
                     <ul class="categories">
                         <li id="presentation" class="panel">
-                            <button aria-labelledby="presentation-label" onClick="goToPage('presentation-page')">
+                            <a href="#presentation-page" aria-labelledby="presentation-label">
                                 <span id="presentation-label" class="text skew top-left">Présentation</span>
 
                                 <div class="panel-container">
@@ -118,11 +120,11 @@
                                 <p class="bubble outside-top-right arrow-to-left" aria-hidden="true">
                                     Cliquez sur une case pour avoir le détail
                                 </p>
-                            </button>
+                            </a>
                         </li>
 
                         <li id="skills" class="panel">
-                            <button aria-labelledby="skills-label experience-label" onClick="goToPage('skills-page')">
+                            <a href="#skills-page" aria-labelledby="skills-label experience-label">
                                 <div class="panel-container">
                                     <img src="assets/puff-1.png" class="puff-icon puff1-icon" alt=""/>
                                     <img src="assets/puff-2.png" class="puff-icon puff2-icon" alt=""/>
@@ -135,12 +137,11 @@
 
                                 <span id="skills-label" class="text skew top-right">Compétences</span>
                                 <span id="experience-label" class="text skew bottom-left">Expériences</span>
-                            </button>
+                            </a>
                         </li>
 
                         <li id="certificates" class="panel">
-                            <button aria-labelledby="diploma-label certif-label"
-                                    onClick="goToPage('certificates-page')">
+                            <a href="#certificates-page" aria-labelledby="diploma-label certif-label">
                                 <div class="panel-container">
                                     <div class="stars-watermark"></div>
                                 </div>
@@ -152,11 +153,11 @@
 
                                 <span id="diploma-label" class="text skew top-left">Diplômes</span>
                                 <span id="certif-label" class="text skew bottom-right">Certifications</span>
-                            </button>
+                            </a>
                         </li>
 
                         <li id="talks" class="panel wm-revealing">
-                            <button aria-labelledby="formations-label talks-label" onClick="goToPage('talks-page')">
+                            <a href="#talks-page" aria-labelledby="formations-label talks-label">
                                 <div class="panel-container">
                                     <div class="halftone-watermark"></div>
                                 </div>
@@ -170,11 +171,11 @@
 
                                 <span id="formations-label" class="text skew top-right">Formations</span>
                                 <span id="talks-label" class="text skew bottom-left">Talks</span>
-                            </button>
+                            </a>
                         </li>
 
                         <li id="hobbies" class="panel">
-                            <button aria-labelledby="hobbies-label projects-label" onClick="goToPage('hobbies-page')">
+                            <a href="#hobbies-page" aria-labelledby="hobbies-label projects-label">
                                 <div class="panel-container">
                                     <div class="halftone-watermark br"></div>
                                 </div>
@@ -193,11 +194,11 @@
 
                                 <span id="hobbies-label" class="text skew top-left">Hobbies</span>
                                 <span id="projects-label" class="text skew bottom-right">Projets perso</span>
-                            </button>
+                            </a>
                         </li>
 
                         <li id="contact" class="panel">
-                            <button aria-labelledby="contact-label" onClick="goToPage('contact-page')">
+                            <a href="#contact-page" aria-labelledby="contact-label">
                                 <div class="panel-container">
                                     <div class="rays-watermark"></div>
                                 </div>
@@ -207,7 +208,7 @@
                                 </div>
 
                                 <span id="contact-label" class="text skew top-right">Contact</span>
-                            </button>
+                            </a>
                         </li>
                     </ul>
                 </nav>
@@ -224,19 +225,26 @@
                 </header>
 
                 <article class="page-content">
-
+                    <p>Un peu de blabla pour la présentation</p>
                 </article>
 
                 <footer>
-                    <nav aria-label="Navigation de la page" class="page-navigation">
-                        <button class="prev-page-button" onClick="prevPage()">
-                            <span class="bubble arrow-to-left">Page précédente</span>
-                        </button>
-                        <button class="go-to-summary-button" onClick="goToPage('summary-page')">Retour au sommaire
-                        </button>
-                        <button class="next-page-button" onClick="nextPage()">
-                            <span class="bubble arrow-to-right">Page suivante</span>
-                        </button>
+                    <nav aria-label="Navigation de la page 'Présentation'" class="page-navigation">
+                        <ul>
+                            <li>
+                                <a href="#summary-page" class="prev-page-button">
+                                    <span class="bubble arrow-to-left">Page précédente</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#summary-page" class="go-to-summary-button">Retour au sommaire</a>
+                            </li>
+                            <li>
+                                <a href="#skills-page" class="next-page-button">
+                                    <span class="bubble arrow-to-right">Page suivante</span>
+                                </a>
+                            </li>
+                        </ul>
                     </nav>
                 </footer>
             </div>
@@ -256,15 +264,22 @@
                 </article>
 
                 <footer>
-                    <nav aria-label="Navigation de la page" class="page-navigation">
-                        <button class="prev-page-button" onClick="prevPage()">
-                            <span class="bubble arrow-to-left">Page précédente</span>
-                        </button>
-                        <button class="go-to-summary-button" onClick="goToPage('summary-page')">Retour au sommaire
-                        </button>
-                        <button class="next-page-button" onClick="nextPage()">
-                            <span class="bubble arrow-to-right">Page suivante</span>
-                        </button>
+                    <nav aria-label="Navigation de la page 'Compétences'" class="page-navigation">
+                        <ul>
+                            <li>
+                                <a href="#presentation-page" class="prev-page-button">
+                                    <span class="bubble arrow-to-left">Page précédente</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#summary-page" class="go-to-summary-button">Retour au sommaire</a>
+                            </li>
+                            <li>
+                                <a href="#certificates-page" class="next-page-button">
+                                    <span class="bubble arrow-to-right">Page suivante</span>
+                                </a>
+                            </li>
+                        </ul>
                     </nav>
                 </footer>
             </div>
@@ -284,15 +299,22 @@
                 </article>
 
                 <footer>
-                    <nav aria-label="Navigation de la page" class="page-navigation">
-                        <button class="prev-page-button" onClick="prevPage()">
-                            <span class="bubble arrow-to-left">Page précédente</span>
-                        </button>
-                        <button class="go-to-summary-button" onClick="goToPage('summary-page')">Retour au sommaire
-                        </button>
-                        <button class="next-page-button" onClick="nextPage()">
-                            <span class="bubble arrow-to-right">Page suivante</span>
-                        </button>
+                    <nav aria-label="Navigation de la page 'Certifications'" class="page-navigation">
+                        <ul>
+                            <li>
+                                <a href="#skills-page" class="prev-page-button">
+                                    <span class="bubble arrow-to-left">Page précédente</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#summary-page" class="go-to-summary-button">Retour au sommaire</a>
+                            </li>
+                            <li>
+                                <a href="#talks-page" class="next-page-button">
+                                    <span class="bubble arrow-to-right">Page suivante</span>
+                                </a>
+                            </li>
+                        </ul>
                     </nav>
                 </footer>
             </div>
@@ -304,7 +326,7 @@
         <section id="talks-page" class="page">
             <div class="front page-with-content">
                 <header>
-                    <h2 tabindex="-1"><span class="unskew">Talks</span></h2>
+                    <h2 tabindex="-1"><span class="unskew">Formations</span></h2>
                 </header>
 
                 <article class="page-content">
@@ -312,15 +334,22 @@
                 </article>
 
                 <footer>
-                    <nav aria-label="Navigation de la page" class="page-navigation">
-                        <button class="prev-page-button" onClick="prevPage()">
-                            <span class="bubble arrow-to-left">Page précédente</span>
-                        </button>
-                        <button class="go-to-summary-button" onClick="goToPage('summary-page')">Retour au sommaire
-                        </button>
-                        <button class="next-page-button" onClick="nextPage()">
-                            <span class="bubble arrow-to-right">Page suivante</span>
-                        </button>
+                    <nav aria-label="Navigation de la page 'Talks et formations'" class="page-navigation">
+                        <ul>
+                            <li>
+                                <a href="#certificates-page" class="prev-page-button">
+                                    <span class="bubble arrow-to-left">Page précédente</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#summary-page" class="go-to-summary-button">Retour au sommaire</a>
+                            </li>
+                            <li>
+                                <a href="#hobbies-page" class="next-page-button">
+                                    <span class="bubble arrow-to-right">Page suivante</span>
+                                </a>
+                            </li>
+                        </ul>
                     </nav>
                 </footer>
             </div>
@@ -340,15 +369,22 @@
                 </article>
 
                 <footer>
-                    <nav aria-label="Navigation de la page" class="page-navigation">
-                        <button class="prev-page-button" onClick="prevPage()">
-                            <span class="bubble arrow-to-left">Page précédente</span>
-                        </button>
-                        <button class="go-to-summary-button" onClick="goToPage('summary-page')">Retour au sommaire
-                        </button>
-                        <button class="next-page-button" onClick="nextPage()">
-                            <span class="bubble arrow-to-right">Page suivante</span>
-                        </button>
+                    <nav aria-label="Navigation de la page 'Hobbies'" class="page-navigation">
+                        <ul>
+                            <li>
+                                <a href="#talks-page" class="prev-page-button">
+                                    <span class="bubble arrow-to-left">Page précédente</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#summary-page" class="go-to-summary-button">Retour au sommaire</a>
+                            </li>
+                            <li>
+                                <a href="#contact-page" class="next-page-button">
+                                    <span class="bubble arrow-to-right">Page suivante</span>
+                                </a>
+                            </li>
+                        </ul>
                     </nav>
                 </footer>
             </div>
@@ -368,12 +404,18 @@
                 </article>
 
                 <footer>
-                    <nav aria-label="Navigation de la page" class="page-navigation">
-                        <button class="prev-page-button" onClick="prevPage()">
-                            <span class="bubble arrow-to-left">Page précédente</span>
-                        </button>
-                        <button class="go-to-summary-button" onClick="goToPage('summary-page')">Retour au sommaire
-                        </button>
+                    <nav aria-label="Navigation de la page 'Contact'" class="page-navigation">
+                        <ul>
+                            <li>
+                                <a href="#hobbies-page" class="prev-page-button">
+                                    <span class="bubble arrow-to-left">Page précédente</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#summary-page" class="go-to-summary-button">Retour au sommaire</a>
+                            </li>
+                            <div class="spacer"></div>
+                        </ul>
                     </nav>
                 </footer>
             </div>

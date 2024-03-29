@@ -2,26 +2,62 @@ let currentPageIndex = 0
 let allPages = {}
 let pageFlipCallbacks = [ initHints ]
 
-function prevPage() {
-    if ($(".active").hasClass("first")) {
-        return;
-    }
+function initBook() {
+    $(".page").each((index, htmlElement) => {
+        allPages[htmlElement.id] = { index }
+    })
 
-    prevPageFlip();
-    vocalizePageTitle();
+    goToHrefHashPage();
 
-    afterFlipCb();
+    window.addEventListener("popstate", function (event) {
+        goToHrefHashPage();
+    });
+
+    $("a, button, [tabindex=0], input, textarea, select").on("focus", (e) => {
+        flipIfFocusIsOnHiddenElement(e.currentTarget)
+    })
 }
 
-function nextPage() {
-    if ($(".active").hasClass("last")) {
+async function goToHrefHashPage() {
+    const hash = window.location.hash?.substring(1)
+
+    if (!hash) {
         return;
     }
 
-    nextPageFlip();
-    vocalizePageTitle();
+    await goToPage(hash);
+}
 
-    afterFlipCb();
+function flipIfFocusIsOnHiddenElement(element) {
+    const containerPage = $(element).parents(".page");
+    if (!containerPage.hasClass("active")) {
+        goToPage(containerPage.attr("id"), { disableVocalize: true })
+    }
+}
+
+async function goToPage(pageId, options = undefined) {
+    const askedPageIndex = allPages[pageId]?.index
+    if (askedPageIndex === undefined) {
+        console.warn("Trying to paginate to an unexisting page:", askedPageIndex)
+        return;
+    }
+
+    !options?.disableVocalize && vocalizePageTitle(pageId)
+
+    const delta = askedPageIndex - currentPageIndex
+    if (delta > 0) {
+        while (askedPageIndex > currentPageIndex) {
+            await timedPagination(nextPageFlip)
+        }
+
+        afterFlipCb();
+    } else if (delta < 0) {
+        while (askedPageIndex < currentPageIndex) {
+            await timedPagination(prevPageFlip)
+        }
+
+        afterFlipCb();
+    }
 }
 
 function prevPageFlip() {
@@ -31,9 +67,6 @@ function prevPageFlip() {
         .addClass("active")
         .siblings(".page")
         .removeClass("active");
-
-    updateHash();
-    afterFlipCb();
 
     currentPageIndex--
 }
@@ -51,56 +84,14 @@ function nextPageFlip() {
 }
 
 function afterFlipCb() {
-    updateHash();
     pageFlipCallbacks.forEach(cbFn => cbFn(currentPageIndex))
     $("#cover-page").removeClass("animated").removeClass("hinted")
 }
 
-function updateHash() {
-    window.location.hash = "#" + $(".active").attr("id")
+function vocalizePageTitle(pageId) {
+    $(`#${ pageId } h1, #${ pageId } h2`).first().focus()
 }
 
-async function goToHrefHashPage() {
-    if (!window.location.hash) {
-        return;
-    }
-
-    await goToPage(window.location.hash.substring(1));
-}
-
-function vocalizePageTitle(pageId = undefined) {
-    let selector
-    if (pageId) {
-        selector = `#${ pageId } h1, #${ pageId } h2`
-    } else {
-        selector = ".active h1, .active h2"
-    }
-    $(selector).first().focus()
-}
-
-async function goToPage(pageId) {
-    const askedPageIndex = allPages[pageId]?.index
-    if (askedPageIndex === undefined) {
-        console.warn("Trying to paginate to an unexisting page:", askedPageIndex)
-        return;
-    }
-    const delta = askedPageIndex - currentPageIndex
-    if (delta > 0) {
-        vocalizePageTitle(pageId)
-        while (askedPageIndex > currentPageIndex) {
-            await timedPagination(nextPageFlip)
-        }
-
-        afterFlipCb();
-    } else if (delta < 0) {
-        vocalizePageTitle(pageId)
-        while (askedPageIndex < currentPageIndex) {
-            await timedPagination(prevPageFlip)
-        }
-
-        afterFlipCb();
-    }
-}
 
 function timedPagination(paginationCb, timeout = 200) {
     return new Promise((resolve) => {
@@ -111,11 +102,4 @@ function timedPagination(paginationCb, timeout = 200) {
     })
 }
 
-function initPageIndex() {
-    $(".page").each((index, htmlElement) => {
-        allPages[htmlElement.id] = { index }
-    })
-}
-
-initPageIndex();
-goToHrefHashPage();
+initBook();
