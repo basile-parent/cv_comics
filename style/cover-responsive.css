@@ -1,5 +1,8 @@
 @media (orientation: portrait) and (max-width: 500px),
         (orientation: landscape) and (max-height: 700px) {
+    #cover-page #cover-container article#cover-dev-section {
+        top: 10%;
+    }
     #cover-page #cover-container article#cover-teacher-section {
         top: 37%;
     }
@@ -13,7 +16,48 @@
     #cover-page #cover-container article#cover-specialist-section .section-content .section-punchline {
         max-width: 40%;
     }
+}
 
+@media (orientation: portrait) and (max-width: 600px) {
+    /* ************* BUBBLE ************* */
+    #cover-page .bubble {
+        left: unset;
+        right: 5%;
+        width: 50%;
+    }
+}
+
+@media (orientation: portrait) and (max-width: 500px),
+        (orientation: landscape) and (max-height: 700px) {
+    /* ************* BUBBLE ************* */
+    #cover-page .bubble {
+        left: unset;
+        top: unset;
+        bottom: 2%;
+        right: 5%;
+        width: 30%;
+        border: solid 3px black;
+    }
+
+    #cover-page.animated .bubble {
+        animation: cover-bubble-reveal .5s ease-out forwards, bubble-pulse-responsive 3s linear infinite;
+        animation-delay: 12s;
+    }
+
+    #cover-page .bubble:before, #cover-page .bubble:after {
+        content: unset;
+    }
+
+    @keyframes cover-bubble-reveal {
+        100% { opacity: 1; }
+    }
+
+    @keyframes bubble-pulse-responsive {
+        0% { scale: 1; }
+        80% { scale: 1; box-shadow: 0 0 0 white; }
+        90% { scale: 1.2; box-shadow: 0 0 4px white, 0 0 8px white, 0 0 12px white, 0 0 16px white;}
+        100% { scale: 1;  box-shadow: 0 0 0 white; }
+    }
 }
 
 @media (orientation: landscape) and (max-height: 700px) {

@@ -25,7 +25,9 @@
     animation: reveal-reverse 1.5s ease-out forwards;
 }
 
-.wm-revealing:hover .halftone-watermark, .wm-revealing button:focus .halftone-watermark {
+.wm-revealing:hover .halftone-watermark,
+.wm-revealing.hover .halftone-watermark,
+.wm-revealing button:focus .halftone-watermark {
     -webkit-animation: reveal 1.5s ease-out forwards;
     -moz-animation: reveal 1.5s ease-out forwards;
     animation: reveal 1.5s ease-out forwards;
@@ -81,7 +83,9 @@
     background-image: radial-gradient(circle, #a6a6a6, #737373);
 }
 
-.panel:hover .rays-watermark, button:focus .rays-watermark {
+.panel:hover .rays-watermark,
+.panel.hover .rays-watermark,
+button:focus .rays-watermark {
     -webkit-animation:spin 1s ease-out forwards;
     -moz-animation:spin 1s ease-out forwards;
     animation:spin 1s ease-out forwards;
@@ -123,7 +127,9 @@ Bottom right for halftone
     background-size: 350%;
     transition: background-size .3s linear;
 }
-.panel:hover .radial-speed, button:focus .radial-speed {
+.panel:hover .radial-speed,
+.panel.hover .radial-speed,
+button:focus .radial-speed {
     background-size: 150%;
 }
 
@@ -142,7 +148,9 @@ Bottom right for halftone
     transform: rotateZ(-15deg);
     transition: translate .3s linear;
 }
-.panel:hover .stars-watermark, button:focus .stars-watermark {
+.panel:hover .stars-watermark,
+.panel.hover .stars-watermark,
+button:focus .stars-watermark {
     translate: 20px;
 }
 

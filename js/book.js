@@ -1,5 +1,6 @@
 var currentPageIndex = 0
 var allPages = {}
+var pageFlipCallbacks = [ initHints ]
 
 function prevPage() {
     if ($(".active").hasClass("first")) {
@@ -17,6 +18,7 @@ function nextPage() {
 
     nextPageFlip()
     vocalizePageTitle()
+    pageFlipCallbacks.forEach(cbFn => cbFn(currentPageIndex))
 }
 
 function prevPageFlip() {

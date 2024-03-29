@@ -9,7 +9,7 @@
     transition: scale .3s linear;
 }
 
-.panel:hover, .panel:focus {
+.panel:hover, .panel.hover, .panel:focus {
     scale: 1.05;
     z-index: 50;
 }

@@ -18,12 +18,6 @@
         transition: .7s ease-out transform;
     }
 
-    .page,
-    .page.flipped:last-of-type,
-    .page.active {
-        z-index: 0;
-    }
-
     .page.flipped {
         transform: translateX(-150%);
     }
