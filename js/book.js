@@ -1,6 +1,7 @@
 let currentPageIndex = 0
 let allPages = {}
-let pageFlipCallbacks = [ initHints, showInerteCover ]
+let pageFlipBeforeCallbacks = [ showInerteCover ]
+let pageFlipCallbacks = [ initHints ]
 
 function disableSummaryLinkOnAnimation(e) {
     if ($("#cover-page").hasClass("animated")) {
@@ -54,12 +55,16 @@ async function goToPage(pageId, options = undefined) {
     const delta = askedPageIndex - currentPageIndex
 
     if (delta > 0) {
+        beforeFlipCb()
+
         while (askedPageIndex > currentPageIndex) {
             await timedPagination(nextPageFlip)
         }
 
         afterFlipCb();
     } else if (delta < 0) {
+        beforeFlipCb()
+
         while (askedPageIndex < currentPageIndex) {
             await timedPagination(prevPageFlip)
         }
@@ -89,6 +94,10 @@ function nextPageFlip() {
         .siblings();
 
     currentPageIndex++;
+}
+
+function beforeFlipCb() {
+    pageFlipBeforeCallbacks.forEach(cbFn => cbFn(currentPageIndex))
 }
 
 function afterFlipCb() {

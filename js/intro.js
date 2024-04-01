@@ -37,6 +37,9 @@ function showAnimatedCover() {
 }
 
 function showInerteCover() {
+    if (!$("#cover-page").hasClass("animated")) {
+        return;
+    }
     $("#cv-book #cover-page").removeClass("animated")
     $("#control-animation").addClass("reload").removeClass("stop")
     $("#control-animation span").html("Relancer l'animation")
@@ -46,8 +49,9 @@ function showInerteCover() {
         .removeAttr("aria-disabled")
         .removeAttr("title")
         .attr("aria-label", "Aller au sommaire")
+
     srSpeak("Animation de la couverture terminée")
-    
+
     showCv()
     clearTimeout(animationTimeout)
 }
