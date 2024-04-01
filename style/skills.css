@@ -1,4 +1,4 @@
-#skills-page h2:before {
+#skills-page header h2:before {
     content: " ";
     position: absolute;
     top: -20px;
@@ -11,3 +11,113 @@
 
     transform: skew(15deg);
 }
+
+#skills-page .page-content h2, #skills-page h3 {
+    padding: 0;
+    margin: 0;
+}
+
+#skills-page h3 {
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+#skills-page h3:not(:first-of-type) {
+    margin-top: 20px;
+}
+
+#skills-page ul, #skills-page li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#skills-page li.item-spacer {
+    margin-top: 15px;
+}
+
+#skills-page .page-content {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+#skills-page .page-content,
+#skills-page #experiences-section {
+    gap: 10px;
+}
+
+#skills-page .panel {
+    padding: 10px;
+    flex-basis: unset;
+}
+
+
+/* **************************************** */
+/* *************    SKILLS    ************* */
+/* **************************************** */
+#skills-page #skills-details {
+    flex: 1;
+    background-image: radial-gradient(circle, #4b717e, #414a4d);
+    color: white;
+}
+
+#skills-page #skills-details li {
+    display: flex;
+    margin-bottom: 2px;
+}
+
+#skills-page .skill-title {
+    display: inline-block;
+    width: 85px;
+}
+
+#skills-page .skill-gauge {
+    flex: 1;
+    display: inline-flex;
+    gap: 3px;
+}
+
+#skills-page .skill-gauge span {
+    flex: 1;
+}
+#skills-page .skill-gauge span.skill-gauge-full,
+#skills-page .skill-gauge span.skill-gauge-empty {
+    position: relative;
+    border: 2px solid black;
+}
+
+#skills-page .skill-gauge span.skill-gauge-full {
+    background: rgb(254,255,0);
+    background: linear-gradient(90deg, rgba(254,255,0,1) 0%, rgba(255,179,0,1) 90%, rgba(255,107,0,1) 100%);
+}
+#skills-page .skill-gauge span.skill-gauge-empty {
+    opacity: 0.5;
+}
+
+/* ***************************************** */
+/* *************  EXPERIENCES  ************* */
+/* ***************************************** */
+#skills-page #experiences-section h2 {
+    font-size: 1.2rem;
+    font-weight: normal;
+}
+#skills-page #experiences-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#skills-page #experiences-title {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    background-image: none;
+}
+
+#skills-page #experiences-details {
+    flex: 1;
+    background-image: radial-gradient(circle, yellow, orange);
+}
+

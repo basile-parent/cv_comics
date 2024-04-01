@@ -5,13 +5,7 @@
     display: inline-block;
     position: relative;
     flex-basis: 200px;
-    cursor: pointer;
     transition: scale .3s linear;
-}
-
-.panel:hover, .panel.hover, .panel:focus {
-    scale: 1.05;
-    z-index: 50;
 }
 
 /* background colours */

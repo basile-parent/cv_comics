@@ -1,3 +1,8 @@
+#summary-page .panel:hover, #summary-page .panel.hover, #summary-page .panel:focus {
+    scale: 1.05;
+    z-index: 50;
+}
+
 #summary-page a {
     display: inline-block;
     width: 100%;

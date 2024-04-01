@@ -83,6 +83,7 @@
 }
 .page .front.page-with-content .page-content {
     flex: 1;
+    padding: 2%;
 }
 .page .front.page-with-content footer {
     height: 75px;
