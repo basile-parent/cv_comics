@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="style/bubble.css">
     <link rel="stylesheet" href="style/effects.css">
 
+    <link rel="stylesheet" href="style/intro.css">
     <link rel="stylesheet" href="style/cover.css">
     <link rel="stylesheet" href="style/cover-animation.css">
     <link rel="stylesheet" href="style/cover-responsive.css">
@@ -30,11 +31,17 @@
 <body>
 
 <main class="scene">
-    <div class="book">
-        <section id="cover-page" class="page active first animated hinted">
+    <div id="intro-book" class="book">
+        <section id="intro-page" class="page active first last">
+            <button onClick="showAnimatedCover()"><span class="unskew">Voir le CV avec animation</span></button>
+            <button onClick="showInerteCover()"><span class="unskew">Voir le CV sans animation</span><span class="sr-only"> (les animations sont purement visuelles)</span></button>
+        </section>
+    </div>
+    <div id="cv-book" class="book" aria-hidden="true">
+        <section id="cover-page" class="page active first hinted">
             <div class="front">
                 <nav id="skip-links" aria-label="Liens d'évitement">
-                    <a href="#summary-page">
+                    <a href="#summary-page" onClick="disableSummaryLinkOnAnimation(event)">
                         Aller au sommaire
                     </a>
                 </nav>
@@ -86,11 +93,17 @@
                     </article>
                 </div>
 
-                <p class="bubble outside-top-right arrow-to-left" aria-hidden="true">Cliquez sur la couverture pour voir la suite</p>
+                <p id="next-hint-bubble" class="bubble outside-top-right arrow-to-left" aria-hidden="true">
+                    Cliquez sur la couverture pour voir la suite
+                </p>
+
+                <button id="control-animation" class="reload">
+                    <span>Relancer l'animation</span>
+                </button>
 
             </div>
             <div class="back" aria-hidden="true">
-                BAAAAAAACK
+                
             </div>
         </section>
 
@@ -214,7 +227,7 @@
                 </nav>
             </div>
             <div class="back" aria-hidden="true">
-                BAAAAAAACK
+                
             </div>
         </section>
 
@@ -249,7 +262,7 @@
                 </footer>
             </div>
             <div class="back" aria-hidden="true">
-                BAAAAAAACK
+                
             </div>
         </section>
 
@@ -284,7 +297,7 @@
                 </footer>
             </div>
             <div class="back" aria-hidden="true">
-                BAAAAAAACK
+                
             </div>
         </section>
 
@@ -319,7 +332,7 @@
                 </footer>
             </div>
             <div class="back" aria-hidden="true">
-                BAAAAAAACK
+                
             </div>
         </section>
 
@@ -354,7 +367,7 @@
                 </footer>
             </div>
             <div class="back" aria-hidden="true">
-                BAAAAAAACK
+                
             </div>
         </section>
 
@@ -389,7 +402,7 @@
                 </footer>
             </div>
             <div class="back" aria-hidden="true">
-                BAAAAAAACK
+                
             </div>
         </section>
 
@@ -414,7 +427,7 @@
                             <li>
                                 <a href="#summary-page" class="go-to-summary-button">Retour au sommaire</a>
                             </li>
-                            <div class="spacer"></div>
+                            <li class="spacer" aria-hidden="true"></li>
                         </ul>
                     </nav>
                 </footer>
@@ -423,7 +436,9 @@
     </div>
 </main>
 
+<script src="js/a11y.js"></script>
 <script src="js/hints.js"></script>
+<script src="js/intro.js"></script>
 <script src="js/book.js"></script>
 
 </body>

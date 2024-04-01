@@ -1,13 +1,12 @@
-@media (orientation: portrait) and (max-width: 500px),
-        (orientation: landscape) and (max-height: 700px) {
+@media (orientation: portrait) and (max-width: 500px) {
     #cover-page #cover-container article#cover-dev-section {
         top: 10%;
     }
     #cover-page #cover-container article#cover-teacher-section {
-        top: 37%;
+        top: 36%;
     }
     #cover-page #cover-container article#cover-specialist-section {
-        top: 68%;
+        top: 66.5%;
     }
 
     #cover-page #cover-container article#cover-specialist-section .section-content .section-character {
@@ -20,7 +19,7 @@
 
 @media (orientation: portrait) and (max-width: 600px) {
     /* ************* BUBBLE ************* */
-    #cover-page .bubble {
+    #cover-page #next-hint-bubble {
         left: unset;
         right: 5%;
         width: 50%;
@@ -30,7 +29,7 @@
 @media (orientation: portrait) and (max-width: 500px),
         (orientation: landscape) and (max-height: 700px) {
     /* ************* BUBBLE ************* */
-    #cover-page .bubble {
+    #cover-page #next-hint-bubble {
         left: unset;
         top: unset;
         bottom: 2%;
@@ -39,12 +38,12 @@
         border: solid 3px black;
     }
 
-    #cover-page.animated .bubble {
+    #cover-page.animated #next-hint-bubble {
         animation: cover-bubble-reveal .5s ease-out forwards, bubble-pulse-responsive 3s linear infinite;
         animation-delay: 12s;
     }
 
-    #cover-page .bubble:before, #cover-page .bubble:after {
+    #cover-page #next-hint-bubble:before, #cover-page #next-hint-bubble:after {
         content: unset;
     }
 
@@ -58,6 +57,18 @@
         90% { scale: 1.2; box-shadow: 0 0 4px white, 0 0 8px white, 0 0 12px white, 0 0 16px white;}
         100% { scale: 1;  box-shadow: 0 0 0 white; }
     }
+
+    /* ************* CONTROL BUTTON ************* */
+    #control-animation {
+        bottom: 15px;
+        left: 15px;
+        height: 50px;
+        width: 50px;
+        padding: 0;
+        color: transparent;
+        border: 4px solid black;
+        background-position: center center !important;
+    }
 }
 
 @media (orientation: landscape) and (max-height: 700px) {
@@ -70,28 +81,29 @@
         line-height: 50px;
     }
 
-    #cover-page #cover-container article {
-        height: 80% !important;
-        width: 30% !important;
+
+    #cover-page #cover-container article#cover-dev-section,
+    #cover-page #cover-container article#cover-teacher-section,
+    #cover-page #cover-container article#cover-specialist-section {
+        height: 80%;
+        width: 30%;
         overflow: hidden;
+        top: 13%;
     }
 
     #cover-page #cover-container article#cover-dev-section {
         position: absolute;
-        left: 4% !important;
-        top: 120%;
+        left: 4%;
     }
 
     #cover-page #cover-container article#cover-teacher-section {
         position: absolute;
-        left: 35% !important;
-        top: -120%;
+        left: 35%;
     }
 
     #cover-page #cover-container article#cover-specialist-section {
         position: absolute;
-        left: 66% !important;
-        top: 120%;
+        left: 66%;
     }
 
     #cover-page #cover-container article .section-border {
@@ -108,18 +120,21 @@
     #cover-page #cover-container article#cover-dev-section .section-content .section-character {
         width: 130%;
         height: 70%;
+        right: -15%;
     }
 
     #cover-page #cover-container article#cover-teacher-section .section-content .section-character {
         left: 10%;
         width: 100%;
         height: 80%;
+        bottom: -10%;
     }
 
     #cover-page #cover-container article#cover-specialist-section .section-content .section-character {
         bottom: -10px;
         width: 120%;
         height: 80%;
+        right: -10%;
     }
 
     #cover-page #cover-container article#cover-dev-section .section-content .section-punchline,
@@ -140,14 +155,30 @@
     /* ************************************** */
 
     /* ************* GLOBAL CONTAINER ************* */
-    #cover-page.animated #cover-container article#cover-dev-section,
-    #cover-page.animated #cover-container article#cover-specialist-section,
+    #cover-page.animated #cover-container article#cover-dev-section {
+        left: 4%;
+    }
     #cover-page.animated #cover-container article#cover-teacher-section {
-        animation: reveal-container-landscape .5s ease-out forwards;
+        left: 35%;
+    }
+    #cover-page.animated #cover-container article#cover-specialist-section {
+        left: 66%;
+    }
+
+    #cover-page.animated #cover-container article#cover-dev-section,
+    #cover-page.animated #cover-container article#cover-specialist-section {
+        top: -120%;
+        animation: reveal-container-landscape-from-top .5s ease-out forwards;
+        animation-delay: 1.5s;
+    }
+    #cover-page.animated #cover-container article#cover-teacher-section {
+        top: 140%;
+        animation: reveal-container-landscape-from-bottom .5s ease-out forwards;
         animation-delay: 1.5s;
     }
 
-    @keyframes reveal-container-landscape { 100% { top: 13%; } }
+    @keyframes reveal-container-landscape-from-top { 0% { top: -120%; } 100% { top: 13%; } }
+    @keyframes reveal-container-landscape-from-bottom { 0% { top: 140%; } 100% { top: 13%; } }
 
     /* ************* BACKGROUND ************* */
     #cover-page.animated #cover-container article#cover-dev-section .background-lightning,
@@ -242,14 +273,12 @@
     }
     @keyframes reveal-specialist-character-landscape { 100% { right: -10%; } }
 
-    #cover-page #cover-container article#cover-dev-section .section-content .section-punchline,
-    #cover-page #cover-container article#cover-teacher-section .section-content .section-punchline,
-    #cover-page #cover-container article#cover-specialist-section .section-content .section-punchline {
+    #cover-page.animated #cover-container article .section-content .section-punchline {
         top: -25%;
         animation: reveal-punchline-landscape .5s ease-out forwards;
     }
 
-    @keyframes reveal-punchline-landscape { 100% { top: 5%; } }
+    @keyframes reveal-punchline-landscape { 0% { top: -25%; } 100% { top: 5%; } }
 
 
     #cover-page.animated #cover-container article#cover-dev-section .section-character,

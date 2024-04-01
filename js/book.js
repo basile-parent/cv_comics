@@ -1,9 +1,15 @@
 let currentPageIndex = 0
 let allPages = {}
-let pageFlipCallbacks = [ initHints ]
+let pageFlipCallbacks = [ initHints, showInerteCover ]
+
+function disableSummaryLinkOnAnimation(e) {
+    if ($("#cover-page").hasClass("animated")) {
+        e.preventDefault()
+    }
+}
 
 function initBook() {
-    $(".page").each((index, htmlElement) => {
+    $("#cv-book .page").each((index, htmlElement) => {
         allPages[htmlElement.id] = { index }
     })
 
@@ -28,6 +34,7 @@ async function goToHrefHashPage() {
     await goToPage(hash);
 }
 
+// For keyboard navigation only
 function flipIfFocusIsOnHiddenElement(element) {
     const containerPage = $(element).parents(".page");
     if (!containerPage.hasClass("active")) {
@@ -45,6 +52,7 @@ async function goToPage(pageId, options = undefined) {
     !options?.disableVocalize && vocalizePageTitle(pageId)
 
     const delta = askedPageIndex - currentPageIndex
+
     if (delta > 0) {
         while (askedPageIndex > currentPageIndex) {
             await timedPagination(nextPageFlip)

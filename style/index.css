@@ -7,14 +7,7 @@ html, body {
     background-color: #ffcf76;
     color: black;
 
-    overflow: hidden;
     font-family: "Comic_book_regular", "Comic Sans", cursive;
-}
-
-@media (max-width: 500px) {
-    main {
-        overflow: auto;
-    }
 }
 
 body:before {
@@ -27,6 +20,14 @@ body:before {
     opacity: 0.6;
     background: url("../assets/bg.svg") center center no-repeat;
     background-size: cover;
+}
+
+@media (orientation: portrait) and (max-width: 500px),
+        (orientation: landscape) and (max-height: 700px) {
+    body:before {
+        display: none;
+        background: none;
+    }
 }
 
 * {
