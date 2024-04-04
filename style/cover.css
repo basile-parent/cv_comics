@@ -59,11 +59,6 @@
     outline: 0;
 }
 
-
-#cover-page #cover-container article {
-    /*filter: drop-shadow(-3px 3px 3px #000000);*/
-}
-
 #cover-page #cover-container article .section-border {
     display: inline-block;
     position: relative;

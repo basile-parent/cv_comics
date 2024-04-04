@@ -44,8 +44,12 @@ nav ul, nav li {
 }
 
 a, a:visited {
-    color: black;
+    color: darkblue;
     text-decoration: none;
+}
+a:hover, a:focus {
+    color: #3c3cff;
+    text-decoration: underline;
 }
 
 .sr-only {

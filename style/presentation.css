@@ -1,13 +1,112 @@
-#presentation-page h2:before {
-    content: " ";
-    position: absolute;
-    top: -20px;
-    left: -10px;
-    height: 62px;
-    width: 62px;
-    background: url("../assets/portrait.png") no-repeat lightblue bottom center;
-    background-size: contain;
-    border: 3px solid black;
-
-    transform: skew(15deg);
+#presentation-page h2 {
+    margin: 0;
+    font-size: 1.35rem;
+    line-height: 1.15rem;
 }
+
+#presentation-page .page-content {
+    padding: 40px;
+}
+
+#presentation-page .page-content .illustration {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    width: 50%;
+    height: 40%;
+
+    background-image: radial-gradient(circle, lightblue, deepskyblue);
+    background-size: cover;
+    border: 3px solid black;
+}
+#presentation-page .page-content .illustration:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: url("../assets/speaker.png") no-repeat bottom center;
+    background-size: 50% 90%;
+}
+
+#presentation-page .page-content .content-wrapper {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 80%;
+    background: black;
+    clip-path: polygon(50% 0px, 100% 0%, 100% 100%, 0 100%, 0% 50%, 50% 45%, 50% 25%, 40% 20%, 50% 20%);
+}
+
+#presentation-page .page-content .content {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: calc(100% - 6px);
+    height: calc(100% - 6px);
+    clip-path: polygon(
+            calc(50% + 2px) 0px,
+            100% 0%,
+            100% 100%,
+            0 100%,
+            0 calc(50% + 2px),
+            calc(50% + 2px) calc(45% + 2px),
+            calc(50% + 2px) calc(25% - 4px),
+            calc(40% + 8px) 20%,
+            calc(50% + 2px) 20%
+    );
+    background: white;
+    padding: 15px;
+    overflow: auto;
+}
+
+#presentation-page .page-content .content:before {
+    content: "";
+    position: relative;
+    display: inline-block;
+    width: 50%;
+    height: 50%;
+    margin-right: 15px;
+
+    float: left;
+    shape-outside: polygon(0 0, 100% 0%, 100% 90%, 0% 100%);
+}
+
+#presentation-page .page-content .content p:last-of-type {
+    margin-bottom: 0;
+}
+
+/* ************* SOCIAL NETWORKS ************* */
+#presentation-page #presentation-social-networks {
+    margin-top: 20px;
+    text-align: center;
+}
+#presentation-page #presentation-social-networks p {
+    font-size: 2rem;
+    margin: 0;
+}
+#presentation-page #presentation-social-networks ul,
+#presentation-page #presentation-social-networks li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+#presentation-page #presentation-social-networks ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#presentation-page #presentation-social-networks li {
+    flex: 1;
+    font-size: 1.5rem;
+}
+
+#presentation-page #presentation-social-networks li a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
