@@ -20,6 +20,10 @@
         transition: .7s ease-out transform;
     }
 
+    .page:not(.active) {
+        overflow: hidden;
+    }
+
     .page.flipped {
         transform: translateX(-150%);
     }

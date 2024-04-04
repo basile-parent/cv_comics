@@ -37,7 +37,8 @@
     <div id="intro-book" class="book">
         <section id="intro-page" class="page active first last animated">
             <button onClick="showAnimatedCover()"><span class="unskew">Voir le CV avec animation</span></button>
-            <button onClick="showInerteCover()"><span class="unskew">Voir le CV sans animation</span><span class="sr-only"> (les animations sont purement visuelles)</span></button>
+            <button onClick="showInerteCover()"><span class="unskew">Voir le CV sans animation</span><span
+                    class="sr-only"> (les animations sont purement visuelles)</span></button>
         </section>
     </div>
     <div id="cv-book" class="book" aria-hidden="true">
@@ -106,7 +107,7 @@
 
             </div>
             <div class="back" aria-hidden="true">
-                
+
             </div>
         </section>
 
@@ -230,10 +231,11 @@
                 </nav>
             </div>
             <div class="back" aria-hidden="true">
-                
+
             </div>
         </section>
 
+        <!-- *********************   PRESENTATION PAGE   ********************* -->
         <section id="presentation-page" class="page">
             <div class="front page-with-content">
                 <header>
@@ -265,7 +267,7 @@
                 </footer>
             </div>
             <div class="back" aria-hidden="true">
-                
+
             </div>
         </section>
 
@@ -273,267 +275,296 @@
         <!-- *********************   SKILLS & EXPERIENCES PAGE   ********************* -->
         <section id="skills-page" class="page">
             <div class="front page-with-content">
-                <header>
-                    <h2 tabindex="-1"><span class="unskew">Compétences</span></h2>
-                </header>
-
                 <article class="page-content">
-                    <div id="skills-details" class="panel">
-                        <h3 id="technical-skills-title">Techniques</h3>
-                        <ul aria-labelledby="technical-skills-title">
-                            <li>
-                                <span class="skill-title">React</span>
-                                <span class="sr-only">: Expert</span>
-                                <span class="skill-gauge" aria-hidden="true" title="Expert">
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-empty"></span>
-                                </span>
-                            </li>
-                            <li>
-                                <span class="skill-title">J2EE</span>
-                                <span class="sr-only">: Expert</span>
-                                <span class="skill-gauge" aria-hidden="true" title="Expert">
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-empty"></span>
-                                    <span class="skill-gauge-empty"></span>
-                                    <span class="skill-gauge-empty"></span>
-                                </span>
-                            </li>
-                            <li>
-                                <span class="skill-title">Javascript</span>
-                                <span class="sr-only">: Expert</span>
-                                <span class="skill-gauge" aria-hidden="true" title="Expert">
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                </span>
-                            </li>
-                            <li>
-                                <span class="skill-title">NodeJS</span>
-                                <span class="sr-only">: Intermédiaire</span>
-                                <span class="skill-gauge" aria-hidden="true" title="Intermédiaire">
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-empty"></span>
-                                    <span class="skill-gauge-empty"></span>
-                                    <span class="skill-gauge-empty"></span>
-                                    <span class="skill-gauge-empty"></span>
-                                    <span class="skill-gauge-empty"></span>
-                                </span>
-                            </li>
-                            <li>
-                                <span class="skill-title">Python</span>
-                                <span class="sr-only">: Intermédiaire</span>
-                                <span class="skill-gauge" aria-hidden="true" title="Intermédiaire">
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-empty"></span>
-                                    <span class="skill-gauge-empty"></span>
-                                    <span class="skill-gauge-empty"></span>
-                                    <span class="skill-gauge-empty"></span>
-                                    <span class="skill-gauge-empty"></span>
-                                    <span class="skill-gauge-empty"></span>
-                                </span>
-                            </li>
-                            <li>
-                                <span class="skill-title">Docker</span>
-                                <span class="sr-only">: Intermédiaire</span>
-                                <span class="skill-gauge" aria-hidden="true" title="Intermédiaire">
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-empty"></span>
-                                    <span class="skill-gauge-empty"></span>
-                                    <span class="skill-gauge-empty"></span>
-                                    <span class="skill-gauge-empty"></span>
-                                    <span class="skill-gauge-empty"></span>
-                                </span>
-                            </li>
-                            <li>
-                                <span class="skill-title">CI/CD</span>
-                                <span class="sr-only">: Intermédiaire</span>
-                                <span class="skill-gauge" aria-hidden="true" title="Intermédiaire">
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-empty"></span>
-                                    <span class="skill-gauge-empty"></span>
-                                    <span class="skill-gauge-empty"></span>
-                                    <span class="skill-gauge-empty"></span>
-                                    <span class="skill-gauge-empty"></span>
-                                </span>
-                            </li>
-                            <li class="item-spacer">
-                                <span class="skill-title">Testing</span>
-                                <span class="sr-only">: Expert</span>
-                                <span class="skill-gauge" aria-hidden="true" title="Expert">
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-empty"></span>
-                                </span>
-                            </li>
-                            <li>
-                                <span class="skill-title">Cypress</span>
-                                <span class="sr-only">: Expert</span>
-                                <span class="skill-gauge" aria-hidden="true" title="Expert">
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-empty"></span>
-                                    <span class="skill-gauge-empty"></span>
-                                </span>
-                            </li>
-                        </ul>
+                    <div id="skills-section">
+                        <h2 tabindex="-1" class="panel"><span class="unskew">Compétences</span></h2>
+                        <div id="skills-details" class="panel">
+                            <h3 id="technical-skills-title">Techniques</h3>
+                            <ul aria-labelledby="technical-skills-title">
+                                <li>
+                                    <span class="skill-title">
+                                        React
+                                        <span class="sr-only">: Expert</span>
+                                    </span>
+                                    <span class="skill-gauge" aria-hidden="true" title="Expert">
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-empty"></span>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="skill-title">
+                                        J2EE
+                                        <span class="sr-only">: Expert</span>
+                                    </span>
+                                    <span class="skill-gauge" aria-hidden="true" title="Expert">
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-empty"></span>
+                                        <span class="skill-gauge-empty"></span>
+                                        <span class="skill-gauge-empty"></span>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="skill-title">
+                                        Javascript
+                                        <span class="sr-only">: Expert</span>
+                                    </span>
+                                    <span class="skill-gauge" aria-hidden="true" title="Expert">
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="skill-title">
+                                        NodeJS
+                                        <span class="sr-only">: Intermédiaire</span>
+                                    </span>
+                                    <span class="skill-gauge" aria-hidden="true" title="Intermédiaire">
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-empty"></span>
+                                        <span class="skill-gauge-empty"></span>
+                                        <span class="skill-gauge-empty"></span>
+                                        <span class="skill-gauge-empty"></span>
+                                        <span class="skill-gauge-empty"></span>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="skill-title">
+                                        Python
+                                        <span class="sr-only">: Intermédiaire</span>
+                                    </span>
+                                    <span class="skill-gauge" aria-hidden="true" title="Intermédiaire">
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-empty"></span>
+                                        <span class="skill-gauge-empty"></span>
+                                        <span class="skill-gauge-empty"></span>
+                                        <span class="skill-gauge-empty"></span>
+                                        <span class="skill-gauge-empty"></span>
+                                        <span class="skill-gauge-empty"></span>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="skill-title">
+                                        Docker
+                                        <span class="sr-only">: Intermédiaire</span>
+                                    </span>
+                                    <span class="skill-gauge" aria-hidden="true" title="Intermédiaire">
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-empty"></span>
+                                        <span class="skill-gauge-empty"></span>
+                                        <span class="skill-gauge-empty"></span>
+                                        <span class="skill-gauge-empty"></span>
+                                        <span class="skill-gauge-empty"></span>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="skill-title">
+                                        CI/CD
+                                        <span class="sr-only">: Intermédiaire</span>
+                                    </span>
+                                    <span class="skill-gauge" aria-hidden="true" title="Intermédiaire">
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-empty"></span>
+                                        <span class="skill-gauge-empty"></span>
+                                        <span class="skill-gauge-empty"></span>
+                                        <span class="skill-gauge-empty"></span>
+                                        <span class="skill-gauge-empty"></span>
+                                    </span>
+                                </li>
+                                <li class="item-spacer">
+                                    <span class="skill-title">
+                                        Testing
+                                        <span class="sr-only">: Expert</span>
+                                    </span>
+                                    <span class="skill-gauge" aria-hidden="true" title="Expert">
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-empty"></span>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="skill-title">
+                                        Cypress
+                                        <span class="sr-only">: Expert</span>
+                                    </span>
+                                    <span class="skill-gauge" aria-hidden="true" title="Expert">
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-empty"></span>
+                                        <span class="skill-gauge-empty"></span>
+                                    </span>
+                                </li>
+                            </ul>
 
-                        <h3 id="agile-skills-title">Agilité</h3>
-                        <ul aria-labelledby="agile-skills-title">
-                            <li>
-                                <span class="skill-title">Scrum</span>
-                                <span class="sr-only">: Expert</span>
-                                <span class="skill-gauge" aria-hidden="true" title="Expert">
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                </span>
-                            </li>
-                            <li>
-                                <span class="skill-title">Kanban</span>
-                                <span class="sr-only">: Confirmé</span>
-                                <span class="skill-gauge" aria-hidden="true" title="Confirmé">
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-empty"></span>
-                                    <span class="skill-gauge-empty"></span>
-                                    <span class="skill-gauge-empty"></span>
-                                </span>
-                            </li>
-                            <li>
-                                <span class="skill-title">Animation</span>
-                                <span class="sr-only">: Confirmé</span>
-                                <span class="skill-gauge" aria-hidden="true" title="Confirmé">
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-empty"></span>
-                                    <span class="skill-gauge-empty"></span>
-                                </span>
-                            </li>
-                        </ul>
+                            <h3 id="agile-skills-title">Agilité</h3>
+                            <ul aria-labelledby="agile-skills-title">
+                                <li>
+                                    <span class="skill-title">
+                                        Scrum
+                                        <span class="sr-only">: Expert</span>
+                                    </span>
+                                    <span class="skill-gauge" aria-hidden="true" title="Expert">
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="skill-title">
+                                        Kanban
+                                        <span class="sr-only">: Confirmé</span>
+                                    </span>
+                                    <span class="skill-gauge" aria-hidden="true" title="Confirmé">
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-empty"></span>
+                                        <span class="skill-gauge-empty"></span>
+                                        <span class="skill-gauge-empty"></span>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="skill-title">
+                                        Animation
+                                        <span class="sr-only">: Confirmé</span>
+                                    </span>
+                                    <span class="skill-gauge" aria-hidden="true" title="Confirmé">
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-empty"></span>
+                                        <span class="skill-gauge-empty"></span>
+                                    </span>
+                                </li>
+                            </ul>
 
-                        <h3 id="soft-skills-title">Savoir-être</h3>
-                        <ul aria-labelledby="soft-skills-title">
-                            <li>
-                                <span class="skill-title">Formation</span>
-                                <span class="sr-only">: Expert</span>
-                                <span class="skill-gauge" aria-hidden="true" title="Expert">
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                </span>
-                            </li>
-                            <li>
-                                <span class="skill-title">Mentoring</span>
-                                <span class="sr-only">: Expert</span>
-                                <span class="skill-gauge" aria-hidden="true" title="Expert">
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                </span>
-                            </li>
-                            <li>
-                                <span class="skill-title">Partage</span>
-                                <span class="sr-only">: Expert</span>
-                                <span class="skill-gauge" aria-hidden="true" title="Expert">
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                    <span class="skill-gauge-full"></span>
-                                </span>
-                            </li>
-                        </ul>
+                            <h3 id="soft-skills-title">Savoir-être</h3>
+                            <ul aria-labelledby="soft-skills-title">
+                                <li>
+                                    <span class="skill-title">
+                                        Formation
+                                        <span class="sr-only">: Expert</span>
+                                    </span>
+                                    <span class="skill-gauge" aria-hidden="true" title="Expert">
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="skill-title">
+                                        Mentoring
+                                        <span class="sr-only">: Expert</span>
+                                    </span>
+                                    <span class="skill-gauge" aria-hidden="true" title="Expert">
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="skill-title">
+                                        Partage
+                                        <span class="sr-only">: Expert</span>
+                                    </span>
+                                    <span class="skill-gauge" aria-hidden="true" title="Expert">
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                        <span class="skill-gauge-full"></span>
+                                    </span>
+                                </li>
+                            </ul>
 
+                        </div>
                     </div>
                     <div id="experiences-section">
-                        <h2 id="experiences-title" class="panel">
+                        <h2 class="panel">
                             Expériences
                         </h2>
                         <div id="experiences-details" class="panel">
@@ -609,11 +640,9 @@
                 </footer>
             </div>
             <div class="back" aria-hidden="true">
-                
+
             </div>
         </section>
-
-
 
 
         <section id="certificates-page" class="page">
@@ -647,7 +676,7 @@
                 </footer>
             </div>
             <div class="back" aria-hidden="true">
-                
+
             </div>
         </section>
 
@@ -682,7 +711,7 @@
                 </footer>
             </div>
             <div class="back" aria-hidden="true">
-                
+
             </div>
         </section>
 
@@ -717,7 +746,7 @@
                 </footer>
             </div>
             <div class="back" aria-hidden="true">
-                
+
             </div>
         </section>
 

@@ -1,6 +1,7 @@
 # Comics CV
 
 ## TODO
+- FIX no animation intro
 - FIX Firefox backface-visibility on reload button
 - FIX zoom on cover & summary
 - Content !
