@@ -46,7 +46,10 @@
     width: 100%;
     height: 100%;
     box-sizing: border-box;
-
+}
+.page,
+.page .front,
+.page .back {
     backface-visibility: hidden;
 }
 .page .front {
@@ -57,6 +60,9 @@
     background: #d6d6d6;
     background: linear-gradient(to bottom right, #FFFFFF, #d6d6d6);
     z-index: 15;
+    border: 1px solid #3f3f3f;
+    border-left: 1px solid #AAAAAA;
+    border-right: 1px solid #AAAAAA;
 }
 
 .page.active {

@@ -71,6 +71,13 @@
     }
 }
 
+@media (orientation: portrait) and (max-width: 450px) {
+    #cover-page #cover-container header h1 {
+        font-size: 3rem;
+        line-height: 85px;
+    }
+}
+
 @media (orientation: landscape) and (max-height: 700px) {
     #cover-page #cover-container header {
         height: 50px;
@@ -113,7 +120,7 @@
     }
 
     #cover-page #cover-container article .section-border,
-    #cover-page #cover-container article .section-border > .section-content {
+    #cover-page #cover-container article .section-border .section-content {
         clip-path: none !important;
     }
 
@@ -131,10 +138,10 @@
     }
 
     #cover-page #cover-container article#cover-specialist-section .section-content .section-character {
-        bottom: -10px;
-        width: 120%;
-        height: 80%;
-        right: -10%;
+        bottom: -45px;
+        width: 130%;
+        height: 90%;
+        right: -15%;
     }
 
     #cover-page #cover-container article#cover-dev-section .section-content .section-punchline,
@@ -224,21 +231,21 @@
 
     #cover-page.animated #cover-container .super-deaf-blur {
         top: 50%;
-        left: -70%;
+        left: -90%;
         transform: rotateZ(95deg);
     }
 
     #cover-page.animated #cover-container article#cover-dev-section .super-deaf-blur {
-        animation: super-deaf-fly-panel-1 .3s ease-out forwards;
+        animation: super-deaf-fly-panel-1 .2s ease-out forwards;
         animation-delay: 3.38s;
     }
     #cover-page.animated #cover-container article#cover-teacher-section .super-deaf-blur {
-        animation: super-deaf-fly-panel-2 .3s ease-out forwards;
-        animation-delay: 3.50s;
+        animation: super-deaf-fly-panel-2 .2s ease-out forwards;
+        animation-delay: 3.46s;
     }
     #cover-page.animated #cover-container article#cover-specialist-section .super-deaf-blur {
-        animation: super-deaf-fly-panel-3 .3s ease-out forwards;
-        animation-delay: 3.62s;
+        animation: super-deaf-fly-panel-3 .2s ease-out forwards;
+        animation-delay: 3.54s;
     }
 
     @keyframes super-deaf-fly-panel-1 {
@@ -256,10 +263,10 @@
 
     /* ************* CHARACTER & PUNCHLINE ************* */
     #cover-page.animated #cover-container article#cover-dev-section .section-character {
-        right: -150%;
+        left: -150%;
         animation: reveal-dev-character-landscape .5s ease-out forwards;
     }
-    @keyframes reveal-dev-character-landscape { 100% { right: -15%; } }
+    @keyframes reveal-dev-character-landscape { 100% { left: -15%; } }
 
     #cover-page.animated #cover-container article#cover-teacher-section .section-character {
         bottom: -100%;
@@ -268,23 +275,25 @@
     @keyframes reveal-teacher-character-landscape { 100% { bottom: -10%; } }
 
     #cover-page.animated #cover-container article#cover-specialist-section .section-character {
-        right: -100%;
+        right: -150%;
         animation: reveal-specialist-character-landscape .5s ease-out forwards;
     }
-    @keyframes reveal-specialist-character-landscape { 100% { right: -10%; } }
+    @keyframes reveal-specialist-character-landscape { 100% { right: -15%; } }
 
-    #cover-page.animated #cover-container article .section-content .section-punchline {
+    #cover-page.animated #cover-container article#cover-dev-section .section-punchline,
+    #cover-page.animated #cover-container article#cover-teacher-section .section-punchline,
+    #cover-page.animated #cover-container article#cover-specialist-section .section-punchline {
         top: -25%;
         animation: reveal-punchline-landscape .5s ease-out forwards;
     }
 
     @keyframes reveal-punchline-landscape { 0% { top: -25%; } 100% { top: 5%; } }
-
-
     #cover-page.animated #cover-container article#cover-dev-section .section-character,
     #cover-page.animated #cover-container article#cover-dev-section .section-punchline {
         animation-delay: 7s;
     }
+
+
     #cover-page.animated #cover-container article#cover-teacher-section .section-character,
     #cover-page.animated #cover-container article#cover-teacher-section .section-punchline {
         animation-delay: 8s;

@@ -289,7 +289,7 @@
 #summary-page #talks .talk-mic .talk-img-container {
     position: absolute;
     top: -20%;
-    left: 0;
+    left: -2%;
     height: 124%;
     width: 100%;
     z-index: 30;

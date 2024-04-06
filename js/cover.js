@@ -26,16 +26,12 @@ function showAnimatedCover() {
 
     animationTimeout = setTimeout(() => {
         showInerteCover()
+        srSpeak("Animation de la couverture terminée")
     }, ANIMATION_TIME)
 }
 
 function showInerteCover() {
-    if (!$("#cover-page").hasClass("animated")) {
-        return;
-    }
     disableCoverAnimation()
-
-    srSpeak("Animation de la couverture terminée")
 
     showCv()
     clearTimeout(animationTimeout)

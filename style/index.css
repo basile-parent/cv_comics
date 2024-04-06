@@ -44,11 +44,11 @@ nav ul, nav li {
 }
 
 a, a:visited {
-    color: darkblue;
+    color: #00009a;
     text-decoration: none;
 }
 a:hover, a:focus {
-    color: #3c3cff;
+    color: #6565e6;
     text-decoration: underline;
 }
 

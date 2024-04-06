@@ -147,7 +147,7 @@
     animation-delay: 4.5s;
 }
 
-#cover-page #cover-container article .section-border > .section-content {
+#cover-page.animated #cover-container article .section-border .section-content {
     animation: lightning-background 2.5s ease-out forwards;
     animation-delay: 2.5s;
 }
