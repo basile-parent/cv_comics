@@ -6,18 +6,27 @@
 
 #presentation-page .page-content {
     padding: 40px;
+    overflow: hidden;
+}
+
+#presentation-page .page-content .presentation-text {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 80%;
+    overflow: auto;
+    border: 3px solid black;
 }
 
 #presentation-page .page-content .illustration {
     position: absolute;
-    top: 40px;
-    left: 40px;
-    width: 50%;
-    height: 40%;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 255px;
 
     background-image: radial-gradient(circle, lightblue, deepskyblue);
     background-size: cover;
-    border: 3px solid black;
 }
 #presentation-page .page-content .illustration:after {
     content: "";
@@ -35,43 +44,50 @@
     display: inline-block;
     position: relative;
     width: 100%;
-    height: 80%;
+    height: auto;
+    min-height: 100%;
     background: black;
-    clip-path: polygon(50% 0px, 100% 0%, 100% 100%, 0 100%, 0% 50%, 50% 45%, 50% 25%, 40% 20%, 50% 20%);
-}
-
-#presentation-page .page-content .content {
-    position: absolute;
-    top: 3px;
-    left: 3px;
-    width: calc(100% - 6px);
-    height: calc(100% - 6px);
     clip-path: polygon(
-            calc(50% + 2px) 0px,
+            200px 0,
             100% 0%,
             100% 100%,
             0 100%,
-            0 calc(50% + 2px),
-            calc(50% + 2px) calc(45% + 2px),
-            calc(50% + 2px) calc(25% - 4px),
-            calc(40% + 8px) 20%,
-            calc(50% + 2px) 20%
+            0 250px,
+            200px 200px,
+            200px 120px,
+            150px 80px,
+            200px 80px
+    );
+}
+
+#presentation-page .page-content .content {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    min-height: 436px;
+    clip-path: polygon(
+            203px 0,
+            100% 0%,
+            100% 100%,
+            0 100%,
+            0 253px,
+            203px 203px,
+            203px 118px,
+            158px 83px,
+            203px 83px
     );
     background: white;
     padding: 15px;
-    overflow: auto;
 }
 
 #presentation-page .page-content .content:before {
     content: "";
-    position: relative;
-    display: inline-block;
-    width: 50%;
-    height: 50%;
-    margin-right: 15px;
+    width: 200px;
+    height: 250px;
+    margin: -15px 15px 0 -15px;
 
     float: left;
-    shape-outside: polygon(0 0, 100% 0%, 100% 90%, 0% 100%);
+    shape-outside: polygon(-15px -15px, 100% -15px, 100% 100%, -15px 100%);
 }
 
 #presentation-page .page-content .content p:last-of-type {
@@ -102,6 +118,7 @@
 #presentation-page #presentation-social-networks li {
     flex: 1;
     font-size: 1.5rem;
+    padding: 10px 0;
 }
 
 #presentation-page #presentation-social-networks li a {
