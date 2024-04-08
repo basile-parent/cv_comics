@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="style/skills.css">
     <link rel="stylesheet" href="style/skills-responsive.css">
     <link rel="stylesheet" href="style/certificates.css">
+    <link rel="stylesheet" href="style/certificates-responsive.css">
     <link rel="stylesheet" href="style/talks.css">
     <link rel="stylesheet" href="style/hobbies.css">
     <link rel="stylesheet" href="style/contact.css">
@@ -682,49 +683,57 @@
         <section id="certificates-page" class="page">
             <div class="front page-with-content">
                 <div class="panel">
+                    <aside class="panel-background" aria-hidden="true"></aside>
+
                     <header>
                         <h2 tabindex="-1"><span class="unskew">Diplômes</span></h2>
                     </header>
 
                     <article class="page-content">
-                        <div class="diploma-frame">
-                            <div class="outerBevel">
-                                <div class="flatSurface">
-                                    <div class="innerBevel">
-                                        <h3>Universitaires</h3>
-                                        <ul>
-                                            <li>DUT informatique</li>
-                                            <li>Master MIAGE</li>
-                                        </ul>
+                        <div class="diploma">
+                            <div class="diploma-frame">
+                                <div class="outerBevel">
+                                    <div class="flatSurface">
+                                        <div class="innerBevel">
+                                            <h3 id="university-diplomas">Universitaires</h3>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            <ul class="diploma-list" aria-labelledby="university-diplomas">
+                                <li>DUT informatique</li>
+                                <li>Master MIAGE</li>
+                            </ul>
                         </div>
-                        <div class="diploma-frame">
-                            <div class="outerBevel">
-                                <div class="flatSurface">
-                                    <div class="innerBevel">
-                                        <h3>Certifications</h3>
-                                        <ul>
-                                            <li id="psm-certificate"><a href="https://www.credly.com/badges/91887340-ec8e-4938-aa94-14a091e8c7d9/public_url" target="_blank">PSM I <span class="new-tab-link" title="Nouvelle fenêtre">(nouvelle fenêtre)</span></a></li>
-                                            <li id="opquast-certificate"><a href="https://directory.opquast.com/fr/certificat/JF5GBD/" target="_blank">Opquast <span class="new-tab-link" title="Nouvelle fenêtre">(nouvelle fenêtre)</span></a></li>
-                                            <li id="agnostic-certificate"><a href="https://wikiagile.coach/index.php?title=Le_Serment_Agile_Agnostique" target="_blank">Agnostic Agile <span class="new-tab-link" title="Nouvelle fenêtre">(nouvelle fenêtre)</span></a></li>
-                                        </ul>
+                        <div class="diploma">
+                            <div class="diploma-frame">
+                                <div class="outerBevel">
+                                    <div class="flatSurface">
+                                        <div class="innerBevel">
+                                            <h3 id="certicates">Certifications</h3>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            <ul class="diploma-list" aria-labelledby="certificates">
+                                <li id="psm-certificate"><a href="https://www.credly.com/badges/91887340-ec8e-4938-aa94-14a091e8c7d9/public_url" target="_blank">PSM I <span class="new-tab-link" title="Nouvelle fenêtre">(nouvelle fenêtre)</span></a></li>
+                                <li id="opquast-certificate"><a href="https://directory.opquast.com/fr/certificat/JF5GBD/" target="_blank">Opquast <span class="new-tab-link" title="Nouvelle fenêtre">(nouvelle fenêtre)</span></a></li>
+                                <li id="agnostic-certificate"><a href="https://wikiagile.coach/index.php?title=Le_Serment_Agile_Agnostique" target="_blank">Agnostic Agile <span class="new-tab-link" title="Nouvelle fenêtre">(nouvelle fenêtre)</span></a></li>
+                            </ul>
                         </div>
-                        <div class="diploma-frame">
-                            <div class="outerBevel">
-                                <div class="flatSurface">
-                                    <div class="innerBevel">
-                                        <h3>Autres</h3>
-                                        <ul>
-                                            <li>CAP Cuisine</li>
-                                        </ul>
+                        <div class="diploma">
+                            <div class="diploma-frame">
+                                <div class="outerBevel">
+                                    <div class="flatSurface">
+                                        <div class="innerBevel">
+                                            <h3 id="other-diplomas">Autres</h3>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            <ul class="diploma-list" aria-labelledby="other-diplomas">
+                                <li>CAP Cuisine</li>
+                            </ul>
                         </div>
 
                     </article>
