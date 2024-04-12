@@ -10,6 +10,11 @@ html, body {
     font-family: "Comic_book_regular", "Comic Sans", cursive;
 }
 
+
+html.noScroll, body.noScroll {
+    overflow: hidden;
+}
+
 body:before {
     content: " ";
     position: absolute;

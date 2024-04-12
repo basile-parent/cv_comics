@@ -97,12 +97,17 @@ function nextPageFlip() {
 }
 
 function beforeFlipCb() {
+    $("html, body").addClass("noScroll")
     pageFlipBeforeCallbacks.forEach(cbFn => cbFn(currentPageIndex))
 }
 
 function afterFlipCb() {
     pageFlipCallbacks.forEach(cbFn => cbFn(currentPageIndex))
     $("#cover-page").removeClass("animated").removeClass("hinted")
+    // Wait for the page to end flipping
+    setTimeout(() => {
+        $("html, body").removeClass("noScroll")
+    }, 1000)
 }
 
 function vocalizePageTitle(pageId) {
