@@ -9,11 +9,11 @@
 }
 
 /* background colours */
-.panel:nth-of-type(6n+1) {background-image: radial-gradient(circle, lightblue, deepskyblue);}
-.panel:nth-of-type(6n+2) {background-image: radial-gradient(circle, yellow, orange);}
-.panel:nth-of-type(6n+3) {background-image: radial-gradient(circle, palegreen, yellowgreen);}
-.panel:nth-of-type(6n+4) {background-image: radial-gradient(circle, lightcoral, tomato);}
-.panel:nth-of-type(6n+5) {background-image: radial-gradient(circle, #e180f0, #cb47ff);}
+.panel:nth-of-type(6n+1) {background-image: radial-gradient(circle, #c7f2ff, deepskyblue);}
+.panel:nth-of-type(6n+2) {background-image: radial-gradient(circle, #fcfca1, orange);}
+.panel:nth-of-type(6n+3) {background-image: radial-gradient(circle, #ceffce, yellowgreen);}
+.panel:nth-of-type(6n+4) {background-image: radial-gradient(circle, #fcaeae, tomato);}
+.panel:nth-of-type(6n+5) {background-image: radial-gradient(circle, #f5c2ff, #cb47ff);}
 .panel:nth-of-type(6n+6) {background-image: radial-gradient(circle, #ffaf46, #fffc36);}
 
 .panel-container {

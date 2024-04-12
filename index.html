@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="style/certificates.css">
     <link rel="stylesheet" href="style/certificates-responsive.css">
     <link rel="stylesheet" href="style/talks.css">
+    <link rel="stylesheet" href="style/talks-responsive.css">
     <link rel="stylesheet" href="style/hobbies.css">
     <link rel="stylesheet" href="style/contact.css">
 
@@ -768,11 +769,71 @@
         <!-- *********************   TALKS PAGE   ********************* -->
         <section id="talks-page" class="page">
             <div class="front page-with-content">
-                <header>
-                    <h2 tabindex="-1"><span class="unskew">Formations</span></h2>
-                </header>
-
                 <article class="page-content">
+                    <div id="training-panels">
+                        <h2 id="training-title" tabindex="-1"><span class="unskew">Formations</span></h2>
+
+                        <ul id="training-list" aria-labelledby="training-title">
+                            <li id="react-training">
+                                <div class="training-panel-wrapper">
+                                    <div class="training-panel">
+                                        <span class="training-character"></span>
+                                        <span class="training-text">React</span>
+                                    </div>
+                                </div>
+                            </li><li id="agile-training">
+                                <div class="training-panel-wrapper">
+                                    <div class="training-panel">
+                                        <span class="training-character"></span>
+                                        <span class="training-text">Agilité</span>
+                                    </div>
+                                </div>
+                            </li><li id="accessibility-training">
+                                <div class="training-panel-wrapper">
+                                    <div class="training-panel">
+                                        <span class="training-character"></span>
+                                        <span class="training-text">Accessibilité</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                    <div id="talk-panels">
+                        <h2 id="talks-title"><span class="unskew">Talks</span></h2>
+
+                        <ul id="talks-list">
+                            <li id="talk-daily-meeting" class="panel talk-wrapper">
+                                <span class="talk-content">
+                                    <a href="https://www.youtube.com/watch?v=H6zjMIaxAK8">
+                                        <span class="title">Daily Meeting</span><span class="date">2019</span>
+                                        <span class="sr-only">(Nouvelle fenêtre vers Youtube)</span>
+                                    </a>
+                                </span>
+                            </li>
+                            <li id="talk-tdd" class="panel talk-wrapper">
+                                <span class="talk-content">
+                                    <span class="title">Tests unitaires & Dojo TDD</span><span class="date">2019</span>
+                                </span>
+                            </li>
+                            <li id="talk-spring" class="panel talk-wrapper">
+                                <span class="talk-content">
+                                    <span class="title">Dojo Spring</span><span class="date">2018</span>
+                                </span>
+                            </li>
+                            <li id="talk-webscokets" class="panel talk-wrapper">
+                                <span class="talk-content">
+                                    <span class="title">WebSockets</span><span class="date">2018</span>
+                                </span>
+                            </li>
+                            <li id="talk-html" class="panel talk-wrapper">
+                                <span class="talk-content">
+                                    <span class="title">HTML5-CSS3</span><span class="date">2015</span>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
 
                 </article>
 
