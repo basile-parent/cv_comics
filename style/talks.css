@@ -4,21 +4,22 @@
     list-style-type: none;
 }
 
+/* **************************************************
+*******************   TRAININGS   *******************
+***************************************************** */
 #talks-page h2#training-title {
     position: absolute;
-    top: 25px;
+    top: 45px;
     left: 50%;
     transform: translate(-50%, 0) skew(-15deg);
     text-align: center;
     background-color: white;
     border: 3px solid black;
     padding: 0 45px;
+    margin: 0;
     z-index: 15;
 }
 
-/* **************************************************
-*******************   TRAININGS   *******************
-***************************************************** */
 #talks-page ul#training-list {
     display: inline-block;
     width: 100%;
