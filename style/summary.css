@@ -47,6 +47,7 @@
     padding: 3px 30px;
     transform: skew(-15deg);
     width: 60%;
+    margin-top: 8px;
 }
 
 #summary-page button {
@@ -77,12 +78,13 @@
     background-size: contain;
 }
 
-#summary-page nav.return-to-front-page-navigation a span {
+#summary-page nav.return-to-front-page-navigation a .bubble {
     bottom: -80px;
     left: 15%;
     right: unset;
     opacity: 0;
     transition: opacity .3s ease;
+    pointer-events: none;
 }
 #summary-page nav.return-to-front-page-navigation a:hover span,
 #summary-page nav.return-to-front-page-navigation a:focus span {
