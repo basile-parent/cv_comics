@@ -29,8 +29,8 @@ function openPortfolioDialog(event) {
 
     const imgSrc = figure.children("img").attr("src")
     const captionContent = figure.children("figcaption")[0].innerText
-    $("#portfolio-dialog .dialog-container .content img").attr("src", imgSrc)
-    $("#portfolio-dialog .dialog-container .content #portfolio-dialog-details").text(captionContent)
+    $("#portfolio-dialog .content img").attr("src", imgSrc)
+    $("#portfolio-dialog .content #portfolio-dialog-details").text(captionContent)
 
     openDialog("portfolio-dialog", `.carrousel-item.active figure`)
 }

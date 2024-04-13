@@ -1,22 +1,23 @@
-[role=dialog] {
+.dialog-container {
     position: fixed;
+    overflow-y: auto;
     z-index: 900;
     top: 0;
+    right: 0;
+    bottom: 0;
     left: 0;
-    height: 100%;
-    width: 100%;
     background-color: rgba(200, 200, 200, 0.5);
     opacity: 0;
 }
 
-[role=dialog]:not([inert]) {
+.dialog-container:not([inert]) {
     display: block;
     animation: dialog-fade-in .2s ease-in forwards;
 }
-[role=dialog].closing {
+.dialog-container.closing {
     animation: dialog-fade-out .2s ease-in forwards;
 }
-[role=dialog][inert] {
+.dialog-container[inert] {
     display: none;
 }
 
@@ -37,7 +38,7 @@
     }
 }
 
-[role=dialog] .dialog-container {
+.dialog-container .dialog {
     position: fixed;
     z-index: 990;
     top: 50%;
@@ -51,7 +52,7 @@
     box-shadow: 6px 6px 6px #444;
 }
 
-[role=dialog] button.close-dialog {
+.dialog-container button.close-dialog {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -62,7 +63,38 @@
     cursor: pointer;
 }
 
-[role=dialog] button.close-dialog:hover,
-[role=dialog] button.close-dialog:focus {
+.dialog-container button.close-dialog:hover,
+.dialog-container button.close-dialog:focus {
     box-shadow: 0 0 20px #444;
+}
+
+@media  (orientation: portrait) and (max-width: 500px),
+        (orientation: landscape) and (max-height: 700px) {
+    .dialog-container {
+        background-color: unset;
+    }
+
+    .dialog-container .dialog {
+        position: unset;
+        transform: none;
+        border: none;
+        box-shadow: none;
+        min-height: 100vh;
+        width: 100vw;
+    }
+}
+
+@media  (orientation: landscape) and (max-height: 700px) {
+    .dialog-container {
+        background-color: unset;
+    }
+
+    .dialog-container .dialog {
+        position: unset;
+        transform: none;
+        border: none;
+        box-shadow: none;
+        min-height: 100vh;
+        width: 100vw;
+    }
 }

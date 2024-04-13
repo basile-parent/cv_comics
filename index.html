@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="style/talks.css">
     <link rel="stylesheet" href="style/talks-responsive.css">
     <link rel="stylesheet" href="style/hobbies.css">
+    <link rel="stylesheet" href="style/hobbies-responsive.css">
     <link rel="stylesheet" href="style/contact.css">
 
     <script src="js/jquery.min.js"></script>
@@ -46,6 +47,7 @@
         </section>
     </div>
     <div id="cv-book" class="book" aria-hidden="true">
+        <!-- *********************   COVER PAGE   ********************* -->
         <section id="cover-page" class="page active first hinted">
             <div class="front">
                 <nav id="skip-links" aria-label="Liens d'évitement">
@@ -1147,13 +1149,13 @@
 </main>
 
 <div id="portfolio-dialog"
-     role="dialog"
-     aria-modal="true"
-     aria-label="Agrandissement de l'image du portfolio"
-
+     class="dialog-container"
      inert
 >
-    <div class="dialog-container">
+    <div class="dialog"
+         role="dialog"
+         aria-modal="true"
+         aria-label="Agrandissement de l'image du portfolio">
         <button class="close-dialog" onClick="closeDialog(this)">Fermer<span class="sr-only"> la popup</span></button>
         <div class="content">
             <img src="" aria-labelledby="portfolio-dialog-details" alt="" />

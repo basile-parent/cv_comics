@@ -1,0 +1,86 @@
+@media  (orientation: portrait) and (max-width: 500px),
+        (orientation: landscape) and (max-height: 700px) {
+
+    #hobbies-page #carrousel-panel {
+        padding-top: 40px;
+    }
+
+    #hobbies-page #carrousel-panel nav {
+        text-align: center;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #hobbies-page #carrousel-panel nav .button-container {
+        flex: 1;
+        position: relative;
+        top: unset;
+        left: unset;
+        transform: none;
+        display: inline-block;
+        height: 95px;
+        width: 85px;
+        opacity: 1;
+    }
+
+    #hobbies-page #carrousel-panel .carrousel-item .slide-picture {
+        position: static;
+        mask: none;
+        transform: none;
+
+        margin: 0 5%;
+        width: 90%;
+        height: auto;
+    }
+    #hobbies-page #carrousel-panel .carrousel-item .slide-picture:before {
+        display: none;
+    }
+
+    #hobbies-page #carrousel-panel .carrousel-item .slide-picture img {
+        max-height: 50%;
+    }
+
+    #hobbies-page #carrousel-panel .carrousel-item .slide-description {
+        position: static;
+        margin: 20px 5% 0 5%;
+        height: auto;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+}
+
+@media (orientation: landscape) and (max-height: 700px) {
+    #talks-page .page-with-content .page-content {
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    #hobbies-page #carrousel-panel nav {
+        position: absolute;
+        top: 33px;
+        width: 40%;
+    }
+    #hobbies-page #carrousel-panel nav .button-container {
+        height: 70px;
+        width: 55px;
+    }
+
+    #hobbies-page #carrousel-panel {
+        padding-top: 40px;
+        display: flex;
+    }
+
+    #hobbies-page #carrousel-panel .carrousel-item {
+        display: flex;
+    }
+
+    #hobbies-page #carrousel-panel .carrousel-item .slide-picture {
+        margin: 0;
+        align-items: flex-end;
+        padding-bottom: 15px;
+    }
+
+    #hobbies-page #carrousel-panel .carrousel-item .slide-description {
+        margin: 15px 15px 15px 0;
+    }
+}

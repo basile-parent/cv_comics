@@ -1,16 +1,16 @@
 function openDialog(dialogId, elementSelectorToFocusOnClose) {
-    const dialog = $(`[role=dialog]#${ dialogId }`)
+    const dialog = $(`.dialog-container#${ dialogId }`)
     dialog.removeAttr("inert")
 
     dialog.find("button, a, input, textarea, [tabindex=0]").focus()
 
-    dialog.children(".dialog-container").first()
+    dialog.children(".dialog").first()
         .append(`<input type="hidden" class="elementSelectorToFocusOnClose" value="${ elementSelectorToFocusOnClose }"/>`)
 
     $("main").attr("inert", "")
 }
 function closeDialog(button) {
-    const dialog = $(button).parents("[role=dialog]");
+    const dialog = $(button).parents(".dialog-container");
 
     $("main").removeAttr("inert")
 
