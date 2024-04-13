@@ -74,7 +74,7 @@ async function goToPage(pageId, options = undefined) {
 }
 
 function prevPageFlip() {
-    $(".flipped")
+    $(".page.flipped")
         .last()
         .removeClass("flipped")
         .addClass("active")
@@ -86,7 +86,7 @@ function prevPageFlip() {
 
 
 function nextPageFlip() {
-    $(".active")
+    $(".page.active")
         .removeClass("active")
         .addClass("flipped")
         .next(".page")
