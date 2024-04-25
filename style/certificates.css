@@ -25,7 +25,8 @@
 }
 
 #certificates-page .page-with-content .page-content {
-    padding-top: 40px;
+    margin-top: -25px;
+    padding-top: 0;
     z-index: 10;
 }
 
@@ -34,11 +35,13 @@
     flex-direction: row;
     gap: 2%;
     width: 100%;
-    height: 130px;
-    margin-bottom: 40px;
+    height: 135px;
+    margin-top: 40px;
 }
 .diploma:nth-of-type(2) {
     flex-direction: row-reverse;
+    height: 170px;
+    margin-top: 20px;
     gap: 5%;
 }
 .diploma:last-of-type {
@@ -52,6 +55,7 @@
     position: relative;
     display: inline-block;
     width: 200px;
+    min-width: 200px;
     height: 130px;
     background-color: #ffecb9;
 }
@@ -164,6 +168,7 @@
 }
 .diploma:nth-of-type(2) .diploma-list {
     align-items: flex-end;
+    text-align: right;
 }
 
 .diploma-list, .diploma-list li {
@@ -186,6 +191,10 @@
     vertical-align: middle;
     filter: drop-shadow(2px 2px 3px black);
 }
+.diploma-list li#a11y-certificate:before {
+    background: url("../assets/certifs/access42.png") no-repeat center center;
+    background-size: contain;
+}
 .diploma-list li#psm-certificate:before {
     background: url("../assets/certifs/psm1.png") no-repeat center center;
     background-size: contain;
@@ -203,6 +212,9 @@
     color: #000031;
 }
 
+.diploma-list li a .new-tab-link {
+    margin-left: 5px;
+}
 .diploma-list li a:hover .new-tab-link, .diploma-list li a:focus .new-tab-link {
     background-color: #000031;
     color: #000031;
