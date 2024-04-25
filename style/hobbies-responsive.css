@@ -1,51 +1,76 @@
 @media  (orientation: portrait) and (max-width: 500px),
         (orientation: landscape) and (max-height: 700px) {
 
-    #hobbies-page #carrousel-panel {
-        padding-top: 40px;
+    #hobbies-page #carrousel-panel .decorations {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 0;
     }
 
-    #hobbies-page #carrousel-panel nav {
-        text-align: center;
-        margin-bottom: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    #hobbies-page #carrousel-panel .decorations .background {
+        height: 100%;
     }
+    #hobbies-page #carrousel-panel .decorations .table {
+        top: 50%;
+    }
+
+    #hobbies-page #carrousel-panel .decorations .tv {
+        width: 100%;
+        height: 200%;
+        top: 5%;
+        left: 0;
+    }
+
+    #hobbies-page #carrousel-panel .decorations .tv-shutdown-effect {
+        display: none;
+    }
+
     #hobbies-page #carrousel-panel nav .button-container {
-        flex: 1;
-        position: relative;
-        top: unset;
-        left: unset;
-        transform: none;
-        display: inline-block;
-        height: 95px;
-        width: 85px;
+        width: 65px;
         opacity: 1;
+    }
+    #hobbies-page #carrousel-panel nav .button-container:nth-of-type(1) {
+        left: -10px;
+    }
+    #hobbies-page #carrousel-panel nav .button-container:nth-of-type(2) {
+        right: -10px;
     }
 
     #hobbies-page #carrousel-panel .carrousel-item .slide-picture {
-        position: static;
-        mask: none;
-        transform: none;
-
-        margin: 0 5%;
-        width: 90%;
+        top: 15%;
+        left: 48%;
+        width: 50%;
         height: auto;
+        background-color: transparent;
     }
+
     #hobbies-page #carrousel-panel .carrousel-item .slide-picture:before {
         display: none;
     }
 
     #hobbies-page #carrousel-panel .carrousel-item .slide-picture img {
+        margin-top: 3px;
         max-height: 50%;
     }
 
+    #hobbies-page #carrousel-panel .carrousel-item .slide-picture figure:hover,
+    #hobbies-page #carrousel-panel .carrousel-item .slide-picture figure:focus {
+        scale: 1;
+        box-shadow: 0 0 0 1px #555, 4px 4px 3px black;
+    }
+
+    #hobbies-page #carrousel-panel .carrousel-item .slide-picture figure figcaption {
+        margin: 0 5px;
+        font-size: .8rem;
+    }
+
     #hobbies-page #carrousel-panel .carrousel-item .slide-description {
-        position: static;
-        margin: 20px 5% 0 5%;
-        height: auto;
         background-color: rgba(0, 0, 0, 0.7);
+        z-index: 30;
+        font-size: 1rem;
     }
 }
 
@@ -55,32 +80,42 @@
         overflow-y: auto;
     }
 
+    #hobbies-page #carrousel-panel .decorations .table {
+        top: 70%;
+    }
+
+    #hobbies-page #carrousel-panel .decorations .tv {
+        width: 50%;
+        height: 200%;
+        top: 15%;
+        left: 5%;
+    }
+
+    #hobbies-page #carrousel-panel .carrousel-item .slide-picture {
+        top: 25%;
+        left: 30%;
+
+        width: 30%;
+        height: auto;
+    }
+
     #hobbies-page #carrousel-panel nav {
         position: absolute;
-        top: 33px;
-        width: 40%;
+        top: 0;
+        left: 5%;
+        width: 50%;
+        height: 100%;
     }
     #hobbies-page #carrousel-panel nav .button-container {
         height: 70px;
         width: 55px;
-    }
-
-    #hobbies-page #carrousel-panel {
-        padding-top: 40px;
-        display: flex;
-    }
-
-    #hobbies-page #carrousel-panel .carrousel-item {
-        display: flex;
-    }
-
-    #hobbies-page #carrousel-panel .carrousel-item .slide-picture {
-        margin: 0;
-        align-items: flex-end;
-        padding-bottom: 15px;
+        top: 30%;
     }
 
     #hobbies-page #carrousel-panel .carrousel-item .slide-description {
-        margin: 15px 15px 15px 0;
+        width: 43%;
+        left: 55%;
+        height: 80%;
+        top: 15%;
     }
 }
