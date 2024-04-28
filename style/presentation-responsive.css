@@ -42,6 +42,9 @@
         );
     }
 
+    #presentation-page #presentation-social-networks {
+        margin-top: 10px;
+    }
     #presentation-page #presentation-social-networks p {
         font-size: 1.8rem;
     }

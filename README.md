@@ -2,11 +2,12 @@
 
 ## TODO
 - Content !
+- animate skills gauges
 - Severe bugs on tab sequence
 - disable animations when the browser parameter is set
-- animate skills gauges
 - swipe on mobile
 - Micro CSS bug on the summary title on landscape
-- back pages
+- CSS improvement for my name on cover
 - Put all the images you can on CSS
+- back pages
 - Dark theme

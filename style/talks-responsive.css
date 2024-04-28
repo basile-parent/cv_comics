@@ -1,4 +1,9 @@
 @media (orientation: portrait) and (max-width: 500px) {
+    #talks-page .page-with-content .page-content {
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
     /* **************************************************
     *******************   TRAININGS   *******************
     ***************************************************** */
@@ -16,6 +21,7 @@
 
     #talks-page ul#training-list li {
         height: 150px;
+        float: none; /* Remove this fix for Firefox in portrait mode */
     }
 
     #talks-page ul#training-list li:nth-of-type(2),

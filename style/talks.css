@@ -28,6 +28,7 @@
 }
 
 #talks-page ul#training-list li {
+    float: left; /* Fix for Firefox: add additionnal spaces from html formatting */
     display: inline-block;
     height: 100%;
 }
