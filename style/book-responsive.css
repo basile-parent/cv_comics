@@ -32,3 +32,9 @@
         transform: none;
     }
 }
+
+@media (orientation: landscape) and (max-height: 700px) {
+    .page .front.page-with-content footer {
+        height: 50px;
+    }
+}
