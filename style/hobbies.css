@@ -8,7 +8,7 @@
     border: 3px solid black;
     width: 300px;
     margin: 0;
-    z-index: 25;
+    z-index: 50;
 }
 #hobbies-page h2 .title-part {
     display: inline-block;
@@ -32,6 +32,12 @@
     height: 100%;
     margin: 0;
 }
+
+#hobbies-page #carrousel-panel .carrousel-content {
+    position: absolute;
+    z-index: 10;
+}
+
 #hobbies-page #carrousel-panel .carrousel-item {
     position: relative;
     display: inline-block;
@@ -67,37 +73,75 @@
     background: linear-gradient(180deg, rgba(243,231,183,1) 0%, rgba(141,169,180,1) 25%, rgba(7,30,38,1) 75%);
 }
 
-#hobbies-page #carrousel-panel .decorations .tv {
+
+/* **************   TV SET   ************** */
+#hobbies-page #carrousel-panel .tv-set {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+#hobbies-page #carrousel-panel .tv {
     position: absolute;
     width: 100%;
     height: 80%;
-    top: 2%;
+    top: 0;
     left: 2%;
     background: url("../assets/old-screen.png") top center no-repeat;
     background-size: contain;
-    z-index: 15;
+    z-index: 25;
+    pointer-events: none;
 }
 
-#hobbies-page #carrousel-panel .decorations .tv-background {
+#hobbies-page #carrousel-panel .tv-background {
     position: absolute;
-    width: 90%;
-    height: 50%;
+    width: 80%;
+    height: 40%;
     top: 5%;
-    left: 5%;
-    z-index: 2;
+    left: 10%;
+}
+#hobbies-page #carrousel-panel .tv-background:before,
+#hobbies-page #carrousel-panel .tv-background:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
 }
 
-#hobbies-page #carrousel-panel .decorations .tv-shutdown-effect {
+#hobbies-page #carrousel-panel .tv-background:before {
+    background-color: black;
+    z-index: 0;
+}
+
+#hobbies-page #carrousel-panel .tv-background:after {
+    background-image: url("../assets/tv_noise.gif");
+    z-index: 10;
+    opacity: 0.5;
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+@media (prefers-reduced-motion: reduce) {
+    #hobbies-page #carrousel-panel .tv-background:after {
+        background-image: url("../assets/tv_noise_static.jpg");
+    }
+}
+
+#hobbies-page #carrousel-panel .tv-shutdown-effect {
     position: absolute;
     width: 70%;
     height: 40%;
     top: 7%;
     left: 15%;
     background-color: black;
-    z-index: 5;
+    z-index: 20;
+    pointer-events: none;
 }
 
-#hobbies-page #carrousel-panel .decorations .tv-shutdown-effect:before {
+#hobbies-page #carrousel-panel .tv-shutdown-effect:before {
     content: "";
     position: absolute;
     width: 0;
@@ -109,12 +153,12 @@
     transform: translate(-50%, -50%);
 }
 
-#hobbies-page:not(.active) #carrousel-panel .decorations .tv-shutdown-effect:before {
+#hobbies-page:not(.active) #carrousel-panel .tv-shutdown-effect:before {
     animation: tv-shutdown .2s ease-out forwards;
     animation-delay: .2s; /* Wait for the container fade in: animation tv-effect-fadein-after-shutdown */
 }
 
-#hobbies-page.active #carrousel-panel .decorations .tv-shutdown-effect:before {
+#hobbies-page.active #carrousel-panel .tv-shutdown-effect:before {
     animation: tv-turn-on .3s ease-out forwards;
     animation-delay: 1s;
 }
@@ -136,7 +180,7 @@
     100% { height: 100%; width: 100%; }
 }
 
-#hobbies-page.active #carrousel-panel .decorations .tv-shutdown-effect {
+#hobbies-page.active #carrousel-panel .tv-shutdown-effect {
     animation: tv-effect-fadeout-after-turn-on 2s ease-out forwards;
     animation-delay: 1.3s;
 }
@@ -146,7 +190,7 @@
     100% { opacity: 0; }
 }
 
-#hobbies-page:not(.active) #carrousel-panel .decorations .tv-shutdown-effect {
+#hobbies-page:not(.active) #carrousel-panel .tv-shutdown-effect {
     animation: tv-effect-fadein-after-shutdown .4s ease-out forwards;
 }
 
@@ -156,7 +200,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-    #hobbies-page #carrousel-panel .decorations .tv-shutdown-effect {
+    #hobbies-page #carrousel-panel .tv-shutdown-effect {
         display: none;
     }
 }
@@ -165,12 +209,12 @@
 /* **************   NAVIGATION BUTTONS   ************** */
 #hobbies-page #carrousel-panel nav .button-container {
     position: absolute;
-    top: 120px;
+    top: 100px;
     height: 95px;
     width: 85px;
     padding: 10px 5px;
     opacity: 0.7;
-    z-index: 20;
+    z-index: 50;
     transition: scale .3s ease, opacity .3s ease;
     border-radius: 5px;
 }
@@ -204,17 +248,17 @@
     cursor: pointer;
 }
 #hobbies-page #carrousel-panel nav .button-container:nth-of-type(1) {
-    left: 25px;
+    left: 15px;
     transform: rotateY(180deg);
 }
 #hobbies-page #carrousel-panel nav .button-container:nth-of-type(2) {
-    right: 15px;
+    right: 5px;
 }
 
 /* ******************   PICTURE   ****************** */
 #hobbies-page #carrousel-panel .carrousel-item .slide-picture {
     position: absolute;
-    top: 50px;
+    top: 40px;
     left: calc(50% + 5px);
     transform: translate(-50%, 0) rotateY(12deg) rotateZ(-2deg);
     width: 287px;
@@ -223,29 +267,9 @@
 
     transform-style: preserve-3d;
 
-    background-color: black;
-
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-#hobbies-page #carrousel-panel .carrousel-item .slide-picture:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("../assets/tv_noise.gif");
-    z-index: -1;
-    opacity: 0.5;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    #hobbies-page #carrousel-panel .carrousel-item .slide-picture:before {
-        background-image: url("../assets/tv_noise_static.jpg");
-    }
 }
 
 #hobbies-page #carrousel-panel .carrousel-item .slide-picture figure {

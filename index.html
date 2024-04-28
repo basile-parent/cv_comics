@@ -885,192 +885,199 @@
                         <div class="decorations" aria-hidden="true">
                             <span class="background"></span>
                             <span class="table"></span>
-                            <span class="tv"></span>
+                        </div>
+
+                        <div class="tv-set">
+                            <span class="tv-background"></span>
+                            <div class="tv"></div>
+
+                            <nav aria-label="Contrôles du carrousel">
+                                <span class="button-container"><button class="prev-slide-button" title="Slide précédente">Slide précédente</button></span>
+                                <span class="button-container"><button class="next-slide-button" title="Slide suivante">Slide suivante</button></span>
+                            </nav>
+
+                            <article class="carrousel-content" aria-live="polite">
+                                <div class="carrousel-item active"
+                                     role="group"
+                                     aria-roledescription="slide"
+                                     aria-label="1 sur X (corrigé par le JS)"
+                                     data-category="personal-projects"
+                                >
+                                    <div class="slide-picture">
+                                        <figure role="group"
+                                                aria-label="Jira reporting tool 2020"
+                                                aria-describedby="portfolio-1-description"
+                                                tabindex="0"
+                                                title="Agrandir l'image"
+                                                aria-haspopup="dialog"
+                                        >
+                                            <img src="assets/portfolio/web-dev/jira.jpg" alt="Screenshot du projet" />
+                                            <figcaption>
+                                                <span class="title">Jira reporting tool 2020</span>
+                                            </figcaption>
+                                        </figure>
+                                    </div>
+
+                                    <div id="portfolio-1-description" class="slide-description">
+                                        <p class="slide-description-text">
+                                            Un programme React / NodeJS qui vient requêter l'API Jira
+                                        </p>
+                                        <p class="slide-description-techno">
+                                            Technologies: ...
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="carrousel-item"
+                                     role="group"
+                                     aria-roledescription="slide"
+                                     aria-label="2 sur X (corrigé par le JS)"
+                                     data-category="personal-projects"
+                                >
+                                    <div class="slide-picture">
+                                        <figure role="group"
+                                                aria-label="Remote Agile Energizers 2020"
+                                                aria-describedby="portfolio-2-description"
+                                                tabindex="0"
+                                                title="Agrandir l'image"
+                                        >
+                                            <img src="assets/portfolio/web-dev/walk-stop.jpg" alt="Screenshot du projet" />
+                                            <figcaption>
+                                                <span class="title">Remote Agile Energizers 2020</span>
+                                            </figcaption>
+                                        </figure>
+                                    </div>
+
+                                    <div id="portfolio-2-description" class="slide-description">
+                                        <p class="slide-description-text">
+                                            Plusieurs energizers / serious games agiles développés pendant le confinement
+                                        </p>
+                                        <p class="slide-description-techno">
+                                            Technologies: ...
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="carrousel-item"
+                                     role="group"
+                                     aria-roledescription="slide"
+                                     aria-label="3 sur X (corrigé par le JS)"
+                                     data-category="personal-projects"
+                                >
+                                    <div class="slide-picture">
+                                        <figure role="group"
+                                                aria-label="Space shooter 2019"
+                                                aria-describedby="portfolio-3-description"
+                                                tabindex="0"
+                                                title="Agrandir l'image"
+                                        >
+                                            <img src="assets/portfolio/web-dev/tryhardship.jpg" alt="Screenshot du projet" />
+                                            <figcaption>
+                                                <span class="title">Space shooter 2019</span>
+                                            </figcaption>
+                                        </figure>
+                                    </div>
+
+                                    <div id="portfolio-3-description" class="slide-description">
+                                        <p class="slide-description-text">
+                                            Un jeu vidéo HTML/JS développé avec Phaser 3
+                                        </p>
+                                        <p class="slide-description-techno">
+                                            Technologies: ...
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="carrousel-item"
+                                     role="group"
+                                     aria-roledescription="slide"
+                                     aria-label="4 sur X (corrigé par le JS)"
+                                     data-category="personal-projects"
+                                >
+                                    <div class="slide-picture">
+                                        <figure role="group"
+                                                aria-label="GED vidéo v2 2018"
+                                                aria-describedby="portfolio-4-description"
+                                                tabindex="0"
+                                                title="Agrandir l'image"
+                                        >
+                                            <img src="assets/portfolio/web-dev/youdance.jpg" alt="Screenshot du projet" />
+                                            <figcaption>
+                                                <span class="title">GED vidéo v2 2018</span>
+                                            </figcaption>
+                                        </figure>
+                                    </div>
+
+                                    <div id="portfolio-4-description" class="slide-description">
+                                        <p class="slide-description-text">
+                                            Un outil de référencement de vidéos de danse avec moteur de recherche sous ElasticSearch.
+                                        </p>
+                                        <p class="slide-description-techno">
+                                            Technologies: ...
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="carrousel-item"
+                                     role="group"
+                                     aria-roledescription="slide"
+                                     aria-label="5 sur X (corrigé par le JS)"
+                                     data-category="hobbies"
+                                >
+                                    <div class="slide-picture">
+                                        <figure role="group"
+                                                aria-label="Arts martiaux"
+                                                aria-describedby="portfolio-5-description"
+                                                tabindex="0"
+                                                title="Agrandir l'image"
+                                        >
+                                            <img src="assets/hobbies/danse.jpg" alt="Soirée dansante sur Paris 2017" />
+                                            <figcaption>
+                                                <span class="title">Arts martiaux</span>
+                                            </figcaption>
+                                        </figure>
+                                    </div>
+
+                                    <div id="portfolio-5-description" class="slide-description">
+                                        <p class="slide-description-text">
+                                            J'ai toujours aimé la pratique des arts martiaux et sports de combat
+                                            en tous genres (judo, jujitsu, krav maga)
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="carrousel-item"
+                                     role="group"
+                                     aria-roledescription="slide"
+                                     aria-label="6 sur X (corrigé par le JS)"
+                                     data-category="hobbies"
+                                >
+                                    <div class="slide-picture">
+                                        <figure role="group"
+                                                aria-label="Danse de couple"
+                                                aria-describedby="portfolio-6-description"
+                                                tabindex="0"
+                                                title="Agrandir l'image"
+                                        >
+                                            <img src="assets/hobbies/danse.jpg" alt="Soirée dansante sur Paris 2017" />
+                                            <figcaption>
+                                                <span class="title">Danse de couple</span>
+                                            </figcaption>
+                                        </figure>
+                                    </div>
+
+                                    <div id="portfolio-6-description" class="slide-description">
+                                        <p class="slide-description-text">
+                                            Passionné par la danse depuis tout petit, j'ai pratiqué et enseigné un certain
+                                            nombre de danses de couple et solo : Rock, Boogie, Lindy, Jazz Roots, WCS...
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+
                             <span class="tv-shutdown-effect"></span>
                         </div>
-                        <nav aria-label="Contrôles du carrousel">
-                            <span class="button-container"><button class="prev-slide-button" title="Slide précédente">Slide précédente</button></span>
-                            <span class="button-container"><button class="next-slide-button" title="Slide suivante">Slide suivante</button></span>
-                        </nav>
-                        <article class="carrousel-content" aria-live="polite">
-                            <div class="carrousel-item active"
-                                 role="group"
-                                 aria-roledescription="slide"
-                                 aria-label="1 sur X (corrigé par le JS)"
-                                 data-category="personal-projects"
-                            >
-                                <div class="slide-picture">
-                                    <figure role="group"
-                                            aria-label="Jira reporting tool 2020"
-                                            aria-describedby="portfolio-1-description"
-                                            tabindex="0"
-                                            title="Agrandir l'image"
-                                            aria-haspopup="dialog"
-                                    >
-                                        <img src="assets/portfolio/web-dev/jira.jpg" alt="Screenshot du projet" />
-                                        <figcaption>
-                                            <span class="title">Jira reporting tool 2020</span>
-                                        </figcaption>
-                                    </figure>
-                                </div>
 
-                                <div id="portfolio-1-description" class="slide-description">
-                                    <p class="slide-description-text">
-                                        Un programme React / NodeJS qui vient requêter l'API Jira
-                                    </p>
-                                    <p class="slide-description-techno">
-                                        Technologies: ...
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="carrousel-item"
-                                 role="group"
-                                 aria-roledescription="slide"
-                                 aria-label="2 sur X (corrigé par le JS)"
-                                 data-category="personal-projects"
-                            >
-                                <div class="slide-picture">
-                                    <figure role="group"
-                                            aria-label="Remote Agile Energizers 2020"
-                                            aria-describedby="portfolio-2-description"
-                                            tabindex="0"
-                                            title="Agrandir l'image"
-                                    >
-                                        <img src="assets/portfolio/web-dev/walk-stop.jpg" alt="Screenshot du projet" />
-                                        <figcaption>
-                                            <span class="title">Remote Agile Energizers 2020</span>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-
-                                <div id="portfolio-2-description" class="slide-description">
-                                    <p class="slide-description-text">
-                                        Plusieurs energizers / serious games agiles développés pendant le confinement
-                                    </p>
-                                    <p class="slide-description-techno">
-                                        Technologies: ...
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="carrousel-item"
-                                 role="group"
-                                 aria-roledescription="slide"
-                                 aria-label="3 sur X (corrigé par le JS)"
-                                 data-category="personal-projects"
-                            >
-                                <div class="slide-picture">
-                                    <figure role="group"
-                                            aria-label="Space shooter 2019"
-                                            aria-describedby="portfolio-3-description"
-                                            tabindex="0"
-                                            title="Agrandir l'image"
-                                    >
-                                        <img src="assets/portfolio/web-dev/tryhardship.jpg" alt="Screenshot du projet" />
-                                        <figcaption>
-                                            <span class="title">Space shooter 2019</span>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-
-                                <div id="portfolio-3-description" class="slide-description">
-                                    <p class="slide-description-text">
-                                        Un jeu vidéo HTML/JS développé avec Phaser 3
-                                    </p>
-                                    <p class="slide-description-techno">
-                                        Technologies: ...
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="carrousel-item"
-                                 role="group"
-                                 aria-roledescription="slide"
-                                 aria-label="4 sur X (corrigé par le JS)"
-                                 data-category="personal-projects"
-                            >
-                                <div class="slide-picture">
-                                    <figure role="group"
-                                            aria-label="GED vidéo v2 2018"
-                                            aria-describedby="portfolio-4-description"
-                                            tabindex="0"
-                                            title="Agrandir l'image"
-                                    >
-                                        <img src="assets/portfolio/web-dev/youdance.jpg" alt="Screenshot du projet" />
-                                        <figcaption>
-                                            <span class="title">GED vidéo v2 2018</span>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-
-                                <div id="portfolio-4-description" class="slide-description">
-                                    <p class="slide-description-text">
-                                        Un outil de référencement de vidéos de danse avec moteur de recherche sous ElasticSearch.
-                                    </p>
-                                    <p class="slide-description-techno">
-                                        Technologies: ...
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="carrousel-item"
-                                 role="group"
-                                 aria-roledescription="slide"
-                                 aria-label="5 sur X (corrigé par le JS)"
-                                 data-category="hobbies"
-                            >
-                                <div class="slide-picture">
-                                    <figure role="group"
-                                            aria-label="Arts martiaux"
-                                            aria-describedby="portfolio-5-description"
-                                            tabindex="0"
-                                            title="Agrandir l'image"
-                                    >
-                                        <img src="assets/hobbies/danse.jpg" alt="Soirée dansante sur Paris 2017" />
-                                        <figcaption>
-                                            <span class="title">Arts martiaux</span>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-
-                                <div id="portfolio-5-description" class="slide-description">
-                                    <p class="slide-description-text">
-                                        J'ai toujours aimé la pratique des arts martiaux et sports de combat
-                                        en tous genres (judo, jujitsu, krav maga)
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="carrousel-item"
-                                 role="group"
-                                 aria-roledescription="slide"
-                                 aria-label="6 sur X (corrigé par le JS)"
-                                 data-category="hobbies"
-                            >
-                                <div class="slide-picture">
-                                    <figure role="group"
-                                            aria-label="Danse de couple"
-                                            aria-describedby="portfolio-6-description"
-                                            tabindex="0"
-                                            title="Agrandir l'image"
-                                    >
-                                        <img src="assets/hobbies/danse.jpg" alt="Soirée dansante sur Paris 2017" />
-                                        <figcaption>
-                                            <span class="title">Danse de couple</span>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-
-                                <div id="portfolio-6-description" class="slide-description">
-                                    <p class="slide-description-text">
-                                        Passionné par la danse depuis tout petit, j'ai pratiqué et enseigné un certain
-                                        nombre de danses de couple et solo : Rock, Boogie, Lindy, Jazz Roots, WCS...
-                                    </p>
-                                </div>
-                            </div>
-
-                        </article>
                     </section>
                 </article>
 
