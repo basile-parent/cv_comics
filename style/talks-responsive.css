@@ -16,12 +16,9 @@
     }
 
     #talks-page ul#training-list li {
+        display: block;
         width: 100% !important;
-    }
-
-    #talks-page ul#training-list li {
         height: 150px;
-        float: none; /* Remove this fix for Firefox in portrait mode */
     }
 
     #talks-page ul#training-list li:nth-of-type(2),
