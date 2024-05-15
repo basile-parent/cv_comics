@@ -75,6 +75,11 @@ a:hover .new-tab-link, a:focus .new-tab-link {
     color: #6565e6;
 }
 
+
+.print-only {
+    display: none;
+}
+
 .sr-only {
     border: 0 !important;
     clip: rect(1px, 1px, 1px, 1px) !important;

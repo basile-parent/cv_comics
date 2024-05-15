@@ -3,6 +3,7 @@
 ## TODO
 - Content !
 - animate skills gauges
+- fix certification right align => align to left and shrink font-size
 - Severe bugs on tab sequence
 - disable animations when the browser parameter is set
 - swipe on mobile

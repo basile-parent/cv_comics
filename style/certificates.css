@@ -181,8 +181,11 @@
     margin: 5px 0;
     font-size: 1.1rem;
 }
+.diploma:not(#certifications-diploma) .diploma-list li {
+    margin: 5px 0 5px 10px;
+}
 
-.diploma-list li:before {
+#certifications-diploma .diploma-list li:before {
     content: "";
     display: inline-block;
     height: 20px;
@@ -191,19 +194,19 @@
     vertical-align: middle;
     filter: drop-shadow(2px 2px 3px black);
 }
-.diploma-list li#a11y-certificate:before {
+#certifications-diploma .diploma-list li#a11y-certificate:before {
     background: url("../assets/certifs/access42.png") no-repeat center center;
     background-size: contain;
 }
-.diploma-list li#psm-certificate:before {
+#certifications-diploma .diploma-list li#psm-certificate:before {
     background: url("../assets/certifs/psm1.png") no-repeat center center;
     background-size: contain;
 }
-.diploma-list li#opquast-certificate:before {
+#certifications-diploma .diploma-list li#opquast-certificate:before {
     background: url("../assets/certifs/opquast.png") no-repeat center center;
     background-size: contain;
 }
-.diploma-list li#agnostic-certificate:before {
+#certifications-diploma .diploma-list li#agnostic-certificate:before {
     background: url("../assets/certifs/agnostic-agile.png") no-repeat center center;
     background-size: contain;
 }

@@ -6,31 +6,36 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
 
-    <link rel="stylesheet" href="style/index.css">
-    <link rel="stylesheet" href="style/book.css">
-    <link rel="stylesheet" href="style/book-responsive.css">
-    <link rel="stylesheet" href="style/panel.css">
-    <link rel="stylesheet" href="style/bubble.css">
-    <link rel="stylesheet" href="style/effects.css">
-    <link rel="stylesheet" href="style/dialog.css">
+        <link media="screen" rel="stylesheet" href="style/index.css">
+        <link media="screen" rel="stylesheet" href="style/book.css">
+        <link media="screen" rel="stylesheet" href="style/book-responsive.css">
+        <link media="screen" rel="stylesheet" href="style/panel.css">
+        <link media="screen" rel="stylesheet" href="style/bubble.css">
+        <link media="screen" rel="stylesheet" href="style/effects.css">
+        <link media="screen" rel="stylesheet" href="style/dialog.css">
 
-    <link rel="stylesheet" href="style/intro.css">
-    <link rel="stylesheet" href="style/cover.css">
-    <link rel="stylesheet" href="style/cover-animation.css">
-    <link rel="stylesheet" href="style/cover-responsive.css">
-    <link rel="stylesheet" href="style/summary.css">
-    <link rel="stylesheet" href="style/summary-responsive.css">
-    <link rel="stylesheet" href="style/presentation.css">
-    <link rel="stylesheet" href="style/presentation-responsive.css">
-    <link rel="stylesheet" href="style/skills.css">
-    <link rel="stylesheet" href="style/skills-responsive.css">
-    <link rel="stylesheet" href="style/certificates.css">
-    <link rel="stylesheet" href="style/certificates-responsive.css">
-    <link rel="stylesheet" href="style/talks.css">
-    <link rel="stylesheet" href="style/talks-responsive.css">
-    <link rel="stylesheet" href="style/hobbies.css">
-    <link rel="stylesheet" href="style/hobbies-responsive.css">
-    <link rel="stylesheet" href="style/contact.css">
+        <link media="screen" rel="stylesheet" href="style/intro.css">
+        <link media="screen" rel="stylesheet" href="style/cover.css">
+        <link media="screen" rel="stylesheet" href="style/cover-animation.css">
+        <link media="screen" rel="stylesheet" href="style/cover-responsive.css">
+        <link media="screen" rel="stylesheet" href="style/summary.css">
+        <link media="screen" rel="stylesheet" href="style/summary-responsive.css">
+        <link media="screen" rel="stylesheet" href="style/presentation.css">
+        <link media="screen" rel="stylesheet" href="style/presentation-responsive.css">
+        <link media="screen" rel="stylesheet" href="style/skills.css">
+        <link media="screen" rel="stylesheet" href="style/skills-responsive.css">
+        <link media="screen" rel="stylesheet" href="style/certificates.css">
+        <link media="screen" rel="stylesheet" href="style/certificates-responsive.css">
+        <link media="screen" rel="stylesheet" href="style/talks.css">
+        <link media="screen" rel="stylesheet" href="style/talks-responsive.css">
+        <link media="screen" rel="stylesheet" href="style/hobbies.css">
+        <link media="screen" rel="stylesheet" href="style/hobbies-responsive.css">
+        <link media="screen" rel="stylesheet" href="style/contact.css">
+
+
+    <link media="print" href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900,400italic,700italic,900italic|Droid+Serif:400,700,400italic,700italic"
+          rel="stylesheet" type="text/css">
+    <link media="print" rel="stylesheet" href="style/print.css">
 
     <script src="js/jquery.min.js"></script>
 
@@ -701,7 +706,7 @@
                     </header>
 
                     <article class="page-content">
-                        <div class="diploma">
+                        <div id="university-diploma" class="diploma">
                             <div class="diploma-frame">
                                 <div class="outerBevel">
                                     <div class="flatSurface">
@@ -712,11 +717,11 @@
                                 </div>
                             </div>
                             <ul class="diploma-list" aria-labelledby="university-diplomas">
-                                <li>DUT informatique</li>
-                                <li>Master MIAGE</li>
+                                <li>DUT informatique <span class="date">2006</span></li>
+                                <li>Master MIAGE <span class="date">2009</span></li>
                             </ul>
                         </div>
-                        <div class="diploma">
+                        <div id="certifications-diploma" class="diploma">
                             <div class="diploma-frame">
                                 <div class="outerBevel">
                                     <div class="flatSurface">
@@ -727,27 +732,39 @@
                                 </div>
                             </div>
                             <ul class="diploma-list" aria-labelledby="certificates">
-                                <li id="a11y-certificate"><a
-                                        href="https://certificate.bcdiploma.com/check/33385930F8E00F3717A7F9992DB391D7A2BDA810A83E2CD42540476D0A4AFAA8UUx4VVlZOTZtZEFLZm9GcC9SVXRQRjdHMFFWUG13RGFTRG9YSnlGUHhuN0hjU1hT"
-                                        target="_blank">Développer des sites webs accessibles<span class="new-tab-link"
-                                                                                                   title="Nouvelle fenêtre"> (nouvelle fenêtre)</span></a>
+                                <li id="a11y-certificate">
+                                    <a href="https://certificate.bcdiploma.com/check/33385930F8E00F3717A7F9992DB391D7A2BDA810A83E2CD42540476D0A4AFAA8UUx4VVlZOTZtZEFLZm9GcC9SVXRQRjdHMFFWUG13RGFTRG9YSnlGUHhuN0hjU1hT"
+                                       target="_blank">
+                                        Développer des sites webs accessibles
+                                        <span class="new-tab-link" title="Nouvelle fenêtre"> (nouvelle fenêtre)</span>
+                                    </a>
+                                    <span class="date">2024</span>
                                 </li>
-                                <li id="psm-certificate"><a
-                                        href="https://www.credly.com/badges/91887340-ec8e-4938-aa94-14a091e8c7d9/public_url"
-                                        target="_blank">PSM I<span class="new-tab-link" title="Nouvelle fenêtre"> (nouvelle fenêtre)</span></a>
+                                <li id="opquast-certificate">
+                                    <a href="https://directory.opquast.com/fr/certificat/JF5GBD/" target="_blank">
+                                        Opquast
+                                        <span class="new-tab-link" title="Nouvelle fenêtre"> (nouvelle fenêtre)</span>
+                                    </a>
+                                    <span class="date">2022</span>
                                 </li>
-                                <li id="opquast-certificate"><a
-                                        href="https://directory.opquast.com/fr/certificat/JF5GBD/" target="_blank">Opquast<span
-                                        class="new-tab-link" title="Nouvelle fenêtre"> (nouvelle fenêtre)</span></a>
+                                <li id="psm-certificate">
+                                    <a href="https://www.credly.com/badges/91887340-ec8e-4938-aa94-14a091e8c7d9/public_url" target="_blank">
+                                        PSM I
+                                        <span class="new-tab-link" title="Nouvelle fenêtre"> (nouvelle fenêtre)</span>
+                                    </a>
+                                    <span class="date">2018</span>
                                 </li>
-                                <li id="agnostic-certificate"><a
-                                        href="https://wikiagile.coach/index.php?title=Le_Serment_Agile_Agnostique"
-                                        target="_blank">Agnostic Agile<span class="new-tab-link"
-                                                                            title="Nouvelle fenêtre"> (nouvelle fenêtre)</span></a>
+                                <li id="agnostic-certificate">
+                                    <a href="https://wikiagile.coach/index.php?title=Le_Serment_Agile_Agnostique"
+                                       target="_blank">
+                                        Agnostic Agile
+                                        <span class="new-tab-link" title="Nouvelle fenêtre"> (nouvelle fenêtre)</span>
+                                    </a>
+                                    <span class="date">2018</span>
                                 </li>
                             </ul>
                         </div>
-                        <div class="diploma">
+                        <div id="other-diploma" class="diploma">
                             <div class="diploma-frame">
                                 <div class="outerBevel">
                                     <div class="flatSurface">
@@ -758,7 +775,7 @@
                                 </div>
                             </div>
                             <ul class="diploma-list" aria-labelledby="other-diplomas">
-                                <li>CAP Cuisine</li>
+                                <li>CAP Cuisine <span class="date">2021</span></li>
                             </ul>
                         </div>
 
@@ -798,6 +815,9 @@
                     <div id="training-panels">
                         <h2 id="training-title" tabindex="-1"><span class="unskew">Formations</span></h2>
 
+                        <p id="training-sub-title" class="sr-only">Je suis actuellement formateur sur les sujets
+                            suivants :</p>
+
                         <ul id="training-list" aria-labelledby="training-title">
                             <li id="react-training">
                                 <div class="training-panel-wrapper">
@@ -834,29 +854,29 @@
                             <li id="talk-daily-meeting" class="panel talk-wrapper">
                                 <span class="talk-content">
                                     <a href="https://www.youtube.com/watch?v=H6zjMIaxAK8" target="_blank">
-                                        <span class="title">Daily Meeting</span><span class="date">2019</span>
+                                        <span class="title">Daily Meeting</span> <span class="date">2019</span>
                                         <span class="sr-only">(Nouvelle fenêtre vers Youtube)</span>
                                     </a>
                                 </span>
                             </li>
                             <li id="talk-tdd" class="panel talk-wrapper">
                                 <span class="talk-content">
-                                    <span class="title">Tests unitaires & Dojo TDD</span><span class="date">2019</span>
+                                    <span class="title">Tests unitaires & Dojo TDD</span> <span class="date">2019</span>
                                 </span>
                             </li>
                             <li id="talk-spring" class="panel talk-wrapper">
                                 <span class="talk-content">
-                                    <span class="title">Dojo Spring</span><span class="date">2018</span>
+                                    <span class="title">Dojo Spring</span> <span class="date">2018</span>
                                 </span>
                             </li>
                             <li id="talk-webscokets" class="panel talk-wrapper">
                                 <span class="talk-content">
-                                    <span class="title">Web&shy;Sockets</span><span class="date">2018</span>
+                                    <span class="title">Web&shy;Sockets</span> <span class="date">2018</span>
                                 </span>
                             </li>
                             <li id="talk-html" class="panel talk-wrapper">
                                 <span class="talk-content">
-                                    <span class="title">HTML5-CSS3</span><span class="date">2015</span>
+                                    <span class="title">HTML5-CSS3</span> <span class="date">2015</span>
                                 </span>
                             </li>
                         </ul>
@@ -938,7 +958,8 @@
                                                     title="Agrandir l'image"
                                                     aria-haspopup="dialog"
                                             >
-                                                <img src="assets/portfolio/web-dev/jira.jpg" alt="Screenshot du projet"/>
+                                                <img src="assets/portfolio/web-dev/jira.jpg"
+                                                     alt="Screenshot du projet"/>
                                                 <figcaption>
                                                     <span class="title">Jira reporting tool 2020</span>
                                                 </figcaption>
@@ -1071,7 +1092,8 @@
                                                     tabindex="0"
                                                     title="Agrandir l'image"
                                             >
-                                                <img src="assets/hobbies/danse.jpg" alt="Soirée dansante sur Paris 2017"/>
+                                                <img src="assets/hobbies/danse.jpg"
+                                                     alt="Soirée dansante sur Paris 2017"/>
                                                 <figcaption>
                                                     <span class="title">Arts martiaux</span>
                                                 </figcaption>
@@ -1101,7 +1123,8 @@
                                                     tabindex="0"
                                                     title="Agrandir l'image"
                                             >
-                                                <img src="assets/hobbies/danse.jpg" alt="Soirée dansante sur Paris 2017"/>
+                                                <img src="assets/hobbies/danse.jpg"
+                                                     alt="Soirée dansante sur Paris 2017"/>
                                                 <figcaption>
                                                     <span class="title">Danse de couple</span>
                                                 </figcaption>
@@ -1159,13 +1182,14 @@
                 </header>
 
                 <article class="page-content">
-<!--                    <form action="#" onsubmit="return false" novalidate="novalidate">-->
-<!--                        <div class="g-recaptcha"-->
-<!--                             data-sitekey="6Ld5cMopAAAAAHo1ud5sYRKoQS5P-yUP6aANuzj6"-->
-<!--                             data-callback="showContact"-->
-<!--                             data-expired-callback="invalidateContact"-->
-<!--                        ></div>-->
-<!--                    </form>-->
+                    <a href="#">mon.adresse.mail@gmail.com</a>
+                    <!--                    <form action="#" onsubmit="return false" novalidate="novalidate">-->
+                    <!--                        <div class="g-recaptcha"-->
+                    <!--                             data-sitekey="6Ld5cMopAAAAAHo1ud5sYRKoQS5P-yUP6aANuzj6"-->
+                    <!--                             data-callback="showContact"-->
+                    <!--                             data-expired-callback="invalidateContact"-->
+                    <!--                        ></div>-->
+                    <!--                    </form>-->
                 </article>
 
                 <footer>
