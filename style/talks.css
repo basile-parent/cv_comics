@@ -77,15 +77,15 @@
 }
 
 #talks-page #react-training .training-panel {
-    background: url("../assets/bootcamp.jpg") center center no-repeat;
+    background: url("../assets/backgrounds/bootcamp.jpg") center center no-repeat;
     background-size: cover;
 }
 #talks-page #agile-training .training-panel {
-    background: url("../assets/city-day.jpg") center center no-repeat;
+    background: url("../assets/backgrounds/city-day.jpg") center center no-repeat;
     background-size: cover;
 }
 #talks-page #accessibility-training .training-panel {
-    background: url("../assets/office-library.jpg") center center no-repeat;
+    background: url("../assets/backgrounds/office-library.jpg") center center no-repeat;
     background-size: cover;
 }
 
@@ -100,15 +100,15 @@
     bottom: -5%;
     left: 45%;
     height: 85%;
-    background: url("../assets/captain_react.png") center center no-repeat;
+    background: url("../assets/characters/super_react.png") center center no-repeat;
     background-size: contain;
 }
 
 #talks-page #agile-training .training-character {
-    top: -10%;
+    top: 0;
     left: 50%;
     height: 95%;
-    background: url("../assets/spiderman.png") center center no-repeat;
+    background: url("../assets/characters/spidey.png") center center no-repeat;
     background-size: contain;
     transform-origin: top;
 
@@ -120,18 +120,18 @@
 }
 
 @keyframes spiderman-balancing {
-    0% { transform: translate(-50%, 0) rotateZ(2deg); }
+    0% { transform: translate(-50%, 0) rotateZ(1deg); }
     25% { transform: translate(-50%, 0) rotateZ(0deg); }
-    50% { transform: translate(-50%, 0) rotateZ(-2deg); }
+    50% { transform: translate(-50%, 0) rotateZ(-1deg); }
     75% { transform: translate(-50%, 0) rotateZ(0deg); }
-    100% { transform: translate(-50%, 0) rotateZ(2deg); }
+    100% { transform: translate(-50%, 0) rotateZ(1deg); }
 }
 
 #talks-page #accessibility-training .training-character {
-    bottom: -40%;
+    bottom: -50%;
     left: 50%;
-    height: 100%;
-    background: url("../assets/professor_x.png") center center no-repeat;
+    height: 140%;
+    background: url("../assets/characters/professor_x.png") center center no-repeat;
     background-size: contain;
 }
 
@@ -261,7 +261,7 @@
     height: 30%;
     width: 50%;
     background-color: black;
-    mask: url("../assets/youtube-icon.png") right center no-repeat;
+    mask: url("../assets/icons/youtube-icon.png") right center no-repeat;
     mask-size: contain;
 }
 #talks-page #talk-panels li#talk-daily-meeting a:hover:before {

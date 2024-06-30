@@ -3,7 +3,7 @@ function srSpeak(text, priority = "polite") {
     const id = "speak-" + Date.now();
     el.setAttribute("id", id);
     el.setAttribute("aria-live", priority);
-    el.classList.add("visually-hidden");
+    el.classList.add("sr-only");
     document.body.appendChild(el);
 
     window.setTimeout(function () {

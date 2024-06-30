@@ -7,13 +7,13 @@
     height: 100%;
     opacity: 0.3;
 
-    background: url("../assets/halftone.png") no-repeat center center;
+    background: url("../assets/ornaments/halftone.png") no-repeat center center;
     background-size: 80%;
 }
 
 .wm-revealing .halftone-watermark {
-    -webkit-mask-image: url("../assets/revealing-mask.svg");
-    mask-image: url("../assets/revealing-mask.svg");
+    -webkit-mask-image: url("../assets/ornaments/revealing-mask.svg");
+    mask-image: url("../assets/ornaments/revealing-mask.svg");
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
     -webkit-mask-position: 140% center;
@@ -123,7 +123,7 @@ Bottom right for halftone
     height: 100%;
     opacity: 0.3;
 
-    background: url("../assets/radial-speed.png") no-repeat center center;
+    background: url("../assets/ornaments/radial-speed.png") no-repeat center center;
     background-size: 350%;
     transition: background-size .3s linear;
 }
@@ -143,7 +143,7 @@ a:focus .radial-speed {
     height: 150%;
     opacity: 0.3;
 
-    background: url("../assets/star.svg") repeat center center;
+    background: url("../assets/ornaments/star.svg") repeat center center;
     background-size: 8%;
     transform: rotateZ(-15deg);
     transition: translate .3s linear;

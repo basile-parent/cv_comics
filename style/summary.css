@@ -74,7 +74,7 @@
     height: 100%;
     width: 100%;
     display: block;
-    background: url("../assets/arrow-to-left.png") no-repeat center left;
+    background: url("../assets/icons/arrow-to-left.png") no-repeat center left;
     background-size: contain;
 }
 
@@ -296,7 +296,7 @@
     width: 100%;
     z-index: 30;
 
-    mask-image: url(../assets/bubble-1-mask.png);
+    mask-image: url("../assets/ornaments/bubble-1-mask.png");
     mask-position: bottom center;
     mask-size: cover;
 }

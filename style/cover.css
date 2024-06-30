@@ -107,18 +107,19 @@
 }
 
 #cover-page #cover-container article#cover-dev-section .section-content .section-background {
-    background: url("../assets/room.jpg") no-repeat center center;
+    background: url("../assets/backgrounds/room.jpg") no-repeat center center;
     background-size: cover;
 }
 
 #cover-page #cover-container article#cover-dev-section .section-content .section-character {
     position: absolute;
     bottom: -10px;
-    right: 0;
-    width: 50%;
+    right: -10%;
+    width: 60%;
     height: 100%;
-    background: url("../assets/dev.png") no-repeat bottom center;
+    background: url("../assets/characters/dev_computer.png") no-repeat bottom center;
     background-size: contain;
+    transform: rotateZ(-3deg);
 }
 
 #cover-page #cover-container article#cover-dev-section .section-content .section-punchline {
@@ -141,7 +142,7 @@
 }
 
 #cover-page #cover-container article#cover-teacher-section .section-content .section-background {
-    background: url("../assets/public.jpg") no-repeat top center;
+    background: url("../assets/backgrounds/public.jpg") no-repeat top center;
     background-size: cover;
     filter: blur(1px);
 }
@@ -152,7 +153,7 @@
     left: 10%;
     width: 50%;
     height: 90%;
-    background: url("../assets/speaker.png") no-repeat left center;
+    background: url("../assets/characters/speaker.png") no-repeat left center;
     background-size: contain;
 }
 
@@ -176,7 +177,7 @@
 }
 
 #cover-page #cover-container article#cover-specialist-section .section-content .section-background {
-    background: url("../assets/city.jpg") no-repeat top center;
+    background: url("../assets/backgrounds/city.jpg") no-repeat top center;
     background-size: cover;
 }
 
@@ -186,7 +187,7 @@
     right: 0;
     width: 50%;
     height: 100%;
-    background: url("../assets/super-deaf.png") no-repeat right center;
+    background: url("../assets/characters/super-deaf.png") no-repeat right center;
     background-size: contain;
     transform: rotateZ(-7deg);
 }
@@ -226,11 +227,11 @@
 }
 
 #control-animation.stop {
-    background: url("../assets/stop.png") no-repeat white 10px center;
+    background: url("../assets/icons/stop.png") no-repeat white 10px center;
     background-size: 20px 20px;
 }
 #control-animation.reload {
-    background: url("../assets/reload.png") no-repeat white 10px center;
+    background: url("../assets/icons/reload.png") no-repeat white 10px center;
     background-size: 30px 30px;
 }
 
