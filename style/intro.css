@@ -7,7 +7,6 @@
     justify-content: center;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, darkblue, #00002f);
     overflow: hidden;
 }
 
@@ -18,6 +17,7 @@
     width: 80%;
     font-size: 1.5rem;
     padding: 2% 5%;
+    z-index: 10;
 }
 
 #intro-page button:hover, #intro-page button:focus {

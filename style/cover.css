@@ -3,8 +3,33 @@
     display: inline-block;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, darkblue, #00002f);
     overflow: hidden;
+}
+
+.cover-background {
+    background: linear-gradient(to bottom, darkblue, #00002f);
+}
+
+.cover-background:before, .cover-background:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.cover-background:before {
+    opacity: 0.15;
+    background: url("../assets/backgrounds/clouds.jpg") no-repeat center center;
+    background-size: cover;
+}
+
+.cover-background:after {
+    opacity: 0.1;
+    background: url("../assets/characters/profil.png") no-repeat center center;
+    background-size: 120% 120%;
 }
 
 #cover-page #skip-links a {
