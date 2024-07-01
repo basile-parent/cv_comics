@@ -1,6 +1,6 @@
 let currentPageIndex = 0
 let allPages = {}
-let pageFlipBeforeCallbacks = [ showInerteCover ]
+let pageFlipBeforeCallbacks = [ passAnimationSelectionPage ]
 let pageFlipCallbacks = [ initHints ]
 
 function disableSummaryLinkOnAnimation(e) {
@@ -79,7 +79,7 @@ function prevPageFlip() {
         .removeClass("flipped")
         .addClass("active")
         .siblings(".page")
-        .removeClass("active");
+        .removeClass("active")
 
     currentPageIndex--
 }
@@ -91,9 +91,8 @@ function nextPageFlip() {
         .addClass("flipped")
         .next(".page")
         .addClass("active")
-        .siblings();
 
-    currentPageIndex++;
+    currentPageIndex++
 }
 
 function beforeFlipCb() {

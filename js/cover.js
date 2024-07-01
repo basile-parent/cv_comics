@@ -22,6 +22,7 @@ function showAnimatedCover() {
         .attr("aria-disabled", true)
         .attr("aria-label", "Aller au sommaire - Lien désactivé pendant l'animation (environ 15 secondes)")
         .attr("title", "Aller au sommaire - Lien désactivé pendant l'animation (environ 15 secondes)")
+
     showCv()
 
     animationTimeout = setTimeout(() => {
@@ -32,7 +33,6 @@ function showAnimatedCover() {
 
 function showInerteCover() {
     disableCoverAnimation()
-
     showCv()
     clearTimeout(animationTimeout)
 }
@@ -49,9 +49,13 @@ function disableCoverAnimation() {
         .attr("aria-label", "Aller au sommaire")
 }
 
-function showCv() {
+function passAnimationSelectionPage() {
     $("#cv-book").removeAttr("aria-hidden")
     $("#intro-book").attr("aria-hidden", "true")
+}
+
+function showCv() {
+    passAnimationSelectionPage()
 
     $("#cv-book h1").focus()
 }
