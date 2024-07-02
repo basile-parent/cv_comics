@@ -189,11 +189,12 @@
 
 #cover-page.animated #cover-container article#cover-specialist-section .section-character {
     right: -50%;
-    animation: reveal-dev-character .5s ease-out forwards;
+    animation: reveal-specialist-character .5s ease-out forwards;
 }
 
-@keyframes reveal-dev-character { 100% { right: 0;} }
+@keyframes reveal-dev-character { 100% { right: -10%;} }
 @keyframes reveal-teacher-character { 100% { left: 5%;} }
+@keyframes reveal-specialist-character { 100% { right: 0;} }
 
 
 #cover-page.animated #cover-container article#cover-dev-section .section-punchline,
