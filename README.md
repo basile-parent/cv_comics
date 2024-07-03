@@ -2,7 +2,6 @@
 
 ## TODO
 - Content !
-- disable animations when the browser parameter is set
 - a11y parameter: stop animations
 - a11y parameter: high contrasts
 - swipe on mobile

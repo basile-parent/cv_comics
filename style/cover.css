@@ -136,6 +136,7 @@
     background-size: cover;
 }
 
+
 #cover-page #cover-container article#cover-dev-section .section-content .section-character {
     position: absolute;
     bottom: -10px;
@@ -146,7 +147,6 @@
     background-size: contain;
     transform: rotateZ(-3deg);
 }
-
 #cover-page #cover-container article#cover-dev-section .section-content .section-punchline {
     top: 5%;
     left: 2%;
@@ -177,7 +177,7 @@
     left: 5%;
     width: 70%;
     height: 100%;
-    background: url("../assets/characters/speaker.png") no-repeat left center;
+    background: url("../assets/characters/speaker.png") no-repeat bottom center;
     background-size: contain;
 }
 

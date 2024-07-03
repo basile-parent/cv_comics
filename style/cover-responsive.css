@@ -126,15 +126,18 @@
 
     #cover-page #cover-container article#cover-dev-section .section-content .section-character {
         width: 130%;
-        height: 70%;
+        height: 80%;
         right: -15%;
+        background-position: bottom center;
+        background-size: contain;
     }
 
     #cover-page #cover-container article#cover-teacher-section .section-content .section-character {
         left: 10%;
-        width: 100%;
-        height: 80%;
-        bottom: -10%;
+        width: 180%;
+        height: 70%;
+        bottom: -1%;
+        background-position: bottom left;
     }
 
     #cover-page #cover-container article#cover-specialist-section .section-content .section-character {
