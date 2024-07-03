@@ -248,15 +248,39 @@
     font-size: 1.1rem;
     text-align: left;
     padding: 5px 10px 5px 40px;
+    background-color: white;
 }
 
-#control-animation.stop {
-    background: url("../assets/icons/stop.png") no-repeat white 10px center;
-    background-size: 15px 15px;
+#control-animation[disabled] {
+    color: grey;
+    border-color: grey;
+    opacity: 0.8;
+    cursor: initial;
+    box-shadow: none;
 }
-#control-animation.reload {
-    background: url("../assets/icons/reload.png") no-repeat white 10px center;
-    background-size: 20px 20px;
+
+#control-animation.stop:before,
+#control-animation.reload:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    height: 20px;
+    width: 20px;
+    margin-top: -10px;
+}
+#control-animation.stop[disabled]:before,
+#control-animation.reload[disabled]:before {
+    opacity: 0.6;
+}
+
+#control-animation.stop:before {
+    background: url("../assets/icons/stop.png") no-repeat center center;
+    background-size: cover;
+}
+#control-animation.reload:before {
+    background: url("../assets/icons/reload.png") no-repeat center center;
+    background-size: cover;
 }
 
 #control-animation:hover,
@@ -267,6 +291,11 @@
                 0 0 12px white,
                 0 0 16px white,
                 0 0 20px white;
+}
+#control-animation:hover[disabled],
+#control-animation:focus[disabled] {
+    opacity: 0.8;
+    box-shadow: none;
 }
 
 #control-animation span.bubble {

@@ -132,11 +132,17 @@
 #skills-page:not(.active) .skill-gauge span.skill-gauge-full:nth-of-type(2) { animation-delay: .8s; }
 #skills-page:not(.active) .skill-gauge span.skill-gauge-full:nth-of-type(1) { animation-delay: .9s; }
 
+@media (prefers-reduced-motion: reduce) {
+    #skills-page.active .skill-gauge span.skill-gauge-full {
+        animation-delay: 0s !important;
+    }
 
-/*#skills-page .skill-gauge span.skill-gauge-full {*/
-/*    background: rgb(254,255,0);*/
-/*    background: linear-gradient(90deg, rgba(254,255,0,1) 0%, rgba(255,179,0,1) 90%, rgba(255,107,0,1) 100%);*/
-/*}*/
+    #skills-page:not(.active) .skill-gauge span.skill-gauge-full {
+        animation: none !important;
+    }
+}
+
+
 #skills-page.active .skill-gauge span.skill-gauge-empty {
     animation: hide-empty-gauge 2s ease-out forwards;
 }
@@ -218,6 +224,12 @@
     border-left : 6px solid transparent;
     transition: transform .2s ease-out;
 }
+@media (prefers-reduced-motion: reduce) {
+    #skills-page #experiences-details dt button:after {
+        transition: none;
+    }
+}
+
 #skills-page #experiences-details dt button[aria-expanded=true]:after {
     transform: rotateZ(180deg);
 }
@@ -243,6 +255,11 @@
     max-height: 0;
     overflow: hidden;
     transition: max-height .7s ease-out;
+}
+@media (prefers-reduced-motion: reduce) {
+    #skills-page #experiences-details dd {
+        transition: none;
+    }
 }
 #skills-page #experiences-details dt:has(button[aria-expanded=true]) + dd {
     max-height: 300px;

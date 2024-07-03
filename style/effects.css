@@ -61,6 +61,12 @@
     }
 }
 
+@media (prefers-reduced-motion: reduce) {
+    .wm-revealing .halftone-watermark {
+        display: none;
+    }
+}
+
 
 .rays-watermark {
     position: absolute;
@@ -86,9 +92,9 @@
 .panel:hover .rays-watermark,
 .panel.hover .rays-watermark,
 a:focus .rays-watermark {
-    -webkit-animation:spin 1s ease-out forwards;
-    -moz-animation:spin 1s ease-out forwards;
-    animation:spin 1s ease-out forwards;
+    -webkit-animation: spin 1s ease-out forwards;
+    -moz-animation: spin 1s ease-out forwards;
+    animation: spin 1s ease-out forwards;
 }
 
 @-moz-keyframes spin { 100% { -moz-transform: rotate(90deg); } }
@@ -99,6 +105,17 @@ a:focus .rays-watermark {
         transform:rotate(90deg);
     }
 }
+
+@media (prefers-reduced-motion: reduce) {
+    .panel:hover .rays-watermark,
+    .panel.hover .rays-watermark,
+    a:focus .rays-watermark {
+        -webkit-animation: none;
+        -moz-animation: none;
+        animation: none;
+    }
+}
+
 
 /*
 Bottom right for halftone
@@ -133,6 +150,17 @@ a:focus .radial-speed {
     background-size: 150%;
 }
 
+/* *********************************
+****     DISABLE ANIMATIONS      ***
+************************************ */
+@media (prefers-reduced-motion: reduce) {
+    .panel:hover .radial-speed,
+    .panel.hover .radial-speed,
+    a:focus .radial-speed {
+        background-size: 350%;
+    }
+}
+
 
 /* ************ STARS WATERMARK ************ */
 .stars-watermark {
@@ -154,3 +182,10 @@ a:focus .stars-watermark {
     translate: 20px;
 }
 
+@media (prefers-reduced-motion: reduce) {
+    .panel:hover .stars-watermark,
+    .panel.hover .stars-watermark,
+    a:focus .stars-watermark {
+        translate: unset;
+    }
+}

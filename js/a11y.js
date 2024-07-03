@@ -1,3 +1,21 @@
+window.isReducedMotion = window.matchMedia(`(prefers-reduced-motion: reduce)`) === true || window.matchMedia(`(prefers-reduced-motion: reduce)`).matches === true
+
+function disableButtonIfReducedMotion(selector) {
+    if (window.isReducedMotion) {
+        const initialTitle = $(selector).attr("title")
+        $(selector).attr("disabled", true)
+            .attr("title", "Vos préférences systèmes bloquent les animations")
+            .attr("data-initial-title", initialTitle)
+    } else {
+        const initialTitle = $(selector).attr("data-initial-title")
+        $(selector).attr("disabled", false)
+        if (initialTitle) {
+            $(selector).attr("title", initialTitle)
+            $(selector).removeAttr("data-initial-title")
+        }
+    }
+}
+
 function srSpeak(text, priority = "polite") {
     const el = document.createElement("div");
     const id = "speak-" + Date.now();

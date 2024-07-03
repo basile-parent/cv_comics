@@ -20,7 +20,14 @@
     z-index: 10;
 }
 
-#intro-page button:hover, #intro-page button:focus {
+#intro-page button[disabled] {
+    color: grey;
+    border-color: grey;
+    opacity: 0.7;
+    cursor: initial;
+}
+
+#intro-page button:not([disabled]):hover, #intro-page button:not([disabled]):focus {
     box-shadow: 0 0 4px white,
                 0 0 8px white,
                 0 0 12px white,
