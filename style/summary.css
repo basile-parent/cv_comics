@@ -148,6 +148,7 @@
     z-index: 10;
     background: url("../assets/characters/portrait.png") no-repeat bottom center;
     background-size: contain;
+    pointer-events: none;
 }
 
 #summary-page #presentation .bubble {
@@ -155,6 +156,7 @@
     z-index: 100;
     opacity: 0;
     transition: opacity .3s ease;
+    pointer-events: none;
 }
 
 #summary-page #presentation .bubble.hint {
