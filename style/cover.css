@@ -28,8 +28,8 @@
 
 .cover-background:after {
     opacity: 0.1;
-    background: url("../assets/characters/profil.png") no-repeat center center;
-    background-size: 100% 100%;
+    background: url("../assets/characters/profil.png") repeat-x bottom center;
+    background-size: contain;
 }
 
 #cover-page #skip-links a {

@@ -116,7 +116,7 @@
 #cover-page.animated #cover-container .super-deaf-blur {
     position: absolute;
     top: 10%;
-    left: -30%;
+    left: -40%;
     width: 30px;
     height: 200px;
     transform: rotateZ(115deg);
@@ -133,7 +133,7 @@
 }
 
 @keyframes super-deaf-fly-panel-2 {
-    0% { top: -20%; left: -30%; }
+    0% { top: -20%; left: -40%; }
     100% { top: 180%; left: 150%; }
 }
 @keyframes super-deaf-fly-panel-3 {

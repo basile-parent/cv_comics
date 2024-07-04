@@ -44,6 +44,7 @@
 
 #a11y-dialog .dialog {
     padding: 20px 40px 30px 40px;
+    overflow: auto;
 }
 
 #a11y-dialog h2 {
@@ -85,4 +86,40 @@
 #a11y-dialog .radio-input-button:has(input:checked) {
     color: white;
     background-color: black;
+}
+
+#a11y-dialog .radio-input-button:has(input[disabled]) {
+    border-color: grey;
+    color: grey;
+}
+#a11y-dialog .radio-input-button:has(input[disabled]),
+#a11y-dialog .radio-input-button:has(input[disabled]) * {
+    cursor: not-allowed;
+}
+#a11y-dialog .radio-input-button:has(input[disabled]:checked) {
+    border-color: grey;
+    background-color: grey;
+    color: white;
+}
+
+
+@media (orientation: portrait) and (max-width: 500px),
+    (orientation: landscape) and (max-height: 700px) {
+    #a11y-parameters #a11y-dialog-button {
+        top: 5px;
+        right: 5px;
+        height: 9mm;
+        width: 9mm;
+        opacity: 0.6;
+    }
+
+    #a11y-dialog .dialog {
+        padding: 15px;
+        overflow: auto;
+    }
+
+    #a11y-dialog .radio-input-button {
+        width: 31%;
+        font-size: 0.75rem;
+    }
 }

@@ -76,6 +76,12 @@
         font-size: 3rem;
         line-height: 85px;
     }
+
+    #cover-page #cover-container article#cover-dev-section .section-content .section-punchline,
+    #cover-page #cover-container article#cover-teacher-section .section-content .section-punchline,
+    #cover-page #cover-container article#cover-specialist-section .section-content .section-punchline {
+        font-size: 1rem;
+    }
 }
 
 @media (orientation: landscape) and (max-height: 700px) {
@@ -234,7 +240,7 @@
 
     #cover-page.animated #cover-container .super-deaf-blur {
         top: 50%;
-        left: -90%;
+        left: -70%;
         transform: rotateZ(95deg);
     }
 
@@ -275,7 +281,7 @@
         bottom: -100%;
         animation: reveal-teacher-character-landscape .5s ease-out forwards;
     }
-    @keyframes reveal-teacher-character-landscape { 100% { bottom: -10%; } }
+    @keyframes reveal-teacher-character-landscape { 100% { bottom: -1%; } }
 
     #cover-page.animated #cover-container article#cover-specialist-section .section-character {
         right: -150%;
