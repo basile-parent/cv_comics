@@ -7,4 +7,3 @@ function initIntroWithHrefHash() {
 }
 
 initIntroWithHrefHash()
-disableButtonIfReducedMotion("#intro-show-animation")

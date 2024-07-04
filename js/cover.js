@@ -61,4 +61,3 @@ function showCv() {
 }
 
 initControlButton()
-disableButtonIfReducedMotion("#control-animation")
