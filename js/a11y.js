@@ -18,14 +18,23 @@ function srSpeak(text, priority = "polite") {
 }
 
 function initA11yParameters() {
+    // Animations
     if (window.isReducedMotion || localStorage.getItem("disable-animations")) {
         disableAnimations()
     } else {
         enableAnimations()
     }
 
-    $(`input[name="control-animation"][value="disabled"]`).click(disableAnimations)
-    $(`input[name="control-animation"][value="enabled"]`).click(enableAnimations)
+    $(`input[name="control-animation"][value="disabled"]`).change(disableAnimations)
+    $(`input[name="control-animation"][value="enabled"]`).change(enableAnimations)
+
+    // Font
+    if (localStorage.getItem("dys-font")) {
+        setFont("dys-font")
+    } else {
+        setFont("default")
+    }
+    $(`input[name="choose-font"]`).click(e => setFont(e.target.value))
 }
 
 function disableAnimations() {
@@ -40,6 +49,22 @@ function enableAnimations() {
     $(`input[name="control-animation"][value="enabled"]`).prop("checked", true)
     localStorage.removeItem("disable-animations")
     $("body").removeClass("disable-animation")
+}
+
+function setFont(fontType) {
+    $(`input[name="choose-font"]`).prop("checked", false)
+
+    if (fontType === "dys-font") {
+        $(`input[name="choose-font"][value="dys-font"]`).prop("checked", true)
+        $("body").addClass("dys-font")
+
+        localStorage.setItem("dys-font", "true")
+    } else {
+        $(`input[name="choose-font"][value="default"]`).prop("checked", true)
+        $("body").removeClass("dys-font")
+
+        localStorage.removeItem("dys-font")
+    }
 }
 
 initA11yParameters()

@@ -2,19 +2,19 @@ function openDialog(dialogId, elementSelectorToFocusOnClose) {
     const dialog = $(`.dialog-container#${ dialogId }`)
     dialog.removeAttr("inert")
 
-    dialog.find("button, a, input, textarea, [tabindex=0]").focus()
+    dialog.find("button, a, input, textarea, [tabindex=0]").first().focus()
 
     dialog.children(".dialog").first()
         .append(`<input type="hidden" class="elementSelectorToFocusOnClose" value="${ elementSelectorToFocusOnClose }"/>`)
 
     window.addEventListener("keydown", closeDialogOnEsc)
 
-    $("main").attr("inert", "")
+    $("main, .dialog-button, #skip-links").attr("inert", "")
 }
 function closeDialog() {
     const dialog = $(".dialog-container:not([inert])")
 
-    $("main").removeAttr("inert")
+    $("main, .dialog-button, #skip-links").removeAttr("inert")
 
     const elementSelectorInput = dialog.find(".elementSelectorToFocusOnClose")[0]
     const elementSelectorToFocusOnClose = elementSelectorInput.value

@@ -17,7 +17,7 @@ function showAnimatedCover() {
     $("#control-animation").addClass("stop").removeClass("reload")
     $("#control-animation span").html("Arrêter l'animation")
 
-    $("#cover-page  #skip-links a")
+    $("#cover-page a")
         .attr("disabled", true)
         .attr("aria-disabled", true)
         .attr("aria-label", "Aller au sommaire - Lien désactivé pendant l'animation (environ 15 secondes)")
@@ -42,7 +42,7 @@ function disableCoverAnimation() {
     $("#control-animation").addClass("reload").removeClass("stop")
     $("#control-animation span").html("Relancer l'animation")
 
-    $("#cover-page  #skip-links a")
+    $("#cover-page a")
         .removeAttr("disabled")
         .removeAttr("aria-disabled")
         .removeAttr("title")
@@ -56,7 +56,6 @@ function passAnimationSelectionPage() {
 
 function showCv() {
     passAnimationSelectionPage()
-
     $("#cv-book h1").focus()
 }
 

@@ -62,6 +62,10 @@
     margin-top: 8px;
 }
 
+.dys-font #summary-page h2 {
+    font-family: "OpenDyslexic", cursive;
+}
+
 #summary-page button {
     display: inline-block;
     width: 100%;

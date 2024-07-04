@@ -10,6 +10,10 @@ html, body {
     font-family: "Comic_book_regular", "Comic Sans", cursive;
 }
 
+body.dys-font {
+    font-family: "OpenDyslexic", cursive;
+}
+
 html.noScroll, body.noScroll {
     overflow: hidden;
 }
@@ -101,19 +105,15 @@ button {
     cursor: pointer;
 }
 
+.dys-font button {
+    font-family: "OpenDyslexic", cursive;
+}
+
 
 @font-face {
     font-family: "Comic_book_regular";
     src: url("fonts/comic_book-webfont.woff2") format("woff2"),
     url("fonts/comic_book-webfont.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Comic_book_bold_italic";
-    src: url("fonts/comic_book_bold_italic-webfont.woff2") format("woff2"),
-    url("fonts/comic_book_bold_italic-webfont.woff") format("woff");
     font-weight: normal;
     font-style: normal;
 }
@@ -127,21 +127,21 @@ button {
 }
 
 @font-face {
-    font-family: "Comic_book_italic";
-    src: url("fonts/comic_book_italic-webfont.woff2") format("woff2"),
-    url("fonts/comic_book_italic-webfont.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
-}
-
-
-@font-face {
     font-family: "Badaboom";
     src: url("fonts/badabb__-webfont.woff2") format("woff2"),
     url("fonts/badabb__-webfont.woff") format("woff");
     font-weight: normal;
     font-style: normal;
 }
+
+@font-face {
+    font-family: "OpenDyslexic";
+    src: url("fonts/opendyslexic-webfont.woff2") format("woff2"),
+    url("fonts/opendyslexic-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
 
 /* *************************************** */
 /* *************  SCROLLBAR  ************* */
@@ -165,4 +165,23 @@ button {
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
     cursor: pointer;
+}
+
+/* *************************************** */
+/* ************  SKIP LINKS  ************* */
+/* *************************************** */
+#skip-links a {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    background-color: white;
+    padding: 2px 10px;
+    border: 3px solid black;
+    border-radius: 5px;
+
+    z-index: 50;
+}
+
+#skip-links a:focus {
+    top: 0;
 }

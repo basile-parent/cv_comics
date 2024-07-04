@@ -44,7 +44,16 @@
 </head>
 <body>
 
-<main class="scene">
+<nav id="skip-links" aria-label="Liens d'évitement">
+    <a href="#main" onClick="disableSummaryLinkOnAnimation(event)">
+        Aller au contenu
+    </a>
+    <a href="#a11y-dialog-button">
+        Aller aux paramètres d'accessibilité
+    </a>
+</nav>
+
+<main id="main" role="main" class="scene">
     <div id="intro-book" class="book">
         <section id="intro-page" class="page active first last animated cover-background">
             <button onClick="showAnimatedCover()" id="intro-show-animation"><span class="unskew">Voir le CV avec animation</span></button>
@@ -56,11 +65,9 @@
         <!-- *********************   COVER PAGE   ********************* -->
         <section id="cover-page" class="page active first hinted">
             <div class="front">
-                <nav id="skip-links" aria-label="Liens d'évitement">
-                    <a href="#summary-page" onClick="disableSummaryLinkOnAnimation(event)">
-                        Aller au sommaire
-                    </a>
-                </nav>
+                <a href="#summary-page" onClick="disableSummaryLinkOnAnimation(event)">
+                    Aller au sommaire
+                </a>
 
                 <div id="cover-container" class="cover-background">
                     <header>
@@ -1205,7 +1212,7 @@
 </main>
 
 <aside role="complementary" id="a11y-parameters">
-    <button id="a11y-dialog-button" onClick="openDialog('a11y-dialog', '#a11y-dialog-button')">
+    <button id="a11y-dialog-button" class="dialog-button" onClick="openDialog('a11y-dialog', '#a11y-dialog-button')">
         <span class="bubble outside-top-left arrow-to-right">
             Accéder aux paramètres d'accessibilité
         </span>
@@ -1219,18 +1226,18 @@
              role="dialog"
              aria-modal="true"
              aria-labelledby="a11y-dialog-title">
-            <button class="close-dialog" onClick="closeDialog(this)">Fermer<span class="sr-only"> la popup</span></button>
+            <button class="close-dialog" onClick="closeDialog(this)">Fermer<span class="sr-only">&nbsp;la popup</span></button>
             <h2 id="a11y-dialog-title">Paramètres d'accessibilité</h2>
             <div class="content">
                 <fieldset>
                     <legend><h3>Contrôle des animations</h3></legend>
 
                     <div class="radio-input-button">
-                        <input type="radio" name="control-animation" id="control-animation-enabled" value="enabled" />
+                        <input type="radio" class="sr-only" name="control-animation" id="control-animation-enabled" value="enabled" />
                         <label for="control-animation-enabled">Animations activées</label>
                     </div>
                     <div class="radio-input-button">
-                        <input type="radio" name="control-animation" id="control-animation-disabled" value="disabled" />
+                        <input type="radio" class="sr-only" name="control-animation" id="control-animation-disabled" value="disabled" />
                         <label for="control-animation-disabled">Animations désactivées</label>
                     </div>
                 </fieldset>
@@ -1238,15 +1245,15 @@
                     <legend><h3>Contrôle du thème</h3></legend>
 
                     <div class="radio-input-button" title="Pas encore implémenté">
-                        <input type="radio" name="choose-theme" id="choose-theme-default" value="default" disabled="disabled" checked="checked" />
+                        <input type="radio" class="sr-only" name="choose-theme" id="choose-theme-default" value="default" disabled="disabled" checked="checked" />
                         <label for="choose-theme-default">Défaut</label>
                     </div>
                     <div class="radio-input-button" title="Pas encore implémenté">
-                        <input type="radio" name="choose-theme" id="choose-theme-dark" value="dark" disabled="disabled" />
+                        <input type="radio" class="sr-only" name="choose-theme" id="choose-theme-dark" value="dark" disabled="disabled" />
                         <label for="choose-theme-dark">Sombre</label>
                     </div>
                     <div class="radio-input-button" title="Pas encore implémenté">
-                        <input type="radio" name="choose-theme" id="choose-theme-contrast" value="contrast" disabled="disabled" />
+                        <input type="radio" class="sr-only" name="choose-theme" id="choose-theme-contrast" value="contrast" disabled="disabled" />
                         <label for="choose-theme-contrast">Contrasté</label>
                     </div>
                 </fieldset>
@@ -1254,11 +1261,11 @@
                     <legend><h3>Choix de la police</h3></legend>
 
                     <div class="radio-input-button" title="Pas encore implémenté">
-                        <input type="radio" name="choose-font" id="choose-font-default" value="default" disabled="disabled" checked="checked" />
+                        <input type="radio" class="sr-only" name="choose-font" id="choose-font-default" value="default" disabled="disabled" />
                         <label for="choose-font-default">Défaut</label>
                     </div>
                     <div class="radio-input-button" title="Pas encore implémenté">
-                        <input type="radio" name="choose-font" id="choose-font-dys" value="dys" disabled="disabled" />
+                        <input type="radio" class="sr-only" name="choose-font" id="choose-font-dys" value="dys-font" disabled="disabled" />
                         <label for="choose-font-dys">Dyslexie</label>
                     </div>
                 </fieldset>
@@ -1276,7 +1283,7 @@
          role="dialog"
          aria-modal="true"
          aria-label="Agrandissement de l'image du portfolio">
-        <button class="close-dialog" onClick="closeDialog(this)">Fermer<span class="sr-only"> la popup</span></button>
+        <button class="close-dialog" onClick="closeDialog(this)">Fermer<span class="sr-only">&nbsp;la popup</span></button>
         <div class="content">
             <img src="" aria-labelledby="portfolio-dialog-details" alt=""/>
             <p id="portfolio-dialog-details"></p>
