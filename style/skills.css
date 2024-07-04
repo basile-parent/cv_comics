@@ -16,13 +16,13 @@
     margin: 0;
 }
 
-#skills-page ul, #skills-page li {
+#skills-page .page-content ul, #skills-page .page-content li {
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
 
-#skills-page li.item-spacer {
+#skills-page .page-content li.item-spacer {
     margin-top: 15px;
 }
 

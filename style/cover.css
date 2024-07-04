@@ -29,7 +29,7 @@
 .cover-background:after {
     opacity: 0.1;
     background: url("../assets/characters/profil.png") no-repeat center center;
-    background-size: 120% 120%;
+    background-size: 100% 100%;
 }
 
 #cover-page #skip-links a {
@@ -167,16 +167,16 @@
 }
 
 #cover-page #cover-container article#cover-teacher-section .section-content .section-background {
-    background: url("../assets/backgrounds/public.png") no-repeat top center;
+    background: url("../assets/backgrounds/public.jpg") no-repeat top center;
     background-size: cover;
 }
 
 #cover-page #cover-container article#cover-teacher-section .section-content .section-character {
     position: absolute;
     bottom: -10px;
-    left: 5%;
-    width: 70%;
-    height: 100%;
+    left: 0;
+    width: 80%;
+    height: 90%;
     background: url("../assets/characters/speaker.png") no-repeat bottom center;
     background-size: contain;
 }
@@ -207,13 +207,12 @@
 
 #cover-page #cover-container article#cover-specialist-section .section-content .section-character {
     position: absolute;
-    bottom: -25px;
+    bottom: -7px;
     right: 0;
     width: 50%;
     height: 100%;
     background: url("../assets/characters/super-deaf.png") no-repeat right center;
     background-size: contain;
-    transform: rotateZ(-7deg);
 }
 
 #cover-page #cover-container article#cover-specialist-section .section-content .section-punchline {
