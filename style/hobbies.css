@@ -124,6 +124,9 @@
     -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
     filter: grayscale(100%);
 }
+.disable-animation #hobbies-page #carrousel-panel .tv-background:after {
+    background-image: url("../assets/animations/tv_noise_static.jpg");
+}
 @media (prefers-reduced-motion: reduce) {
     #hobbies-page #carrousel-panel .tv-background:after {
         background-image: url("../assets/animations/tv_noise_static.jpg");
@@ -201,6 +204,9 @@
     100% { opacity: 1; }
 }
 
+.disable-animation #hobbies-page #carrousel-panel .tv-shutdown-effect {
+    display: none;
+}
 @media (prefers-reduced-motion: reduce) {
     #hobbies-page #carrousel-panel .tv-shutdown-effect {
         display: none;

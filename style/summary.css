@@ -3,6 +3,11 @@
     z-index: 50;
 }
 
+.disable-animation #summary-page .panel:hover,
+.disable-animation #summary-page .panel.hover,
+.disable-animation #summary-page .panel:focus {
+    scale: 1 !important;
+}
 @media (prefers-reduced-motion: reduce) {
     #summary-page .panel:hover, #summary-page .panel.hover, #summary-page .panel:focus {
         scale: 1 !important;
@@ -203,6 +208,9 @@
     opacity: 0;
 }
 
+.disable-animation #summary-page #skills .puff-icon {
+    display: none;
+}
 @media (prefers-reduced-motion: reduce) {
     #summary-page #skills .puff-icon {
         display: none;
@@ -322,6 +330,13 @@
     height: 90%;
 }
 
+.disable-animation #summary-page #certificates:hover .bubble-certification:after,
+.disable-animation #summary-page #certificates.hover .bubble-certification:after,
+.disable-animation #summary-page #certificates a:focus .bubble-certification:after {
+    width: 90%;
+    height: 70%;
+    transform: rotateZ(-15deg);
+}
 @media (prefers-reduced-motion: reduce) {
     #summary-page #certificates:hover .bubble-certification:after,
     #summary-page #certificates.hover .bubble-certification:after,
@@ -330,7 +345,6 @@
         height: 70%;
         transform: rotateZ(-15deg);
     }
-
 }
 
 /* *********************************
@@ -378,6 +392,11 @@
     scale: 1.15;
 }
 
+.disable-animation #summary-page #talks:hover .talk-mic:after,
+.disable-animation #summary-page #talks.hover .talk-mic:after,
+.disable-animation #summary-page #talks a:focus .talk-mic:after {
+    scale: 1;
+}
 @media (prefers-reduced-motion: reduce) {
     #summary-page #talks:hover .talk-mic:after,
     #summary-page #talks.hover .talk-mic:after,
@@ -385,7 +404,6 @@
         scale: 1;
     }
 }
-
 
 /* *********************************
 *********     HOBBIES      *********
@@ -445,6 +463,17 @@
     top: 85%;
 }
 
+.disable-animation #summary-page #hobbies:hover #mixing-bowl .bowl-front,
+.disable-animation #summary-page #hobbies:hover #mixing-bowl .bowl-back,
+.disable-animation #summary-page #hobbies.hover #mixing-bowl .bowl-front,
+.disable-animation #summary-page #hobbies.hover #mixing-bowl .bowl-back,
+.disable-animation #summary-page #hobbies a:focus #mixing-bowl .bowl-front,
+.disable-animation #summary-page #hobbies a:focus #mixing-bowl .bowl-back {
+    top: 50%;
+    left: 50%;
+    scale: 1;
+    transform: translate(-50%, -50%);
+}
 @media (prefers-reduced-motion: reduce) {
     #summary-page #hobbies:hover #mixing-bowl .bowl-front,
     #summary-page #hobbies:hover #mixing-bowl .bowl-back,
@@ -479,6 +508,16 @@
     margin-left: -40%;
     transform: rotateZ(10deg);
 }
+
+.disable-animation #summary-page #hobbies:hover #mixing-bowl .belt,
+.disable-animation #summary-page #hobbies.hover #mixing-bowl .belt,
+.disable-animation #summary-page #hobbies a:focus #mixing-bowl .belt {
+    scale: 1;
+    top: 40%;
+    left: 45%;
+    margin-left: -25%;
+    transform: rotateZ(45deg);
+}
 @media (prefers-reduced-motion: reduce) {
     #summary-page #hobbies:hover #mixing-bowl .belt,
     #summary-page #hobbies.hover #mixing-bowl .belt,
@@ -510,6 +549,15 @@
     top: 30%;
     left: 10%;
     transform: rotateZ(5deg);
+}
+
+.disable-animation #summary-page #hobbies:hover #mixing-bowl .shoe,
+.disable-animation #summary-page #hobbies.hover #mixing-bowl .shoe,
+.disable-animation #summary-page #hobbies a:focus #mixing-bowl .shoe {
+    scale: 1;
+    top: 50%;
+    left: 48%;
+    transform: rotateZ(20deg);
 }
 @media (prefers-reduced-motion: reduce) {
     #summary-page #hobbies:hover #mixing-bowl .shoe,
@@ -549,6 +597,15 @@
     left: 30%;
     transform: rotateZ(5deg);
 }
+
+.disable-animation #summary-page #hobbies:hover #mixing-bowl .notebook,
+.disable-animation #summary-page #hobbies.hover #mixing-bowl .notebook,
+.disable-animation #summary-page #hobbies a:focus #mixing-bowl .notebook {
+    scale: 1;
+    top: 15%;
+    left: 32%;
+    transform: rotateZ(-5deg);
+}
 @media (prefers-reduced-motion: reduce) {
     #summary-page #hobbies:hover #mixing-bowl .notebook,
     #summary-page #hobbies.hover #mixing-bowl .notebook,
@@ -579,6 +636,15 @@
     top: 5%;
     left: 80%;
     transform: rotateZ(60deg);
+}
+
+.disable-animation #summary-page #hobbies:hover #mixing-bowl .whisk,
+.disable-animation #summary-page #hobbies.hover #mixing-bowl .whisk,
+.disable-animation #summary-page #hobbies a:focus #mixing-bowl .whisk {
+    scale: 1;
+    top: 7%;
+    left: 55%;
+    transform: rotateZ(35deg);
 }
 @media (prefers-reduced-motion: reduce) {
     #summary-page #hobbies:hover #mixing-bowl .whisk,
@@ -614,6 +680,11 @@
     scale: 1.2;
 }
 
+.disable-animation #summary-page #contact:hover .handshake,
+.disable-animation #summary-page #contact.hover .handshake,
+.disable-animation #summary-page #contact a:focus .handshake {
+    scale: 1;
+}
 @media (prefers-reduced-motion: reduce) {
     #summary-page #contact:hover .handshake,
     #summary-page #contact.hover .handshake,

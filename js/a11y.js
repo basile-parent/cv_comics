@@ -16,3 +16,30 @@ function srSpeak(text, priority = "polite") {
         document.body.removeChild(document.getElementById(id));
     }, 1000);
 }
+
+function initA11yParameters() {
+    if (window.isReducedMotion || localStorage.getItem("disable-animations")) {
+        disableAnimations()
+    } else {
+        enableAnimations()
+    }
+
+    $(`input[name="control-animation"][value="disabled"]`).click(disableAnimations)
+    $(`input[name="control-animation"][value="enabled"]`).click(enableAnimations)
+}
+
+function disableAnimations() {
+    $(`input[name="control-animation"]`).prop("checked", false)
+    $(`input[name="control-animation"][value="disabled"]`).prop("checked", true)
+    localStorage.setItem("disable-animations", "true")
+
+    $("body").addClass("disable-animation")
+}
+function enableAnimations() {
+    $(`input[name="control-animation"]`).prop("checked", false)
+    $(`input[name="control-animation"][value="enabled"]`).prop("checked", true)
+    localStorage.removeItem("disable-animations")
+    $("body").removeClass("disable-animation")
+}
+
+initA11yParameters()

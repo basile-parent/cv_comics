@@ -13,6 +13,7 @@
     <link media="screen" rel="stylesheet" href="style/bubble.css">
     <link media="screen" rel="stylesheet" href="style/effects.css">
     <link media="screen" rel="stylesheet" href="style/dialog.css">
+    <link media="screen" rel="stylesheet" href="style/a11y.css">
 
     <link media="screen" rel="stylesheet" href="style/intro.css">
     <link media="screen" rel="stylesheet" href="style/cover.css">
@@ -1202,6 +1203,42 @@
         </section>
     </div>
 </main>
+
+<aside role="complementary" id="a11y-parameters">
+    <button id="a11y-dialog-button" onClick="openDialog('a11y-dialog', '#a11y-dialog-button')">
+        <span class="bubble outside-top-left arrow-to-right">
+            Accéder aux paramètres d'accessibilité
+        </span>
+    </button>
+
+    <div id="a11y-dialog"
+         class="dialog-container"
+         inert
+    >
+        <div class="dialog"
+             role="dialog"
+             aria-modal="true"
+             aria-labelledby="a11y-dialog-title">
+            <button class="close-dialog" onClick="closeDialog(this)">Fermer<span class="sr-only"> la popup</span></button>
+            <h2 id="a11y-dialog-title">Paramètres d'accessibilité</h2>
+            <div class="content">
+                <fieldset>
+                    <legend><h3>Contrôle des animations</h3></legend>
+
+                    <div class="radio-input-button">
+                        <input type="radio" name="control-animation" id="control-animation-enabled" value="enabled" />
+                        <label for="control-animation-enabled">Animations activées</label>
+                    </div>
+                    <div class="radio-input-button">
+                        <input type="radio" name="control-animation" id="control-animation-disabled" value="disabled" />
+                        <label for="control-animation-disabled">Animations désactivées</label>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+
+</aside>
 
 <div id="portfolio-dialog"
      class="dialog-container"

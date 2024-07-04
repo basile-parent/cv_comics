@@ -61,6 +61,9 @@
     }
 }
 
+.disable-animation .wm-revealing .halftone-watermark {
+    display: none;
+}
 @media (prefers-reduced-motion: reduce) {
     .wm-revealing .halftone-watermark {
         display: none;
@@ -106,6 +109,13 @@ a:focus .rays-watermark {
     }
 }
 
+.disable-animation .panel:hover .rays-watermark,
+.disable-animation .panel.hover .rays-watermark,
+.disable-animation a:focus .rays-watermark {
+    -webkit-animation: none;
+    -moz-animation: none;
+    animation: none;
+}
 @media (prefers-reduced-motion: reduce) {
     .panel:hover .rays-watermark,
     .panel.hover .rays-watermark,
@@ -153,6 +163,11 @@ a:focus .radial-speed {
 /* *********************************
 ****     DISABLE ANIMATIONS      ***
 ************************************ */
+.disable-animation .panel:hover .radial-speed,
+.disable-animation .panel.hover .radial-speed,
+.disable-animation a:focus .radial-speed {
+    background-size: 350%;
+}
 @media (prefers-reduced-motion: reduce) {
     .panel:hover .radial-speed,
     .panel.hover .radial-speed,
@@ -182,6 +197,11 @@ a:focus .stars-watermark {
     translate: 20px;
 }
 
+.disable-animation .panel:hover .stars-watermark,
+.disable-animation .panel.hover .stars-watermark,
+.disable-animation a:focus .stars-watermark {
+    translate: unset;
+}
 @media (prefers-reduced-motion: reduce) {
     .panel:hover .stars-watermark,
     .panel.hover .stars-watermark,

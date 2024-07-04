@@ -132,6 +132,8 @@
 #skills-page:not(.active) .skill-gauge span.skill-gauge-full:nth-of-type(2) { animation-delay: .8s; }
 #skills-page:not(.active) .skill-gauge span.skill-gauge-full:nth-of-type(1) { animation-delay: .9s; }
 
+.disable-animation #skills-page.active .skill-gauge span.skill-gauge-full { animation-delay: 0s !important; }
+.disable-animation #skills-page:not(.active) .skill-gauge span.skill-gauge-full { animation: none !important; }
 @media (prefers-reduced-motion: reduce) {
     #skills-page.active .skill-gauge span.skill-gauge-full {
         animation-delay: 0s !important;
@@ -141,7 +143,6 @@
         animation: none !important;
     }
 }
-
 
 #skills-page.active .skill-gauge span.skill-gauge-empty {
     animation: hide-empty-gauge 2s ease-out forwards;
@@ -224,6 +225,9 @@
     border-left : 6px solid transparent;
     transition: transform .2s ease-out;
 }
+.disable-animation #skills-page #experiences-details dt button:after {
+    transition: none;
+}
 @media (prefers-reduced-motion: reduce) {
     #skills-page #experiences-details dt button:after {
         transition: none;
@@ -256,6 +260,7 @@
     overflow: hidden;
     transition: max-height .7s ease-out;
 }
+.disable-animation #skills-page #experiences-details dd { transition: none; }
 @media (prefers-reduced-motion: reduce) {
     #skills-page #experiences-details dd {
         transition: none;

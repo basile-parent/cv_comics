@@ -115,6 +115,7 @@
     animation: spiderman-balancing 10s linear infinite;
 }
 
+.disable-animation #talks-page #agile-training .training-character { animation: none; }
 @media (prefers-reduced-motion: reduce) {
     #talks-page #agile-training .training-character { animation: none; }
 }
@@ -237,6 +238,7 @@
 #talks-page #talk-panels li:has(a):hover {
     scale: 1.03;
 }
+.disable-animation #talks-page #talk-panels li:has(a):hover { scale: none; }
 @media (prefers-reduced-motion: reduce) {
     #talks-page #talk-panels li:has(a):hover { scale: none; }
 }
