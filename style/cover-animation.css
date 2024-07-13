@@ -194,7 +194,7 @@
 
 @keyframes reveal-dev-character { 100% { right: -10%;} }
 @keyframes reveal-teacher-character { 100% { left: 0;} }
-@keyframes reveal-specialist-character { 100% { right: 0;} }
+@keyframes reveal-specialist-character { 100% { right: -10px;} }
 
 
 #cover-page.animated #cover-container article#cover-dev-section .section-punchline,

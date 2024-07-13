@@ -206,12 +206,13 @@
 
 #cover-page #cover-container article#cover-specialist-section .section-content .section-character {
     position: absolute;
-    bottom: -7px;
-    right: 0;
+    bottom: -15px;
+    right: -10px;
     width: 50%;
     height: 100%;
     background: url("../assets/characters/super-deaf.png") no-repeat right center;
     background-size: contain;
+    transform: rotateZ(-4deg);
 }
 
 #cover-page #cover-container article#cover-specialist-section .section-content .section-punchline {

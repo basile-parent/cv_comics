@@ -16,12 +16,6 @@ function initBook() {
 
     goToHrefHashPage({ disableVocalize: true })
 
-    beforeFlipCb()
-
-    nextPageFlip()
-
-    afterFlipCb()
-
     window.addEventListener("popstate", function (event) {
         goToHrefHashPage()
     })
@@ -59,6 +53,10 @@ async function goToPage(pageId, options = undefined) {
     !options?.disableVocalize && vocalizePageTitle(pageId)
 
     const delta = askedPageIndex - currentPageIndex
+
+    console.log("delta", delta)
+    console.log("askedPageIndex", askedPageIndex)
+    console.log("currentPageIndex", currentPageIndex)
 
     if (delta > 0) {
         beforeFlipCb()

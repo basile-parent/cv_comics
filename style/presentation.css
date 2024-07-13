@@ -24,20 +24,30 @@
     left: 0;
     width: 200px;
     height: 255px;
-
-    background-image: radial-gradient(circle, lightblue, deepskyblue);
-    background-size: cover;
 }
+
+#presentation-page .page-content .illustration:before,
 #presentation-page .page-content .illustration:after {
     content: "";
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+#presentation-page .page-content .illustration:before {
+    background-image: url("../assets/backgrounds/it-office.jpg");
+    background-size: cover;
+    opacity: 0.8;
+}
+#presentation-page .page-content .illustration:after {
+    height: 90%;
 
     background: url("../assets/characters/profil.png") no-repeat bottom center;
-    background-size: 80% 90%;
+    background-size: contain;
+
+    filter: drop-shadow(3px 3px 3px #444444);
 }
 
 #presentation-page .page-content .content-wrapper {

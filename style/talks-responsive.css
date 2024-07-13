@@ -78,9 +78,9 @@
     }
 
     #talks-page #react-training .training-character {
-        bottom: -50%;
-        left: 25%;
-        height: 135%;
+        top: 0;
+        left: 20%;
+        height: 150%;
     }
 
     #talks-page #react-training .training-text {
@@ -90,10 +90,11 @@
     }
 
     #talks-page #agile-training .training-character {
-        top: -15%;
+        top: unset;
+        bottom: 30px;
         left: unset;
         right: -25%;
-        height: 95%;
+        height: 135%;
         transform: none;
     }
 
@@ -105,9 +106,9 @@
 
     #talks-page #accessibility-training .training-character {
         bottom: unset;
-        top: 20%;
-        left: 5%;
-        height: 120%;
+        top: 0;
+        left: 0;
+        height: 200%;
         transform: scaleX(-1);
         transform-origin: center;
     }

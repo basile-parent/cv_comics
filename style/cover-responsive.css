@@ -8,10 +8,6 @@
     #cover-page #cover-container article#cover-specialist-section {
         top: 66.5%;
     }
-
-    #cover-page #cover-container article#cover-specialist-section .section-content .section-character {
-        bottom: -40px;
-    }
     #cover-page #cover-container article#cover-specialist-section .section-content .section-punchline {
         max-width: 40%;
     }
@@ -147,10 +143,11 @@
     }
 
     #cover-page #cover-container article#cover-specialist-section .section-content .section-character {
-        bottom: -45px;
+        bottom: -25px;
         width: 130%;
-        height: 90%;
-        right: -15%;
+        height: 80%;
+        right: -7%;
+        transform: none;
     }
 
     #cover-page #cover-container article#cover-dev-section .section-content .section-punchline,
