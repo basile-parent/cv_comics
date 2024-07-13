@@ -39,7 +39,8 @@ async function goToHrefHashPage(options = undefined) {
 function flipIfFocusIsOnHiddenElement(element) {
     const containerPage = $(element).parents(".page");
     if (!containerPage.hasClass("active")) {
-        goToPage(containerPage.attr("id"), { disableVocalize: true })
+        const pageHash = containerPage.attr("id")
+        window.location.hash = `#${ pageHash }`
     }
 }
 
