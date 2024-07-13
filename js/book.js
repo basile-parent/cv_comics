@@ -55,10 +55,6 @@ async function goToPage(pageId, options = undefined) {
 
     const delta = askedPageIndex - currentPageIndex
 
-    console.log("delta", delta)
-    console.log("askedPageIndex", askedPageIndex)
-    console.log("currentPageIndex", currentPageIndex)
-
     if (delta > 0) {
         beforeFlipCb()
 

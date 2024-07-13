@@ -9,7 +9,7 @@
 ***************************************************** */
 #talks-page h2#training-title {
     position: absolute;
-    top: 45px;
+    top: 35px;
     left: 50%;
     transform: translate(-50%, 0) skew(-15deg);
     text-align: center;
@@ -174,7 +174,7 @@
 
 #talks-page #talk-panels h2#talks-title {
     position: absolute;
-    top: -30px;
+    top: -35px;
     left: 50%;
     margin: 0;
     display: inline-block;

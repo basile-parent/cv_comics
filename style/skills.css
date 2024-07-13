@@ -75,18 +75,17 @@
 
 #skills-page #skills-details li {
     display: flex;
+    width: 100%;
     margin-bottom: 2px;
 }
 
 #skills-page .skill-title {
-    flex: 1;
-    width: 80px;
+    flex: 6;
 }
 
 #skills-page .skill-gauge {
-    flex: 1;
-    min-width: 120px;
-    display: flex;
+    display: inline-flex;
+    flex: 4;
 }
 
 #skills-page .skill-gauge span {
@@ -104,16 +103,16 @@
     animation: fill-gauge .1s linear forwards;
 }
 
-#skills-page.active .skill-gauge span.skill-gauge-full:nth-of-type(1) { animation-delay: .5s; }
-#skills-page.active .skill-gauge span.skill-gauge-full:nth-of-type(2) { animation-delay: .6s; }
-#skills-page.active .skill-gauge span.skill-gauge-full:nth-of-type(3) { animation-delay: .7s; }
-#skills-page.active .skill-gauge span.skill-gauge-full:nth-of-type(4) { animation-delay: .8s; }
-#skills-page.active .skill-gauge span.skill-gauge-full:nth-of-type(5) { animation-delay: .9s; }
-#skills-page.active .skill-gauge span.skill-gauge-full:nth-of-type(6) { animation-delay: 1s; }
-#skills-page.active .skill-gauge span.skill-gauge-full:nth-of-type(7) { animation-delay: 1.1s; }
-#skills-page.active .skill-gauge span.skill-gauge-full:nth-of-type(8) { animation-delay: 1.2s; }
-#skills-page.active .skill-gauge span.skill-gauge-full:nth-of-type(9) { animation-delay: 1.3s; }
-#skills-page.active .skill-gauge span.skill-gauge-full:nth-of-type(10) { animation-delay: 1.4s; }
+#skills-page.active .skill-gauge span.skill-gauge-full:nth-of-type(1) { animation-delay: .9s; }
+#skills-page.active .skill-gauge span.skill-gauge-full:nth-of-type(2) { animation-delay: 1s; }
+#skills-page.active .skill-gauge span.skill-gauge-full:nth-of-type(3) { animation-delay: 1.1s; }
+#skills-page.active .skill-gauge span.skill-gauge-full:nth-of-type(4) { animation-delay: 1.2s; }
+#skills-page.active .skill-gauge span.skill-gauge-full:nth-of-type(5) { animation-delay: 1.3s; }
+/*#skills-page.active .skill-gauge span.skill-gauge-full:nth-of-type(6) { animation-delay: 1s; }*/
+/*#skills-page.active .skill-gauge span.skill-gauge-full:nth-of-type(7) { animation-delay: 1.1s; }*/
+/*#skills-page.active .skill-gauge span.skill-gauge-full:nth-of-type(8) { animation-delay: 1.2s; }*/
+/*#skills-page.active .skill-gauge span.skill-gauge-full:nth-of-type(9) { animation-delay: 1.3s; }*/
+/*#skills-page.active .skill-gauge span.skill-gauge-full:nth-of-type(10) { animation-delay: 1.4s; }*/
 
 #skills-page:not(.active) .skill-gauge span.skill-gauge-full {
     background: rgb(254,255,0);
@@ -121,16 +120,16 @@
     animation: fill-gauge-reverse .1s linear forwards;
 }
 
-#skills-page:not(.active) .skill-gauge span.skill-gauge-full:nth-of-type(10) { animation-delay: 0s; }
-#skills-page:not(.active) .skill-gauge span.skill-gauge-full:nth-of-type(9) { animation-delay: .1s; }
-#skills-page:not(.active) .skill-gauge span.skill-gauge-full:nth-of-type(8) { animation-delay: .2s; }
-#skills-page:not(.active) .skill-gauge span.skill-gauge-full:nth-of-type(7) { animation-delay: .3s; }
-#skills-page:not(.active) .skill-gauge span.skill-gauge-full:nth-of-type(6) { animation-delay: .4s; }
-#skills-page:not(.active) .skill-gauge span.skill-gauge-full:nth-of-type(5) { animation-delay: .5s; }
-#skills-page:not(.active) .skill-gauge span.skill-gauge-full:nth-of-type(4) { animation-delay: .6s; }
-#skills-page:not(.active) .skill-gauge span.skill-gauge-full:nth-of-type(3) { animation-delay: .7s; }
-#skills-page:not(.active) .skill-gauge span.skill-gauge-full:nth-of-type(2) { animation-delay: .8s; }
-#skills-page:not(.active) .skill-gauge span.skill-gauge-full:nth-of-type(1) { animation-delay: .9s; }
+/*#skills-page:not(.active) .skill-gauge span.skill-gauge-full:nth-of-type(10) { animation-delay: 0s; }*/
+/*#skills-page:not(.active) .skill-gauge span.skill-gauge-full:nth-of-type(9) { animation-delay: .1s; }*/
+/*#skills-page:not(.active) .skill-gauge span.skill-gauge-full:nth-of-type(8) { animation-delay: .2s; }*/
+/*#skills-page:not(.active) .skill-gauge span.skill-gauge-full:nth-of-type(7) { animation-delay: .3s; }*/
+/*#skills-page:not(.active) .skill-gauge span.skill-gauge-full:nth-of-type(6) { animation-delay: .4s; }*/
+#skills-page:not(.active) .skill-gauge span.skill-gauge-full:nth-of-type(5) { animation-delay: 0s; }
+#skills-page:not(.active) .skill-gauge span.skill-gauge-full:nth-of-type(4) { animation-delay: .1s; }
+#skills-page:not(.active) .skill-gauge span.skill-gauge-full:nth-of-type(3) { animation-delay: .2s; }
+#skills-page:not(.active) .skill-gauge span.skill-gauge-full:nth-of-type(2) { animation-delay: .3s; }
+#skills-page:not(.active) .skill-gauge span.skill-gauge-full:nth-of-type(1) { animation-delay: .4s; }
 
 .disable-animation #skills-page.active .skill-gauge span.skill-gauge-full { animation-delay: 0s !important; }
 .disable-animation #skills-page:not(.active) .skill-gauge span.skill-gauge-full { animation: none !important; }

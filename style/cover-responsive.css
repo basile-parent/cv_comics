@@ -9,7 +9,8 @@
         top: 66.5%;
     }
     #cover-page #cover-container article#cover-specialist-section .section-content .section-punchline {
-        max-width: 40%;
+        max-width: 45%;
+        text-align: center;
     }
 }
 

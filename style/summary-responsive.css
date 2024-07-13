@@ -22,6 +22,13 @@
     }
 
     /* *********************************
+    *********   PRESENTATION   *********
+    ************************************ */
+    #summary-page #presentation:before {
+        height: 88%;
+    }
+
+    /* *********************************
     *********   CERTIFICATES   *********
     ************************************ */
     #summary-page #certificates .bubble-icon {
@@ -53,6 +60,10 @@
     #summary-page #talks .talk-mic .talk-img {
         top: 33%;
         height: 50%;
+    }
+
+    #summary-page #talks .talk-mic:after {
+        height: 85%;
     }
 
     /* *********************************
@@ -169,6 +180,14 @@
     }
 
     /* *********************************
+    *********   PRESENTATION   *********
+    ************************************ */
+    #summary-page #presentation:before {
+        height: 88%;
+    }
+
+
+    /* *********************************
     *********   CERTIFICATES   *********
     ************************************ */
     #summary-page #certificates .bubble-icon {
@@ -201,6 +220,11 @@
     #summary-page #talks .talk-mic .talk-img-container {
         height: 131%;
     }
+
+    #summary-page #talks .talk-mic:after {
+        height: 85%;
+    }
+
 
     /* *********************************
     *********     HOBBIES      *********

@@ -110,8 +110,8 @@
     text-align: center;
 }
 #presentation-page #presentation-social-networks p {
-    font-size: 2rem;
-    margin: 0;
+    font-size: 1.7rem;
+    margin: 0 !important;
 }
 #presentation-page #presentation-social-networks ul,
 #presentation-page #presentation-social-networks li {
@@ -127,7 +127,7 @@
 }
 #presentation-page #presentation-social-networks li {
     flex: 1;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     padding: 10px 0;
 }
 

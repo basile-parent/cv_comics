@@ -10,6 +10,11 @@
         text-align: center;
     }
 
+    .diploma-frame h3 {
+        font-size: 1rem;
+        line-height: 1.2rem;
+    }
+
     .diploma {
         flex-direction: column;
         align-items: center;
