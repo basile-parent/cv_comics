@@ -1,5 +1,4 @@
 const HINT_INTERVAL = 3000;
-const MAX_PANEL_INDEX = 6;
 const SUMMARY_PAGE_INDEX = 1;
 
 let hintDisabled = false;

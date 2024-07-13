@@ -1,7 +1,7 @@
 let currentPageIndex = 0
 let allPages = {}
 let pageFlipBeforeCallbacks = [ passAnimationSelectionPage ]
-let pageFlipCallbacks = [ initHints ]
+let pageFlipCallbacks = [ initHints, updateSkipLinksWithPageBook ]
 
 function disableSummaryLinkOnAnimation(e) {
     if ($("#cover-page").hasClass("animated")) {
@@ -14,25 +14,31 @@ function initBook() {
         allPages[htmlElement.id] = { index }
     })
 
-    goToHrefHashPage();
+    goToHrefHashPage({ disableVocalize: true })
+
+    beforeFlipCb()
+
+    nextPageFlip()
+
+    afterFlipCb()
 
     window.addEventListener("popstate", function (event) {
-        goToHrefHashPage();
-    });
+        goToHrefHashPage()
+    })
 
     $("a, button, [tabindex=0], input, textarea, select").on("focus", (e) => {
         flipIfFocusIsOnHiddenElement(e.currentTarget)
     })
 }
 
-async function goToHrefHashPage() {
+async function goToHrefHashPage(options = undefined) {
     const hash = window.location.hash?.substring(1)
 
     if (!hash) {
-        return;
+        return
     }
 
-    await goToPage(hash);
+    await goToPage(hash, options)
 }
 
 // For keyboard navigation only
