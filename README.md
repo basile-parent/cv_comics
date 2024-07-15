@@ -4,4 +4,3 @@
 - Content !
 - swipe on mobile
 - CSS improvement for my name on cover
-- Dark theme
