@@ -211,6 +211,8 @@
 #skills-page #experiences-details dt button {
     width: 100%;
     padding: 10px 0;
+    display: flex;
+    align-items: center;
 }
 
 #skills-page #experiences-details dt button:after {
@@ -247,17 +249,22 @@
     opacity: 0.8;
 }
 
+#skills-page #experiences-details dt .experiences-title {
+    font-weight: 700;
+}
+
 #skills-page #experiences-details dt .experiences-dates {
     font-size: .9rem;
     display: inline-block;
 }
 
 #skills-page #experiences-details dd {
-    font-size: 0.95rem;
-    line-height: 0.95rem;
+    font-size: 1.15rem;
+    line-height: 1rem;
     max-height: 0;
     overflow: hidden;
     transition: max-height .7s ease-out;
+    font-family: Pink_chicken, Comic_book_regular, serif;
 }
 .disable-animation #skills-page #experiences-details dd { transition: none; }
 @media (prefers-reduced-motion: reduce) {
@@ -266,18 +273,30 @@
     }
 }
 #skills-page #experiences-details dt:has(button[aria-expanded=true]) + dd {
-    max-height: 300px;
+    max-height: 330px;
+}
+
+#skills-page #experiences-details dd ul li {
+    list-style: disc;
+    margin: .3rem 0 .3rem 1.3rem;
+}
+#skills-page #experiences-details dd ul li::marker {
+    font-size: 1rem;
 }
 
 #skills-page #experiences-details dd .client {
-    font-size: 1.05rem;
+    display: block;
+    font-size: 1.35rem;
     font-weight: bold;
 }
 
+#skills-page #experiences-details dd .experiences-context .context {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
 #skills-page #experiences-details dd .experiences-context {
     display: inline-block;
-    font-size: 0.85rem;
-    transform: skew(-10deg); /* Simulate italic */
+    font-size: 1rem;
     margin-top: 5px;
 }
 

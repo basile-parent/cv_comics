@@ -2,7 +2,6 @@ const SKILL_GAUGE_COUNT = 5
 
 function initSkillsGauges() {
     const skillStep = 10 / SKILL_GAUGE_COUNT
-    console.log("skillStep", skillStep)
 
     $(".skill-gauge").each((index, element) => {
         const levelOnTen = +$(element).attr("data-level")

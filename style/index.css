@@ -8,14 +8,12 @@ html, body {
     color: black;
 
     font-family: "Comic_book_regular", "Comic Sans", cursive;
+
+    overflow: hidden;
 }
 
 body.dys-font {
     font-family: "OpenDyslexic", cursive;
-}
-
-html.noScroll, body.noScroll {
-    overflow: hidden;
 }
 
 body:before {
@@ -142,6 +140,13 @@ button {
     font-style: normal;
 }
 
+@font-face {
+    font-family: "Pink_chicken";
+    src: url("fonts/pinkchicken-regular-webfont.woff2") format("woff2"),
+    url("fonts/pinkchicken-regular-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
 
 /* *************************************** */
 /* *************  SCROLLBAR  ************* */

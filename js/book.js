@@ -1,7 +1,7 @@
 let currentPageIndex = 0
 let allPages = {}
 let pageFlipBeforeCallbacks = [ passAnimationSelectionPage ]
-let pageFlipCallbacks = [ initHints, updateSkipLinksWithPageBook ]
+let pageFlipCallbacks = [ initHints, updateSkipLinksWithPageBook, scrollToTop ]
 
 function disableSummaryLinkOnAnimation(e) {
     if ($("#cover-page").hasClass("animated")) {
@@ -97,7 +97,6 @@ function nextPageFlip() {
 }
 
 function beforeFlipCb() {
-    $("html, body").addClass("noScroll")
     pageFlipBeforeCallbacks.forEach(cbFn => cbFn(currentPageIndex))
 }
 
@@ -106,7 +105,6 @@ function afterFlipCb() {
     $("#cover-page").removeClass("animated").removeClass("hinted")
     // Wait for the page to end flipping
     setTimeout(() => {
-        $("html, body").removeClass("noScroll")
     }, 1000)
 }
 
@@ -122,6 +120,10 @@ function timedPagination(paginationCb, timeout = 200) {
             resolve()
         }, timeout)
     })
+}
+
+function scrollToTop() {
+    window.scroll(0, 0)
 }
 
 initBook();
