@@ -3,6 +3,9 @@
     z-index: 50;
 }
 
+.page.flipped #summary-page .panel:hover,
+.page.flipped #summary-page .panel.hover,
+.page.flipped #summary-page .panel:focus,
 .disable-animation #summary-page .panel:hover,
 .disable-animation #summary-page .panel.hover,
 .disable-animation #summary-page .panel:focus {
@@ -102,8 +105,8 @@
     transition: opacity .3s ease;
     pointer-events: none;
 }
-#summary-page nav.return-to-front-page-navigation a:hover span,
-#summary-page nav.return-to-front-page-navigation a:focus span {
+#summary-page:not(.flipped) nav.return-to-front-page-navigation a:hover span,
+#summary-page:not(.flipped) nav.return-to-front-page-navigation a:focus span {
     animation: reveal-return-button .3s forwards;
 }
 @keyframes reveal-return-button {
@@ -213,6 +216,7 @@
     opacity: 0;
 }
 
+.page.flipped #summary-page #skills .puff-icon,
 .disable-animation #summary-page #skills .puff-icon {
     display: none;
 }
@@ -335,6 +339,9 @@
     height: 90%;
 }
 
+.page.flipped #summary-page #certificates:hover .bubble-certification:after,
+.page.flipped #summary-page #certificates.hover .bubble-certification:after,
+.page.flipped #summary-page #certificates a:focus .bubble-certification:after,
 .disable-animation #summary-page #certificates:hover .bubble-certification:after,
 .disable-animation #summary-page #certificates.hover .bubble-certification:after,
 .disable-animation #summary-page #certificates a:focus .bubble-certification:after {
@@ -398,6 +405,9 @@
     height: 100%;
 }
 
+.page.flipped #summary-page #talks:hover .talk-mic:after,
+.page.flipped #summary-page #talks.hover .talk-mic:after,
+.page.flipped #summary-page #talks a:focus .talk-mic:after,
 .disable-animation #summary-page #talks:hover .talk-mic:after,
 .disable-animation #summary-page #talks.hover .talk-mic:after,
 .disable-animation #summary-page #talks a:focus .talk-mic:after {
@@ -469,6 +479,12 @@
     top: 85%;
 }
 
+.page.flipped #summary-page #hobbies:hover #mixing-bowl .bowl-front,
+.page.flipped #summary-page #hobbies:hover #mixing-bowl .bowl-back,
+.page.flipped #summary-page #hobbies.hover #mixing-bowl .bowl-front,
+.page.flipped #summary-page #hobbies.hover #mixing-bowl .bowl-back,
+.page.flipped #summary-page #hobbies a:focus #mixing-bowl .bowl-front,
+.page.flipped #summary-page #hobbies a:focus #mixing-bowl .bowl-back,
 .disable-animation #summary-page #hobbies:hover #mixing-bowl .bowl-front,
 .disable-animation #summary-page #hobbies:hover #mixing-bowl .bowl-back,
 .disable-animation #summary-page #hobbies.hover #mixing-bowl .bowl-front,
@@ -515,6 +531,9 @@
     transform: rotateZ(10deg);
 }
 
+.page.flipped #summary-page #hobbies:hover #mixing-bowl .belt,
+.page.flipped #summary-page #hobbies.hover #mixing-bowl .belt,
+.page.flipped #summary-page #hobbies a:focus #mixing-bowl .belt,
 .disable-animation #summary-page #hobbies:hover #mixing-bowl .belt,
 .disable-animation #summary-page #hobbies.hover #mixing-bowl .belt,
 .disable-animation #summary-page #hobbies a:focus #mixing-bowl .belt {
@@ -557,6 +576,9 @@
     transform: rotateZ(5deg);
 }
 
+.page.flipped #summary-page #hobbies:hover #mixing-bowl .shoe,
+.page.flipped #summary-page #hobbies.hover #mixing-bowl .shoe,
+.page.flipped #summary-page #hobbies a:focus #mixing-bowl .shoe,
 .disable-animation #summary-page #hobbies:hover #mixing-bowl .shoe,
 .disable-animation #summary-page #hobbies.hover #mixing-bowl .shoe,
 .disable-animation #summary-page #hobbies a:focus #mixing-bowl .shoe {
@@ -604,6 +626,9 @@
     transform: rotateZ(5deg);
 }
 
+.page.flipped #summary-page #hobbies:hover #mixing-bowl .notebook,
+.page.flipped #summary-page #hobbies.hover #mixing-bowl .notebook,
+.page.flipped #summary-page #hobbies a:focus #mixing-bowl .notebook,
 .disable-animation #summary-page #hobbies:hover #mixing-bowl .notebook,
 .disable-animation #summary-page #hobbies.hover #mixing-bowl .notebook,
 .disable-animation #summary-page #hobbies a:focus #mixing-bowl .notebook {
@@ -644,6 +669,9 @@
     transform: rotateZ(60deg);
 }
 
+.page.flipped #summary-page #hobbies:hover #mixing-bowl .whisk,
+.page.flipped #summary-page #hobbies.hover #mixing-bowl .whisk,
+.page.flipped #summary-page #hobbies a:focus #mixing-bowl .whisk,
 .disable-animation #summary-page #hobbies:hover #mixing-bowl .whisk,
 .disable-animation #summary-page #hobbies.hover #mixing-bowl .whisk,
 .disable-animation #summary-page #hobbies a:focus #mixing-bowl .whisk {
@@ -686,6 +714,9 @@
     scale: 1.2;
 }
 
+.page.flipped #summary-page #contact:hover .handshake,
+.page.flipped #summary-page #contact.hover .handshake,
+.page.flipped #summary-page #contact a:focus .handshake,
 .disable-animation #summary-page #contact:hover .handshake,
 .disable-animation #summary-page #contact.hover .handshake,
 .disable-animation #summary-page #contact a:focus .handshake {

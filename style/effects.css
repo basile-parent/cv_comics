@@ -61,6 +61,7 @@
     }
 }
 
+.page.flipped .wm-revealing .halftone-watermark,
 .disable-animation .wm-revealing .halftone-watermark {
     display: none;
 }
@@ -109,6 +110,9 @@ a:focus .rays-watermark {
     }
 }
 
+.page.flipped .panel:hover .rays-watermark,
+.page.flipped .panel.hover .rays-watermark,
+.page.flipped a:focus .rays-watermark,
 .disable-animation .panel:hover .rays-watermark,
 .disable-animation .panel.hover .rays-watermark,
 .disable-animation a:focus .rays-watermark {
@@ -163,6 +167,9 @@ a:focus .radial-speed {
 /* *********************************
 ****     DISABLE ANIMATIONS      ***
 ************************************ */
+.page.flipped .panel:hover .radial-speed,
+.page.flipped .panel.hover .radial-speed,
+.page.flipped a:focus .radial-speed,
 .disable-animation .panel:hover .radial-speed,
 .disable-animation .panel.hover .radial-speed,
 .disable-animation a:focus .radial-speed {
@@ -197,6 +204,9 @@ a:focus .stars-watermark {
     translate: 20px;
 }
 
+.page.flipped .panel:hover .stars-watermark,
+.page.flipped .panel.hover .stars-watermark,
+.page.flipped a:focus .stars-watermark,
 .disable-animation .panel:hover .stars-watermark,
 .disable-animation .panel.hover .stars-watermark,
 .disable-animation a:focus .stars-watermark {
