@@ -47,6 +47,16 @@
     perspective-origin: 50% 50%;
 }
 
+#hobbies-page #carrousel-panel .carrousel-item a {
+    color: white;
+    text-decoration: underline;
+}
+
+#hobbies-page #carrousel-panel .carrousel-item a .new-tab-link {
+    background-color: white;
+    font-size: 0.0001rem;
+}
+
 /* **************   DECORATIONS   ************** */
 #hobbies-page #carrousel-panel .decorations * {
     pointer-events: none;

@@ -63,17 +63,12 @@ a:hover, a:focus {
     width: 15px;
     height: 15px;
     overflow: hidden;
-    background-color: #00009a;
-    color: #00009a;
+    background-color: currentColor;
+    color: currentColor;
     vertical-align: middle;
     -webkit-mask: url("../assets/icons/new-tab-icon.png");
     mask: url("../assets/icons/new-tab-icon.png");
     mask-size: contain;
-}
-
-a:hover .new-tab-link, a:focus .new-tab-link {
-    background-color: #6565e6;
-    color: #6565e6;
 }
 
 

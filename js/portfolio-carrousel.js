@@ -2,6 +2,7 @@ let currentSlideIndex = 0
 let slideCount
 
 function initCarrousel() {
+    initCarrouselImgAfterLoad()
     $("#carrousel-panel button.next-slide-button").on("click", nextSlide)
     $("#carrousel-panel button.prev-slide-button").on("click", prevSlide)
     let allSlides = $("#carrousel-panel .carrousel-item");
@@ -12,6 +13,14 @@ function initCarrousel() {
 
     $("#carrousel-panel figure").on("click", openPortfolioDialog)
     $("#carrousel-panel figure").on("keydown", openPortfolioDialogOnSpaceAndEnter)
+}
+
+function initCarrouselImgAfterLoad() {
+    $(window).on("load", () => {
+        $("#carrousel-panel img").each((_, img) => {
+            $(img).attr("src", $(img).attr("data-src"))
+        })
+    })
 }
 
 function openPortfolioDialogOnSpaceAndEnter(event) {
@@ -95,25 +104,6 @@ function adaptTitle(direction) {
             }, 300)
         }, 300)
     }
-}
-
-function face(direction) {
-    const {fadeOutClass, fadeInClass} = getFadeClasses(direction)
-
-    $("#carrousel-panel .carrousel-item.active").addClass(fadeOutClass)
-    setTimeout(() => {
-        $("#carrousel-panel .carrousel-item.active").removeClass("active")
-
-        $(`#carrousel-panel .carrousel-item:nth-of-type(${ currentSlideIndex + 1 })`)
-            .addClass("active")
-            .addClass(fadeInClass)
-
-        setTimeout(() => {
-            $("#carrousel-panel .carrousel-item")
-                .removeClass(fadeOutClass)
-                .removeClass(fadeInClass)
-        }, 300)
-    }, 300)
 }
 
 initCarrousel()
