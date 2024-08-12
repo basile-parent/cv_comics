@@ -1,11 +1,13 @@
 function openDialog(dialogId, elementSelectorToFocusOnClose) {
     const dialog = $(`.dialog-container#${ dialogId }`)
     dialog.removeAttr("inert")
+    dialog.on("click", closeDialog)
 
     dialog.find("button, a, input, textarea, [tabindex=0]").first().focus()
 
-    dialog.children(".dialog").first()
-        .append(`<input type="hidden" class="elementSelectorToFocusOnClose" value="${ elementSelectorToFocusOnClose }"/>`)
+    const dialogPanel = dialog.children(".dialog").first()
+    dialogPanel.append(`<input type="hidden" class="elementSelectorToFocusOnClose" value="${ elementSelectorToFocusOnClose }"/>`)
+    dialogPanel.on("click", stopDialogPropagation)
 
     window.addEventListener("keydown", closeDialogOnEsc)
 
@@ -33,4 +35,8 @@ function closeDialogOnEsc(event) {
     if (event.key === "Escape") {
         closeDialog()
     }
+}
+
+function stopDialogPropagation(event) {
+    event.stopPropagation()
 }

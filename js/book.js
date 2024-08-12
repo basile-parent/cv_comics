@@ -20,7 +20,7 @@ function initBook() {
         goToHrefHashPage()
     })
 
-    $("a, button, [tabindex=0], input, textarea, select").on("focus", (e) => {
+    $("#cv-book a, #cv-book button, #cv-book [tabindex=0], #cv-book input, #cv-book textarea, #cv-book select").on("focus", (e) => {
         flipIfFocusIsOnHiddenElement(e.currentTarget)
     })
 }
