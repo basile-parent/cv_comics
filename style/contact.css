@@ -66,21 +66,23 @@
 /* Fallbacks for attr function support */
 #contact-page .page-content #contact-technologies li#contact-technology__css { width: 60%; }
 #contact-page .page-content #contact-technologies li#contact-technology__html { width: 34%; }
-#contact-page .page-content #contact-technologies li#contact-technology__js { width: 6%; }
+#contact-page .page-content #contact-technologies li#contact-technology__js { width: 6%; min-width: 2rem; }
 
 #contact-page .page-content #contact-technologies li {
     width: attr(data-value %); /* Not implemented in most browser for now */
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
+
 #contact-page .page-content #contact-technologies li:not(:last-of-type) {
     border-right: 2px solid black;
 }
 #contact-page .page-content #contact-technologies li#contact-technology__js { font-size: .9rem; }
 
 
-#contact-page .page-content #contact-technologies li#contact-technology__css { background-color: purple; color: #ffeeff; }
+#contact-page .page-content #contact-technologies li#contact-technology__css { background-color: purple; color: #ffeeff; text-shadow: 1px 1px 2px black; }
 #contact-page .page-content #contact-technologies li#contact-technology__html { background-color: #ff7e46; }
 #contact-page .page-content #contact-technologies li#contact-technology__js { background-color: yellow; }
 

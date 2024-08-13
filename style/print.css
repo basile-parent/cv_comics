@@ -1,7 +1,7 @@
 :root {
     --font-color: #754000;
     --dont-print-color: #195200;
-    --border-color: #2f2f2f;
+    --border-color: #754000;
 }
 
 html {
@@ -82,13 +82,17 @@ h2 {
 
 /* ***************** COVER PAGE ***************** */
 #cover-page {
-    border-top: 1mm solid var(--font-color);
-    border-bottom: 1mm solid var(--font-color);
+    border-top: 1mm solid var(--border-color);
+    border-bottom: 1mm solid var(--border-color);
     text-align: center;
     padding: 3mm 0;
 
     grid-column: 1 / 9;
     grid-row: 1;
+}
+
+#cover-page a {
+    display: none;
 }
 
 #cover-page h1 {
@@ -152,6 +156,17 @@ h2 {
     float: right;
 }
 
+#contact-page .page-content > :not(#contact-link),
+#contact-page .page-content #contact-link > :not(#contact-link__main) {
+    display: none;
+}
+
+#contact-page .page-content #contact-link,
+#contact-page .page-content #contact-link #contact-link__main {
+    display: inline-block;
+    margin: 0;
+}
+
 /* ***************** EXPERIENCE PAGE ***************** */
 #skills-page {
     grid-column: 1 / 9;
@@ -192,7 +207,12 @@ h2 {
 }
 
 #skills-page .page-with-content .page-content #experiences-section dt:not(:first-of-type) {
-    margin-top: 0.5cm;
+    margin-top: 5mm;
+}
+
+#skills-page .page-with-content .page-content #experiences-section dd li {
+    list-style-type: circle;
+    margin-left: 5mm;
 }
 
 #skills-page .page-with-content .page-content #skills-section {
@@ -270,3 +290,9 @@ h2 {
     text-align: center;
 }
 
+
+
+/* ***************** A11Y PARAMETERS ***************** */
+#a11y-parameters {
+    display: none;
+}
