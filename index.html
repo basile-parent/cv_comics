@@ -1238,17 +1238,36 @@
                 </header>
 
                 <article class="page-content">
-                    <a href="#">mon.adresse.mail@gmail.com</a>
-                    <!--                    <form action="#" onsubmit="return false" novalidate="novalidate">-->
-                    <!--                        <div class="g-recaptcha"-->
-                    <!--                             data-sitekey="6Ld5cMopAAAAAHo1ud5sYRKoQS5P-yUP6aANuzj6"-->
-                    <!--                             data-callback="showContact"-->
-                    <!--                             data-expired-callback="invalidateContact"-->
-                    <!--                        ></div>-->
-                    <!--                    </form>-->
+                    <div id="contact-link" class="panel contact-part">
+                        <p>
+                            Pour me contacter, vous pouvez passer par mon
+                            <a href="https://www.linkedin.com/in/basile-parent/" target="_blank">
+                                LinkedIn<span class="new-tab-link" title="Nouvelle fenêtre"> (nouvelle fenêtre)</span>
+                            </a>
+                        </p>
+                        <p>
+                            Ce CV est <button id="print-button" onClick="window.print()">imprimable</button> mais ne le faites que si c'est nécessaire.
+                        </p>
+                    </div>
 
-                    <p id="mentions">Illustrations par <a href="https://paskal.fr/" target="_blank">Paskal<span
-                            class="new-tab-link" title="Nouvelle fenêtre"> (nouvelle fenêtre)</span></a></p>
+                    <div id="contact-technologies" class="panel contact-part">
+                        <p id="contact-technology-list__label">Technologies du projet :</p>
+                        <ol aria-labelledby="contact-technology-list__label">
+                            <li id="contact-technology__css" data-value="60">CSS: 60%</li>
+                            <li id="contact-technology__html" data-value="34">HTML: 34%</li>
+                            <li id="contact-technology__js" data-value="6">JS: 6%</li>
+                        </ol>
+                        <p id="contact-technology-list__framework">Aucun frawework / librairy n'a été utilisé</p>
+                        <p id="contact-technology-list__framework--complementary">sauf JQuery par convénience</p>
+                    </div>
+
+                    <p id="contact-mentions" class="panel contact-part">
+                        Illustrations par&nbsp;
+                        <a href="https://paskal.fr/" target="_blank">
+                            Paskal
+                            <span class="new-tab-link" title="Nouvelle fenêtre"> (nouvelle fenêtre)</span>
+                        </a>
+                    </p>
                 </article>
 
                 <footer>

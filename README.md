@@ -1,6 +1,6 @@
 # Comics CV
 
 ## TODO
-- Content !
-- swipe on mobile
-- CSS improvement for my name on cover
+[ ] Swipe on mobile
+[ ] Remove JQuery
+[ ] CSS improvement for my name on cover
