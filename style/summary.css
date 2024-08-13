@@ -393,6 +393,7 @@
     background-size: contain;
     mask-image: url("../assets/ornaments/bubble-1-mask.png");
     mask-position: top center;
+    -webkit-mask-size: 100% 100%;
     mask-size: 100% 100%;
 
     transition: all .3s ease;

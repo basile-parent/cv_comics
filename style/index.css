@@ -68,6 +68,7 @@ a:hover, a:focus {
     vertical-align: middle;
     -webkit-mask: url("../assets/icons/new-tab-icon.png");
     mask: url("../assets/icons/new-tab-icon.png");
+    -webkit-mask-size: contain;
     mask-size: contain;
 }
 

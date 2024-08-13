@@ -266,6 +266,7 @@
     width: 50%;
     background-color: black;
     mask: url("../assets/icons/youtube-icon.png") right center no-repeat;
+    -webkit-mask-size: contain;
     mask-size: contain;
 }
 #talks-page #talk-panels li#talk-daily-meeting a:hover:before {

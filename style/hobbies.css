@@ -261,6 +261,7 @@
     height: 100%;
     background-color: white;
     mask: url("../assets/icons/arrow-simple.png") center center no-repeat;
+    -webkit-mask-size: contain;
     mask-size: contain;
     color: transparent;
     cursor: pointer;
