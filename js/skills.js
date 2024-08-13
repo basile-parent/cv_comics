@@ -11,6 +11,8 @@ function initSkillsGauges() {
         for (let i = 0; i < SKILL_GAUGE_COUNT; i++) {
             if (levelOnTen >= (i+1) * skillStep) {
                 $(element).append(`<span class="skill-gauge-full"></span>`)
+            } else if (levelOnTen > i * skillStep && levelOnTen < (i+1) * skillStep) {
+                $(element).append(`<span class="skill-gauge-partial"></span>`)
             } else {
                 $(element).append(`<span class="skill-gauge-empty"></span>`)
             }
