@@ -38,7 +38,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: url("../assets/animations/lightning_1.png") no-repeat top center;
+    background: url("../assets/animations/lightning_1.webp") no-repeat top center;
     background-size: 400px 630px;
     opacity: 0;
     animation: lightning-strike-main 2.5s ease-out forwards;
@@ -65,14 +65,14 @@
     opacity: 0;
 }
 #cover-page.animated #cover-container article .background-lightning:before {
-    background: url("../assets/animations/lightning_2.png") no-repeat;
+    background: url("../assets/animations/lightning_2.webp") no-repeat;
     background-size: 400px 630px;
     animation: lightning-strike-sub-1 2.5s ease-out forwards;
     animation-delay: 2.5s;
 }
 
 #cover-page.animated #cover-container article .background-lightning:after {
-    background: url("../assets/animations/lightning_3.png") no-repeat;
+    background: url("../assets/animations/lightning_3.webp") no-repeat;
     background-size: 400px 630px;
     animation: lightning-strike-sub-2 2.5s ease-out forwards;
     animation-delay: 2.5s;
@@ -120,7 +120,7 @@
     width: 30px;
     height: 200px;
     transform: rotateZ(115deg);
-    background: url("../assets/characters/super-deaf-blur.png") no-repeat center center;
+    background: url("../assets/characters/super-deaf-blur.webp") no-repeat center center;
     background-size: cover;
 }
 #cover-page.animated #cover-container article#cover-teacher-section .super-deaf-blur {

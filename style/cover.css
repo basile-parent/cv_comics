@@ -22,13 +22,13 @@
 
 .cover-background:before {
     opacity: 0.15;
-    background: url("../assets/backgrounds/clouds.jpg") no-repeat center center;
+    background: url("../assets/backgrounds/clouds.webp") no-repeat center center;
     background-size: cover;
 }
 
 .cover-background:after {
     opacity: 0.1;
-    background: url("../assets/characters/profil.png") repeat-x bottom center;
+    background: url("../assets/characters/profil.webp") repeat-x bottom center;
     background-size: contain;
 }
 
@@ -131,7 +131,7 @@
 }
 
 #cover-page #cover-container article#cover-dev-section .section-content .section-background {
-    background: url("../assets/backgrounds/room.jpg") no-repeat center center;
+    background: url("../assets/backgrounds/room.webp") no-repeat center center;
     background-size: cover;
 }
 
@@ -142,7 +142,7 @@
     right: -10%;
     width: 60%;
     height: 100%;
-    background: url("../assets/characters/dev_computer.png") no-repeat bottom center;
+    background: url("../assets/characters/dev_computer.webp") no-repeat bottom center;
     background-size: contain;
     transform: rotateZ(-3deg);
 }
@@ -166,7 +166,7 @@
 }
 
 #cover-page #cover-container article#cover-teacher-section .section-content .section-background {
-    background: url("../assets/backgrounds/public.jpg") no-repeat top center;
+    background: url("../assets/backgrounds/public.webp") no-repeat top center;
     background-size: cover;
 }
 
@@ -176,7 +176,7 @@
     left: 0;
     width: 80%;
     height: 90%;
-    background: url("../assets/characters/speaker.png") no-repeat bottom center;
+    background: url("../assets/characters/speaker.webp") no-repeat bottom center;
     background-size: contain;
 }
 
@@ -200,7 +200,7 @@
 }
 
 #cover-page #cover-container article#cover-specialist-section .section-content .section-background {
-    background: url("../assets/backgrounds/city.jpg") no-repeat top center;
+    background: url("../assets/backgrounds/city.webp") no-repeat top center;
     background-size: cover;
 }
 
@@ -210,7 +210,7 @@
     right: -10px;
     width: 50%;
     height: 100%;
-    background: url("../assets/characters/super-deaf.png") no-repeat right center;
+    background: url("../assets/characters/super-deaf.webp") no-repeat right center;
     background-size: contain;
     transform: rotateZ(-4deg);
 }
@@ -274,11 +274,11 @@
 }
 
 #control-animation.stop:before {
-    background: url("../assets/icons/stop.png") no-repeat center center;
+    background: url("../assets/icons/stop.webp") no-repeat center center;
     background-size: cover;
 }
 #control-animation.reload:before {
-    background: url("../assets/icons/reload.png") no-repeat center center;
+    background: url("../assets/icons/reload.webp") no-repeat center center;
     background-size: cover;
 }
 

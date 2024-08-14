@@ -77,15 +77,15 @@
 }
 
 #talks-page #react-training .training-panel {
-    background: url("../assets/backgrounds/ark.jpg") center center no-repeat;
+    background: url("../assets/backgrounds/ark.webp") center center no-repeat;
     background-size: cover;
 }
 #talks-page #agile-training .training-panel {
-    background: url("../assets/backgrounds/city-day.jpg") center center no-repeat;
+    background: url("../assets/backgrounds/city-day.webp") center center no-repeat;
     background-size: cover;
 }
 #talks-page #accessibility-training .training-panel {
-    background: url("../assets/backgrounds/office-library.jpg") center center no-repeat;
+    background: url("../assets/backgrounds/office-library.webp") center center no-repeat;
     background-size: cover;
 }
 
@@ -100,7 +100,7 @@
     bottom: -5%;
     left: 45%;
     height: 85%;
-    background: url("../assets/characters/super_react.png") center center no-repeat;
+    background: url("../assets/characters/super_react.webp") center center no-repeat;
     background-size: contain;
 }
 
@@ -108,7 +108,7 @@
     top: 0;
     left: 50%;
     height: 87%;
-    background: url("../assets/characters/spidey.png") center center no-repeat;
+    background: url("../assets/characters/spidey.webp") center center no-repeat;
     background-size: contain;
     transform-origin: top;
 
@@ -134,7 +134,7 @@
     bottom: -50%;
     left: 50%;
     height: 140%;
-    background: url("../assets/characters/professor_x.png") center center no-repeat;
+    background: url("../assets/characters/professor_x.webp") center center no-repeat;
     background-size: contain;
 }
 
@@ -265,7 +265,7 @@
     height: 30%;
     width: 50%;
     background-color: black;
-    mask: url("../assets/icons/youtube-icon.png") right center no-repeat;
+    mask: url("../assets/icons/youtube-icon.webp") right center no-repeat;
     -webkit-mask-size: contain;
     mask-size: contain;
 }

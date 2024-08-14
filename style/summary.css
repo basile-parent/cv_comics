@@ -93,7 +93,7 @@
     height: 100%;
     width: 100%;
     display: block;
-    background: url("../assets/icons/arrow-to-left.png") no-repeat center left;
+    background: url("../assets/icons/arrow-to-left.webp") no-repeat center left;
     background-size: contain;
 }
 
@@ -165,7 +165,7 @@
     width: 100%;
     height: 95%;
     z-index: 21;
-    background: url("../assets/characters/portrait.png") no-repeat bottom center;
+    background: url("../assets/characters/portrait.webp") no-repeat bottom center;
     background-size: contain;
     pointer-events: none;
 }
@@ -194,7 +194,7 @@
     width: 60%;
     height: 60%;
     z-index: 10;
-    background: url("../assets/summary/brain.png") no-repeat center center;
+    background: url("../assets/summary/brain.webp") no-repeat center center;
     background-size: contain;
     pointer-events: none;
 }
@@ -231,7 +231,7 @@
     top: 3%;
     height: 30%;
     width: 40%;
-    background: url("../assets/ornaments/puff-1.png") no-repeat center center;
+    background: url("../assets/ornaments/puff-1.webp") no-repeat center center;
     background-size: contain;
     transform: rotateZ(-7deg);
 }
@@ -242,7 +242,7 @@
     height: 35%;
     width: 45%;
     transform: rotateZ(-10deg);
-    background: url("../assets/ornaments/puff-2.png") no-repeat center center;
+    background: url("../assets/ornaments/puff-2.webp") no-repeat center center;
     background-size: contain;
 }
 
@@ -251,7 +251,7 @@
     bottom: 10%;
     height: 20%;
     width: 30%;
-    background: url("../assets/ornaments/puff-3.png") no-repeat center center;
+    background: url("../assets/ornaments/puff-3.webp") no-repeat center center;
     background-size: contain;
 }
 
@@ -261,7 +261,7 @@
     height: 15%;
     width: 30%;
     transform: rotateZ(-120deg);
-    background: url("../assets/ornaments/puff-4.png") no-repeat center center;
+    background: url("../assets/ornaments/puff-4.webp") no-repeat center center;
     background-size: contain;
 }
 
@@ -271,7 +271,7 @@
     height: 20%;
     width: 20%;
     transform: rotateZ(-170deg);
-    background: url("../assets/ornaments/puff-4.png") no-repeat center center;
+    background: url("../assets/ornaments/puff-4.webp") no-repeat center center;
     background-size: contain;
 }
 
@@ -304,7 +304,7 @@
     width: 90%;
     height: 70%;
     z-index: 10;
-    background: url("../assets/ornaments/bubble-2.png") no-repeat center center;
+    background: url("../assets/ornaments/bubble-2.webp") no-repeat center center;
     background-size: contain;
 }
 #summary-page .bubble-certification:after {
@@ -315,7 +315,7 @@
     width: 90%;
     height: 70%;
     z-index: 21;
-    background: url("../assets/summary/certificate.png") no-repeat center center;
+    background: url("../assets/summary/certificate.webp") no-repeat center center;
     background-size: contain;
     transform: rotateZ(-15deg);
     transition: all .3s ease;
@@ -377,7 +377,7 @@
     width: 100%;
     height: 100%;
     z-index: 10;
-    background: url("../assets/ornaments/bubble-1.png") no-repeat center center;
+    background: url("../assets/ornaments/bubble-1.webp") no-repeat center center;
     background-size: cover;
 }
 
@@ -389,9 +389,9 @@
     width: 100%;
     height: 90%;
     z-index: 21;
-    background: url("../assets/summary/mic.png") no-repeat center center;
+    background: url("../assets/summary/mic.webp") no-repeat center center;
     background-size: contain;
-    mask-image: url("../assets/ornaments/bubble-1-mask.png");
+    mask-image: url("../assets/ornaments/bubble-1-mask.webp");
     mask-position: top center;
     -webkit-mask-size: 100% 100%;
     mask-size: 100% 100%;
@@ -449,7 +449,7 @@
     margin-top: -5%;
     z-index: 20;
     height: 25%;
-    background: url("../assets/summary/bowl-back.png") center center no-repeat;
+    background: url("../assets/summary/bowl-back.webp") center center no-repeat;
     background-size: contain;
 }
 #summary-page #hobbies #mixing-bowl .bowl-front {
@@ -458,7 +458,7 @@
     z-index: 30;
 
     height: 50%;
-    background: url("../assets/summary/bowl-front.png") center center no-repeat;
+    background: url("../assets/summary/bowl-front.webp") center center no-repeat;
     background-size: contain;
 }
 
@@ -519,7 +519,7 @@
     width: 30%;
     height: 20%;
 
-    background: url("../assets/summary/black_belt.png") center center no-repeat;
+    background: url("../assets/summary/black_belt.webp") center center no-repeat;
     background-size: contain;
 }
 #summary-page #hobbies:hover #mixing-bowl .belt,
@@ -565,7 +565,7 @@
     margin-top: -15%;
     transform: rotateZ(20deg);
 
-    background: url("../assets/summary/shoe.png") center center no-repeat;
+    background: url("../assets/summary/shoe.webp") center center no-repeat;
     background-size: contain;
 }
 #summary-page #hobbies:hover #mixing-bowl .shoe,
@@ -608,7 +608,7 @@
 
     filter: drop-shadow(1px 1px 0px #444);
 
-    background: url("../assets/summary/notebook.png") center center no-repeat;
+    background: url("../assets/summary/notebook.webp") center center no-repeat;
     background-size: contain;
 }
 #summary-page #hobbies #mixing-bowl .notebook:after {
@@ -658,7 +658,7 @@
     transform: rotateZ(35deg);
     filter: drop-shadow(2px 2px 0px #444);
 
-    background: url("../assets/summary/whisk.png") center center no-repeat;
+    background: url("../assets/summary/whisk.webp") center center no-repeat;
     background-size: contain;
 }
 #summary-page #hobbies:hover #mixing-bowl .whisk,
@@ -705,7 +705,7 @@
     pointer-events: none;
     object-fit: cover;
     transition: .3s all ease;
-    background: url("../assets/summary/handshake.png") no-repeat center center;
+    background: url("../assets/summary/handshake.webp") no-repeat center center;
     background-size: cover;
 }
 

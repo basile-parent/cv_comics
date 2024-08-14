@@ -37,14 +37,14 @@
 }
 
 #presentation-page .page-content .illustration:before {
-    background-image: url("../assets/backgrounds/it-office.jpg");
+    background-image: url("../assets/backgrounds/it-office.webp");
     background-size: cover;
     opacity: 0.8;
 }
 #presentation-page .page-content .illustration:after {
     height: 90%;
 
-    background: url("../assets/characters/profil.png") no-repeat bottom center;
+    background: url("../assets/characters/profil.webp") no-repeat bottom center;
     background-size: contain;
 
     filter: drop-shadow(3px 3px 3px #444444);

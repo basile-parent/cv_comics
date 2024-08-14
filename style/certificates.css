@@ -193,19 +193,19 @@
     filter: drop-shadow(2px 2px 3px black);
 }
 #certifications-diploma .diploma-list li#a11y-certificate:before {
-    background: url("../assets/certifs/access42.png") no-repeat center center;
+    background: url("../assets/certifs/access42.webp") no-repeat center center;
     background-size: contain;
 }
 #certifications-diploma .diploma-list li#psm-certificate:before {
-    background: url("../assets/certifs/psm1.png") no-repeat center center;
+    background: url("../assets/certifs/psm1.webp") no-repeat center center;
     background-size: contain;
 }
 #certifications-diploma .diploma-list li#opquast-certificate:before {
-    background: url("../assets/certifs/opquast.png") no-repeat center center;
+    background: url("../assets/certifs/opquast.webp") no-repeat center center;
     background-size: contain;
 }
 #certifications-diploma .diploma-list li#agnostic-certificate:before {
-    background: url("../assets/certifs/agnostic-agile.png") no-repeat center center;
+    background: url("../assets/certifs/agnostic-agile.webp") no-repeat center center;
     background-size: contain;
 }
 

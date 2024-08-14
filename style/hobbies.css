@@ -99,7 +99,7 @@
     height: 80%;
     top: 0;
     left: 2%;
-    background: url("../assets/ornaments/old-screen.png") top center no-repeat;
+    background: url("../assets/ornaments/old-screen.webp") top center no-repeat;
     background-size: contain;
     z-index: 25;
     pointer-events: none;
@@ -135,11 +135,11 @@
     filter: grayscale(100%);
 }
 .disable-animation #hobbies-page #carrousel-panel .tv-background:after {
-    background-image: url("../assets/animations/tv_noise_static.jpg");
+    background-image: url("../assets/animations/tv_noise_static.webp");
 }
 @media (prefers-reduced-motion: reduce) {
     #hobbies-page #carrousel-panel .tv-background:after {
-        background-image: url("../assets/animations/tv_noise_static.jpg");
+        background-image: url("../assets/animations/tv_noise_static.webp");
     }
 }
 
@@ -243,7 +243,7 @@
     left: 5px;
     width: calc(100% - 10px);
     height: calc(100% - 20px);
-    background: url("../assets/icons/arrow-simple.png") center center no-repeat;
+    background: url("../assets/icons/arrow-simple.webp") center center no-repeat;
     background-size: contain;
     filter: drop-shadow(2px 2px 2px black);
 }
@@ -260,7 +260,7 @@
     width: 100%;
     height: 100%;
     background-color: white;
-    mask: url("../assets/icons/arrow-simple.png") center center no-repeat;
+    mask: url("../assets/icons/arrow-simple.webp") center center no-repeat;
     -webkit-mask-size: contain;
     mask-size: contain;
     color: transparent;

@@ -7,7 +7,7 @@
     height: 100%;
     opacity: 0.3;
 
-    background: url("../assets/ornaments/halftone.png") no-repeat center center;
+    background: url("../assets/ornaments/halftone.webp") no-repeat center center;
     background-size: 80%;
 }
 
@@ -154,7 +154,7 @@ Bottom right for halftone
     height: 100%;
     opacity: 0.3;
 
-    background: url("../assets/ornaments/radial-speed.png") no-repeat center center;
+    background: url("../assets/ornaments/radial-speed.webp") no-repeat center center;
     background-size: 350%;
     transition: background-size .3s linear;
 }
