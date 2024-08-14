@@ -5,7 +5,7 @@ on:
       - main
   workflow_dispatch:
 jobs:
-  test:
+  execute-minify:
     runs-on: ${{ matrix.os }}
 
     strategy:
