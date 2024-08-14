@@ -12,8 +12,8 @@
 }
 
 .wm-revealing .halftone-watermark {
-    -webkit-mask-image: url("../assets/ornaments/revealing-mask.svg");
-    mask-image: url("../assets/ornaments/revealing-mask.svg");
+    -webkit-mask-image: url("../assets/ornaments/revealing-mask.webp");
+    mask-image: url("../assets/ornaments/revealing-mask.webp");
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
     -webkit-mask-position: 140% center;
@@ -193,7 +193,7 @@ a:focus .radial-speed {
     height: 150%;
     opacity: 0.3;
 
-    background: url("../assets/ornaments/star.svg") repeat center center;
+    background: url("../assets/ornaments/star.webp") repeat center center;
     background-size: 8%;
     transform: rotateZ(-15deg);
     transition: translate .3s linear;
